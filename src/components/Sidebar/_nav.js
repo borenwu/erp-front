@@ -20,59 +20,34 @@ export default {
         },
         {
             name: '生产',
-            url: '/components',
-            icon: 'icon-puzzle',
+            url: '/work',
+            icon: 'icon-star',
             children: [
                 {
-                    name: 'Buttons',
-                    url: '/components/buttons',
-                    icon: 'icon-puzzle'
+                    name: '任务',
+                    url: '/work/tasks',
+                    icon: 'icon-star'
                 },
                 {
-                    name: 'Social Buttons',
-                    url: '/components/social-buttons',
-                    icon: 'icon-puzzle'
+                    name: '任务',
+                    url: '/work/tasks',
+                    icon: 'icon-star'
                 },
                 {
-                    name: 'Cards',
-                    url: '/components/cards',
-                    icon: 'icon-puzzle'
-                },
-                {
-                    name: 'Forms',
-                    url: '/components/forms',
-                    icon: 'icon-puzzle'
-                },
-                {
-                    name: 'Modals',
-                    url: '/components/modals',
-                    icon: 'icon-puzzle'
-                },
-                {
-                    name: 'Switches',
-                    url: '/components/switches',
-                    icon: 'icon-puzzle'
-                },
-                {
-                    name: 'Tables',
-                    url: '/components/tables',
-                    icon: 'icon-puzzle'
-                },
-                {
-                    name: 'Tabs',
-                    url: '/components/tabs',
-                    icon: 'icon-puzzle'
+                    name: '任务',
+                    url: '/work/tasks',
+                    icon: 'icon-star'
                 }
             ]
         },
         {
             name: '财务',
-            url: '/icons',
+            url: '/finance',
             icon: 'icon-star',
             children: [
                 {
                     name: 'Font Awesome',
-                    url: '/icons/font-awesome',
+                    url: '/finance/font-awesome',
                     icon: 'icon-star',
                     badge: {
                         variant: 'secondary',
@@ -81,19 +56,19 @@ export default {
                 },
                 {
                     name: 'Simple Line Icons',
-                    url: '/icons/simple-line-icons',
+                    url: '/finance/simple-line-icons',
                     icon: 'icon-star'
                 },
                 {
                     name: 'demo test',
-                    url: '/icons/demotest',
+                    url: '/finance/demotest',
                     icon: 'icon-star'
                 }
             ]
         },
         {
             name: '仓储',
-            url: '/icons',
+            url: '/warehouse',
             icon: 'icon-star',
             children: [
                 {
@@ -112,55 +87,6 @@ export default {
                 }
             ]
         },
-
-        {
-            name: 'Widgets',
-            url: '/widgets',
-            icon: 'icon-calculator',
-            badge: {
-                variant: 'info',
-                text: 'NEW'
-            }
-        },
-        {
-            name: 'Charts',
-            url: '/charts',
-            icon: 'icon-pie-chart'
-        },
-        {
-            divider: true
-        },
-        {
-            title: true,
-            name: 'Extras'
-        },
-        // {
-        //   name: 'Pages',
-        //   url: '/pages',
-        //   icon: 'icon-star',
-        //   children: [
-        //     {
-        //       name: 'Login',
-        //       url: '/login',
-        //       icon: 'icon-star'
-        //     },
-        //     {
-        //       name: 'Register',
-        //       url: '/register',
-        //       icon: 'icon-star'
-        //     },
-        //     {
-        //       name: 'Error 404',
-        //       url: '/404',
-        //       icon: 'icon-star'
-        //     },
-        //     {
-        //       name: 'Error 500',
-        //       url: '/500',
-        //       icon: 'icon-star'
-        //     }
-        //   ]
-        // },
 
     ]
 };

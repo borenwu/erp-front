@@ -25,7 +25,7 @@ import {DatePicker} from 'antd';
 import EditableTable from '../Tables/EditableTable'
 
 // let et = new EditableTable()
-
+const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
 const data = [];
 for (let i = 0; i < 100; i++) {
     data.push({
@@ -102,19 +102,17 @@ class Forms extends Component {
             <div className="animated fadeIn">
                 <Row>
                     <Col xs="12">
-                        <Card>
-                            <CardHeader>
-                                <i className="fa fa-edit"></i>Form Elements
-                                <div className="card-actions">
-                                    <a href="#" className="btn-setting"><i className="icon-settings"></i></a>
-                                    <a href="#" className="btn-minimize"><i className="icon-arrow-up"></i></a>
-                                    <a href="#" className="btn-close"><i className="icon-close"></i></a>
-                                </div>
-                            </CardHeader>
-                            <CardBody>
-                                <EditableTable ref='et' tableData={data} columnInfo={this.columnInfo}/>
-                            </CardBody>
-                        </Card>
+
+
+
+
+                        <RangePicker/>
+
+
+
+                        <EditableTable ref='et' tableData={data} columnInfo={this.columnInfo}/>
+
+
                     </Col>
                 </Row>
             </div>

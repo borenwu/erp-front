@@ -1,4 +1,3 @@
-
 import {observable, action, computed,useStrict} from 'mobx';
 import Axios from 'axios'
 import * as ipConfig from '../configs/ipConfig'
