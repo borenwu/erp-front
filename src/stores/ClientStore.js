@@ -1,9 +1,9 @@
 import {observable, action, computed, useStrict} from 'mobx';
 import Axios from 'axios'
-import {rootUrl} from '../configs/ipConfig'
+import * as ipConfig from '../configs/ipConfig'
 
-const clientUrl = `${rootUrl}/client`;
-const clientsUrl = `${rootUrl}/clients`;
+const clientUrl = `${ipConfig.rootUrl}/client`;
+const clientsUrl = `${ipConfig.rootUrl}/clients`;
 
 
 export default class ClientStore {

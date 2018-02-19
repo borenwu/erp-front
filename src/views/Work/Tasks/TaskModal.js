@@ -39,8 +39,7 @@ export default class TaskModal extends React.Component {
         this.setState({dueDate:dateString})
     }
 
-    handleOk(e){
-        e.preventDefault()
+    handleOk(){
         let company_id = companyConfig.companyInfo.company_id
         let client_name = this.refs.client_name.value
         let task_date = moment().format('YYYY-MM-DD')

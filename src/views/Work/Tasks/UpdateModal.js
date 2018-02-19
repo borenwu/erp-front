@@ -1,5 +1,5 @@
 import React from 'react'
-import {Modal,Button,DatePicker} from 'antd'
+import {Modal,Button,DatePicker,message} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
@@ -23,13 +23,11 @@ export default class UpdateModal extends React.Component{
         });
     }
     handleAssistantOk(e){
-        console.log(e);
         this.setState({
             assistantVisible: false,
         });
     }
     handleAssistantCancel(e){
-        console.log(e);
         this.setState({
             assistantVisible: false,
         });
@@ -41,6 +39,27 @@ export default class UpdateModal extends React.Component{
     }
 
     handleUpdate(){
+        let task_id = this.props.store.taskById.id
+        let company_id = companyConfig.companyInfo.company_id
+        let client_name = this.props.store.taskById.client_name
+        let task_name = this.refs.task_name.value
+        let due_date = this.state.dueDate
+        let volume = this.refs.volume.value
+        let desc = this.refs.desc.value
+        let maker = this.refs.maker.value
+
+        let taskInfo = {
+            task_id:task_id,
+            company_id:company_id,
+            client_name:client_name,
+            due_date:due_date,
+            task_name:task_name,
+            desc:desc,
+            volume:volume,
+            maker:maker
+        }
+        this.props.store.updateTaskById(taskInfo)
+
         this.props.store.closeUpdateModal()
     }
 
@@ -60,22 +79,16 @@ export default class UpdateModal extends React.Component{
                     <form>
                         <div className="form-group">
                             <label htmlFor="exampleFormControlSelect1">客户</label>
-                            <select ref="client_name" className="form-control" id="exampleFormControlSelect1" defaultValue={this.props.store.taskById.client}>
-                                <option>海门日报</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                            <input type="text" ref="client_name" className="form-control" id="taskName" disabled="true" defaultValue={this.props.store.taskById.client_name}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskName">任务</label>
-                            <input type="text" ref="task_name" className="form-control" id="taskName"  defaultValue={this.props.store.taskById.task}/>
+                            <input type="text" ref="task_name" className="form-control" id="taskName"  defaultValue={this.props.store.taskById.task_name}/>
                             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div className="form-group">
                             <label>交付时间</label>
-                            <DatePicker style={{width:100+'%'}} onChange={this.onChange.bind(this)} defaultValue={moment(this.props.store.taskById.dueDate, 'YYYY-MM-DD')}/>
+                            <DatePicker style={{width:100+'%'}} onChange={this.onChange.bind(this)} defaultValue={moment(this.props.store.taskById.due_date, 'YYYY-MM-DD')}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskVolume">印量</label>
@@ -108,9 +121,7 @@ export default class UpdateModal extends React.Component{
                             <input type="text" ref="maker" className="form-control" id="taskMaker"  defaultValue={this.props.store.taskById.maker}/>
                         </div>
                     </form>
-
                 </Modal>
-
         )
     }
 
