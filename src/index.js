@@ -32,6 +32,11 @@ import moment from 'moment';
 import 'moment/locale/zh-cn';
 moment.locale('zh-cn');
 
+let storage=window.localStorage;
+storage.setItem('testInfo', 'this is a test msg');
+
+console.log(storage.getItem('testInfo'));
+
 ReactDOM.render((
     <HashRouter>
         <Switch>

@@ -16,6 +16,9 @@ const isAuthenticated = () => {
 const PRIVATE_ROOT = '/private';
 const PUBLIC_ROOT = '/login';
 
+// 通过sessionStorage来检测用户状态，如果是空，跳转到登陆界面
+// 通过localStorage来检测公司信息，如果没有公司信息，初始化
+// 页面第一次加载时，写入localStorage关于服务器的信息
 const AuthRoute = ({component, ...props}) => {
     // const { isPrivate } = component;
     // if (isAuthenticated()) {
