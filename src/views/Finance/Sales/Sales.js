@@ -2,27 +2,20 @@ import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import {DatePicker,Button} from 'antd';
 import moment from 'moment';
-import TaskModal from './TaskModal'
-import UpdateModal from './UpdateModal'
-import TaskTable from './TaskTable'
-import './Tasks.css'
+import SalesTable from './SalesTable'
 import * as companyConfig from '../../../configs/companyConfig'
-
+import SalesModal from './SalesModal'
 
 const {RangePicker} = DatePicker;
 
 @observer
-export default class Tasks extends Component {
+export default class Sales extends Component{
     state = {
         dateRange : []
     }
 
     constructor(props) {
         super(props)
-    }
-
-    showModal() {
-        this.props.store.showModal()
     }
 
 
@@ -50,8 +43,6 @@ export default class Tasks extends Component {
         this.props.store.listTasks(info)
     }
 
-
-
     componentDidMount() {
         this.showTodayTasks()
     }
@@ -63,28 +54,26 @@ export default class Tasks extends Component {
     }
 
 
-    render() {
-
-
-        return (
+    render(){
+        return(
             <div>
                 <div className="table-operations">
                     <label style={{marginRight: 8}}>检索日期</label>
                     <RangePicker style={{marginRight: 8}} placeholder={['开始日期', '结束日期']} onChange={this.onChange.bind(this)}/>
-                    <Button onClick={this.searchTasks.bind(this)}>查询</Button>
-                    <Button onClick={this.showTodayTasks.bind(this)}>查询今日任务</Button>
-                    <Button onClick={this.showModal.bind(this)}>创建</Button>
-                    <TaskModal
+                    <Button >查询</Button>
+                    <Button >查询今日任务</Button>
+                    <Button >创建</Button>
+                    {/*<TaskModal*/}
+                        {/*store={this.props.store}*/}
+                        {/*title="Basic Modal"*/}
+                        {/*visible={this.props.store.modalVisible}/>*/}
+                    <SalesModal
                         store={this.props.store}
-                        title="Basic Modal"
-                        visible={this.props.store.modalVisible}/>
-                    <UpdateModal
-                        store={this.props.store}
-                        title="Update Modal"
-                        visible={this.props.store.updateModalVisible}
+                        title="Sales Modal"
+                        visible={this.props.store.salesModalVisible}
                     />
                 </div>
-                <TaskTable store={this.props.store}/>
+                <SalesTable store={this.props.store}/>
             </div>
         )
     }

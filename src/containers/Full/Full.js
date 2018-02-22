@@ -17,12 +17,16 @@ import DemoTest from '../../views/Icons/DemoTest'
 
 //Tasks
 import Tasks from '../../views/Work/Tasks/'
+import Sales from '../../views/Finance/Sales'
 
 import CompanyStore from '../../stores/CompanyStore'
 import TaskStore from '../../stores/TaskStore'
+import FinanceStore from '../../stores/FinanceStore'
+
 
 const taskStore = new TaskStore()
 const companyStore = new CompanyStore()
+const financeStore = new FinanceStore()
 
 class Full extends Component {
     render() {
@@ -37,6 +41,7 @@ class Full extends Component {
                             <Switch>
                                 <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
                                 <Route path="/work/tasks" name="Tasks" component={()=><Tasks store={taskStore}/>}/>
+                                <Route path="/finance/sales" name="Sales" component={()=><Sales store={financeStore}/>}/>
                                 <Redirect from="/" to="/dashboard"/>
                             </Switch>
                         </Container>

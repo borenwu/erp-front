@@ -6,6 +6,8 @@ import moment from 'moment';
 import * as companyConfig from '../../../configs/companyConfig'
 
 
+
+
 @observer
 export default class UpdateModal extends React.Component{
     state = {
@@ -74,7 +76,8 @@ export default class UpdateModal extends React.Component{
                     title={this.props.title}
                     visible={this.props.visible}
                     onOk={this.handleUpdate.bind(this)}
-                    onCancel={this.handleCancel.bind(this)}>
+                    onCancel={this.handleCancel.bind(this)}
+                    destroyOnClose={true}>
 
                     <form>
                         <div className="form-group">
@@ -121,6 +124,7 @@ export default class UpdateModal extends React.Component{
                             <input type="text" ref="maker" className="form-control" id="taskMaker"  defaultValue={this.props.store.taskById.maker}/>
                         </div>
                     </form>
+
                 </Modal>
         )
     }

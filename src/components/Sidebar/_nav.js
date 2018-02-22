@@ -26,43 +26,19 @@ export default {
                 {
                     name: '任务',
                     url: '/work/tasks',
-                    icon: 'icon-star'
+                    icon: 'icon-screen-desktop'
                 },
-                {
-                    name: '任务',
-                    url: '/work/tasks',
-                    icon: 'icon-star'
-                },
-                {
-                    name: '任务',
-                    url: '/work/tasks',
-                    icon: 'icon-star'
-                }
             ]
         },
         {
             name: '财务',
             url: '/finance',
-            icon: 'icon-star',
+            icon: 'icon-chart',
             children: [
                 {
-                    name: 'Font Awesome',
-                    url: '/finance/font-awesome',
-                    icon: 'icon-star',
-                    badge: {
-                        variant: 'secondary',
-                        text: '4.7'
-                    }
-                },
-                {
-                    name: 'Simple Line Icons',
-                    url: '/finance/simple-line-icons',
-                    icon: 'icon-star'
-                },
-                {
-                    name: 'demo test',
-                    url: '/finance/demotest',
-                    icon: 'icon-star'
+                    name:'销售',
+                    url:'/finance/sales',
+                    icon: 'icon-notebook'
                 }
             ]
         },

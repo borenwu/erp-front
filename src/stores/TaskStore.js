@@ -75,9 +75,23 @@ export default class TaskStore {
         Axios.put(taskUrl, taskInfo)
             .then(response => {
                 let updateTask = response.data
-                let index = this.tasks.findIndex((updateTask) => updateTask.id)
+                let index = this.tasks.findIndex((task) => task.id === updateTask.id)
                 this.tasks[index] = updateTask
                 message.success('修改成功')
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    @action finishTask(taskInfo){
+        Axios.put(`${taskUrl}/finish`, taskInfo)
+            .then(response => {
+                let finishTask = response.data
+                let index = this.tasks.findIndex((task) => task.id === finishTask.id)
+                console.log(index)
+                this.tasks[index].status = true
+                message.success('任务完成')
             })
             .catch(error => {
                 throw(error);
@@ -99,6 +113,7 @@ export default class TaskStore {
 
 
     @action closeUpdateModal() {
+        this.taskById = {}
         this.updateModalVisible = false
     }
 
