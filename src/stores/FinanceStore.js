@@ -15,9 +15,27 @@ export default class FinanceStore{
     @observable clients = []
     @observable tasks = []
     @observable taskById = {}
+    @observable price = 0.0
+    @observable volume =  0.0
+    @observable sale = 0.0
 
     @observable modalVisible = false
     @observable salesModalVisible = false
+
+    computeSale(){
+        this.sale = (Number(this.price) * Number(this.volume)).toFixed(2)
+    }
+
+    @action setPrice(price){
+        this.price = price
+        this.computeSale()
+    }
+
+    @action setVolume(volume){
+        this.volume = volume
+        this.computeSale()
+    }
+
 
     @action fetchClients(company_id){
         let companyInfo = {
@@ -47,32 +65,20 @@ export default class FinanceStore{
     }
 
 
-    @action updateTaskById(taskInfo) {
-        Axios.put(taskUrl, taskInfo)
+
+    @action updateSale(taskInfo){
+        Axios.put(`${taskUrl}/sale`,taskInfo)
             .then(response => {
                 let updateTask = response.data
                 let index = this.tasks.findIndex((task) => task.id === updateTask.id)
                 this.tasks[index] = updateTask
-                message.success('修改成功')
+                message.success('销售记录添加成功')
             })
             .catch(error => {
                 throw(error);
             });
     }
 
-    @action finishTask(taskInfo){
-        Axios.put(`${taskUrl}/finish`, taskInfo)
-            .then(response => {
-                let finishTask = response.data
-                let index = this.tasks.findIndex((task) => task.id === finishTask.id)
-                console.log(index)
-                this.tasks[index].status = true
-                message.success('任务完成')
-            })
-            .catch(error => {
-                throw(error);
-            });
-    }
 
     @action showModal() {
         this.modalVisible = true
@@ -84,6 +90,7 @@ export default class FinanceStore{
 
     @action showSalesModal(record) {
         this.taskById = this.tasks[record.key]
+        this.volume = this.taskById.volume
         this.salesModalVisible = true
     }
 

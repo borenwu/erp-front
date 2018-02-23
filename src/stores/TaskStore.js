@@ -13,7 +13,6 @@ message.config(messageConfig.messageConf);
 
 
 export default class TaskStore {
-
     @observable clients = []
     @observable tasks = []
     @observable taskById = {}
@@ -71,7 +70,7 @@ export default class TaskStore {
             });
     }
 
-    @action updateTaskById(taskInfo) {
+    @action updateTask(taskInfo) {
         Axios.put(taskUrl, taskInfo)
             .then(response => {
                 let updateTask = response.data

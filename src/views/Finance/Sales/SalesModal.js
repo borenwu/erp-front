@@ -8,38 +8,41 @@ import * as companyConfig from '../../../configs/companyConfig'
 
 @observer
 export default class SaleModal extends React.Component{
-    state = {
-    }
 
     constructor(props){
         super(props)
     }
 
     //////////////////////////////////////////////////
+    onVolumeChange(){
+        let volume = this.refs.volume.value
+        this.props.store.setVolume(volume)
+    }
+
+    onPriceChange(){
+        let price = this.refs.price.value
+        this.props.store.setPrice(price)
+    }
 
 
     handleUpdate(){
-        // let task_id = this.props.store.taskById.id
-        // let company_id = companyConfig.companyInfo.company_id
-        // let client_name = this.props.store.taskById.client_name
-        // let task_name = this.refs.task_name.value
-        // let due_date = this.state.dueDate
-        // let volume = this.refs.volume.value
-        // let desc = this.refs.desc.value
-        // let maker = this.refs.maker.value
-        //
-        // let taskInfo = {
-        //     task_id:task_id,
-        //     company_id:company_id,
-        //     client_name:client_name,
-        //     due_date:due_date,
-        //     task_name:task_name,
-        //     desc:desc,
-        //     volume:volume,
-        //     maker:maker
-        // }
-        // this.props.store.updateTaskById(taskInfo)
+        let task_id = this.props.store.taskById.id
+        let company_id = companyConfig.companyInfo.company_id
+        let client_name = this.props.store.taskById.client_name
+        let price = this.refs.price.value
+        let sale = this.refs.sale.value
+        let checker = this.refs.checker.value
 
+
+        let taskInfo = {
+            task_id:task_id,
+            company_id:company_id,
+            client_name:client_name,
+            price:price,
+            sale:sale,
+            checker:checker
+        }
+        this.props.store.updateSale(taskInfo)
         this.props.store.closeSalesModal()
     }
 
@@ -73,7 +76,7 @@ export default class SaleModal extends React.Component{
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskVolume">印量</label>
-                            <input ref="volume" type="number" className="form-control" id="taskVolume" defaultValue={this.props.store.taskById.volume}/>
+                            <input ref="volume" type="number" className="form-control" id="taskVolume" defaultValue={this.props.store.taskById.volume} onChange={this.onVolumeChange.bind(this)}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskDesc">规格明细</label>
@@ -81,18 +84,17 @@ export default class SaleModal extends React.Component{
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskVolume">单价</label>
-                            <input ref="price" type="number" className="form-control" id="taskVolume" defaultValue={this.props.store.taskById.price}/>
+                            <input ref="price" type="number" className="form-control" id="taskVolume" defaultValue={0.0} onChange={this.onPriceChange.bind(this)}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskVolume">金额</label>
-                            <input ref="sale" type="number" className="form-control" id="taskVolume" defaultValue={this.props.store.taskById.sale}/>
+                            <input ref="sale" type="number" className="form-control" id="taskVolume"  value={this.props.store.sale} readOnly={true}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskChecker">审核人</label>
-                            <input type="text" ref="checker" className="form-control" id="taskMaker"  defaultValue={this.props.store.taskById.checker}/>
+                            <input type="text" ref="checker" className="form-control" id="taskChecker"  defaultValue={this.props.store.taskById.checker}/>
                         </div>
                     </form>
-
                 </Modal>
         )
     }

@@ -109,11 +109,11 @@ export default class SalesTable extends React.Component{
                         操作 一
                         <Divider type="vertical"/>
 
-                        <Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>
-                            <a>删除</a>
-                        </Popconfirm>
+                        {/*<Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>*/}
+                            {/*<a>删除</a>*/}
+                        {/*</Popconfirm>*/}
                         <Divider type="vertical"/>
-                        <a onClick={this.showSalesModal.bind(this,record)}>修改</a>
+                        <a onClick={this.showSalesModal.bind(this,record)}>录入单价</a>
                     </span>
                 ),
             }];

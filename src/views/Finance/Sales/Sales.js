@@ -60,9 +60,8 @@ export default class Sales extends Component{
                 <div className="table-operations">
                     <label style={{marginRight: 8}}>检索日期</label>
                     <RangePicker style={{marginRight: 8}} placeholder={['开始日期', '结束日期']} onChange={this.onChange.bind(this)}/>
-                    <Button >查询</Button>
-                    <Button >查询今日任务</Button>
-                    <Button >创建</Button>
+                    <Button onClick={this.searchTasks.bind(this)}>查询</Button>
+                    <Button onClick={this.showTodayTasks.bind(this)}>查询今日任务</Button>
                     {/*<TaskModal*/}
                         {/*store={this.props.store}*/}
                         {/*title="Basic Modal"*/}
