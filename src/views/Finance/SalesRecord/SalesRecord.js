@@ -9,7 +9,7 @@ import SalesModal from './SalesModal'
 const {RangePicker} = DatePicker;
 
 @observer
-export default class Sales extends Component{
+export default class SalesRecord extends Component{
     state = {
         dateRange : []
     }
@@ -62,10 +62,7 @@ export default class Sales extends Component{
                     <RangePicker style={{marginRight: 8}} placeholder={['开始日期', '结束日期']} onChange={this.onChange.bind(this)}/>
                     <Button onClick={this.searchTasks.bind(this)}>查询</Button>
                     <Button onClick={this.showTodayTasks.bind(this)}>查询今日任务</Button>
-                    {/*<TaskModal*/}
-                        {/*store={this.props.store}*/}
-                        {/*title="Basic Modal"*/}
-                        {/*visible={this.props.store.modalVisible}/>*/}
+
                     <SalesModal
                         store={this.props.store}
                         title="Sales Modal"

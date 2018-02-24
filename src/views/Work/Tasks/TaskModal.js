@@ -82,7 +82,10 @@ export default class TaskModal extends React.Component {
                 visible={this.props.visible}
                 onOk={this.handleOk.bind(this)}
                 onCancel={this.handleCancel.bind(this)}
-                destroyOnClose={true}>
+                destroyOnClose={true}
+                okText='确定'
+                cancelText='取消'
+            >
 
                 <form>
                     <div className="form-group">

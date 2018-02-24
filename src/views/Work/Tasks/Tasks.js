@@ -64,8 +64,6 @@ export default class Tasks extends Component {
 
 
     render() {
-
-
         return (
             <div>
                 <div className="table-operations">

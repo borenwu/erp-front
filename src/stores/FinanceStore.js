@@ -8,6 +8,7 @@ import * as messageConfig from '../configs/messageConfig'
 const clientsUrl = `${ipConfig.rootUrl}/clients`
 const taskUrl = `${ipConfig.rootUrl}/task`;
 const tasksUrl = `${ipConfig.rootUrl}/tasks`
+const tasksByClientUrl = `${ipConfig.rootUrl}/tasksByClient`
 
 message.config(messageConfig.messageConf);
 
@@ -50,6 +51,22 @@ export default class FinanceStore{
 
     @action listTasks(info) {
         Axios.post(tasksUrl, info)
+            .then(response => {
+                if (response.data.status == 201) {
+                    message.warning('获取任务列表为空');
+                }
+                else {
+                    this.tasks = response.data
+                }
+
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    @action listTasksByClient(info){
+        Axios.post(tasksByClientUrl, info)
             .then(response => {
                 if (response.data.status == 201) {
                     message.warning('获取任务列表为空');

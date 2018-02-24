@@ -5,6 +5,7 @@ import moment from 'moment';
 
 import * as companyConfig from '../../../configs/companyConfig'
 
+const confirm = Modal.confirm;
 
 @observer
 export default class SaleModal extends React.Component{
@@ -14,6 +15,10 @@ export default class SaleModal extends React.Component{
     }
 
     //////////////////////////////////////////////////
+
+
+
+
     onVolumeChange(){
         let volume = this.refs.volume.value
         this.props.store.setVolume(volume)
@@ -50,15 +55,30 @@ export default class SaleModal extends React.Component{
         this.props.store.closeSalesModal()
     }
 
+    showConfirm(update) {
+        confirm({
+            title: '确定录入销售数据？',
+            content: '保存销售数据之后不能再修改',
+            onOk() {
+                update()
+            },
+            onCancel() {
+                console.log('Cancel');
+            },
+        });
+    }
+
     render(){
         return(
 
                 <Modal
                     title={this.props.title}
                     visible={this.props.visible}
-                    onOk={this.handleUpdate.bind(this)}
+                    onOk={this.showConfirm.bind(this,this.handleUpdate.bind(this))}
                     onCancel={this.handleCancel.bind(this)}
-                    destroyOnClose={true}>
+                    destroyOnClose={true}
+                    okText='确定'
+                    cancelText='取消'>
 
                     <form>
                         <div className="form-group">

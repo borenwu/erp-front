@@ -9,7 +9,7 @@ import DevTools from 'mobx-react-devtools';
 
 
 @observer
-export default class TaskTable extends React.Component{
+export default class SalesTable extends React.Component{
     constructor(props){
         super(props)
     }
@@ -18,23 +18,10 @@ export default class TaskTable extends React.Component{
         this.props.store.deleteTaskById(record.id)
     }
 
-    showUpdateModal(record) {
-        this.props.store.showUpdateModal(record)
+    showSalesModal(record) {
+        this.props.store.showSalesModal(record)
     }
 
-    handleFinishTask(record){
-        let company_id = companyConfig.companyInfo.company_id
-        let client_name = record.client_name
-        let task_id = record.id
-
-        const taskInfo = {
-            company_id:company_id,
-            client_name: client_name,
-            task_id:task_id
-        }
-
-        this.props.store.finishTask(taskInfo)
-    }
 
     render(){
         const data = this.props.store.tasks.map((t, i) => {
@@ -49,7 +36,11 @@ export default class TaskTable extends React.Component{
                 volume: t.volume,
                 desc: t.desc,
                 maker: t.maker,
-                status:t.status ? '完成' : '未完成'
+                checker:t.checker,
+                status:t.status ? '完成' : '未完成',
+                price:t.price,
+                sale:t.sale,
+                saleOpDisable:t.saleOpDisable
             }
 
         })
@@ -97,20 +88,32 @@ export default class TaskTable extends React.Component{
                 key: 'status',
             },
             {
+                title: '单价',
+                dataIndex: 'price',
+                key: 'price',
+            },
+            {
+                title: '金额',
+                dataIndex: 'sale',
+                key: 'sale',
+            },
+            {
+                title: '审核人',
+                dataIndex: 'checker',
+                key: 'checker',
+            },
+            {
                 title: '操作',
                 key: 'action',
                 render: (text, record) => (
                     <span>
                         操作 一
-                        <Divider type="vertical"/>
 
-                        <Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>
-                            <a>删除</a>
-                        </Popconfirm>
+                        {/*<Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>*/}
+                            {/*<a>删除</a>*/}
+                        {/*</Popconfirm>*/}
                         <Divider type="vertical"/>
-                        <a onClick={this.showUpdateModal.bind(this,record)}>修改</a>
-                        <Divider type="vertical"/>
-                        <a onClick={this.handleFinishTask.bind(this,record)}>完成</a>
+                        <button type="button" className="btn btn-primary" onClick={this.showSalesModal.bind(this,record)} disabled={record.saleOpDisable}>录入单价</button>
                     </span>
                 ),
             }];

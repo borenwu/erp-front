@@ -73,7 +73,9 @@ export default class UpdateModal extends React.Component{
                     visible={this.props.visible}
                     onOk={this.handleUpdate.bind(this)}
                     onCancel={this.handleCancel.bind(this)}
-                    destroyOnClose={true}>
+                    destroyOnClose={true}
+                    okText='确定'
+                    cancelText='取消'>
 
                     <form>
                         <div className="form-group">
@@ -106,6 +108,8 @@ export default class UpdateModal extends React.Component{
                                         visible={this.state.assistantVisible}
                                         onOk={this.handleAssistantOk.bind(this)}
                                         onCancel={this.handleAssistantCancel.bind(this)}
+                                        okText='确定'
+                                        cancelText='取消'
                                     >
                                         <p>Some contents...</p>
                                         <p>Some contents...</p>

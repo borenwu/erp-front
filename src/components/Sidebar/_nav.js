@@ -36,9 +36,14 @@ export default {
             icon: 'icon-chart',
             children: [
                 {
-                    name:'销售',
-                    url:'/finance/sales',
+                    name:'销售日报表',
+                    url:'/finance/SalesRecord',
                     icon: 'icon-notebook'
+                },
+                {
+                    name:'销售统计',
+                    url:'/finance/SalesStatistics',
+                    icon: 'icon-screen-tablet'
                 }
             ]
         },

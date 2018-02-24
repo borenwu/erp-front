@@ -2,5 +2,5 @@
   "name": "Sales",
   "version": "0.0.0",
   "private": true,
-  "main": "./Sales.js"
+  "main": "./SalesStatistics.js"
 }

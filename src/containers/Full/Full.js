@@ -17,7 +17,9 @@ import DemoTest from '../../views/Icons/DemoTest'
 
 //Tasks
 import Tasks from '../../views/Work/Tasks/'
-import Sales from '../../views/Finance/Sales'
+import SalesRecord from '../../views/Finance/SalesRecord'
+import SalesStatistics from '../../views/Finance/SalesStatistics'
+
 
 import CompanyStore from '../../stores/CompanyStore'
 import TaskStore from '../../stores/TaskStore'
@@ -41,7 +43,8 @@ class Full extends Component {
                             <Switch>
                                 <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
                                 <Route path="/work/tasks" name="Tasks" component={()=><Tasks store={taskStore}/>}/>
-                                <Route path="/finance/sales" name="Sales" component={()=><Sales store={financeStore}/>}/>
+                                <Route path="/finance/SalesRecord" name="SalesRecord" component={()=><SalesRecord store={financeStore}/>}/>
+                                <Route path="/finance/SalesStatistics" name="SalesStatistics" component={()=><SalesStatistics store={financeStore}/>}/>
                                 <Redirect from="/" to="/dashboard"/>
                             </Switch>
                         </Container>
