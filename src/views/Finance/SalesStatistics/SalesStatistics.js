@@ -4,7 +4,7 @@ import {DatePicker,Button} from 'antd';
 import moment from 'moment';
 import StatisticsTable from './StatisticsTable'
 import * as companyConfig from '../../../configs/companyConfig'
-import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+
 
 const {RangePicker} = DatePicker;
 
@@ -20,7 +20,7 @@ export default class SalesStatistics extends Component{
         })
     }
 
-    searchTasks(){
+    searchTasksByClient(){
         let company_id = companyConfig.companyInfo.company_id
         let client_name = this.refs.client_name.value
         let startDate = this.state.dateRange[0] || moment().format('YYYY-MM-DD')
@@ -31,8 +31,9 @@ export default class SalesStatistics extends Component{
             start_date: startDate,
             end_date: endDate
         }
-        this.props.store.listTasks(info)
+        this.props.store.listTasksByClient(info)
     }
+
 
     componentDidMount(){
         this.props.store.fetchClients(companyConfig.companyInfo.company_id)
@@ -51,19 +52,14 @@ export default class SalesStatistics extends Component{
                         </select>
                         <label style={{marginRight: 8}}>检索日期</label>
                         <RangePicker style={{marginRight: 8}} placeholder={['开始日期', '结束日期']} onChange={this.onChange.bind(this)}/>
-                        <Button style={{marginRight: 8}} onClick={this.searchTasks.bind(this)}>查询</Button>
-                        <Button style={{marginRight: 8}}>导出Excel</Button>
+                        <Button style={{marginRight: 8}} onClick={this.searchTasksByClient.bind(this)}>查询</Button>
+                        <Button style={{marginRight: 8}} onClick={this.props.store.exportJson2Excel(this.props.store.tasks,'xls')}>导出Excel</Button>
                     </form>
                 </div>
-                <ReactHTMLTableToExcel
-                    id="test-table-xls-button"
-                    className="download-table-xls-button"
-                    table="table-to-xls"
-                    filename="tablexls"
-                    sheet="tablexls"
-                    buttonText="Download as XLS"/>
                 <StatisticsTable id="table-to-xls" store={this.props.store}/>
             </div>
         )
     }
 }
+
+// this.props.store.exportJson2Excel(this.props.store.tasks,'xls')

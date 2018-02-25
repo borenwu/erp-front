@@ -6,24 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ae6bfa5-ece0-414e-ac52-3142e381ea2e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Sidebar/_nav.js" afterPath="$PROJECT_DIR$/src/components/Sidebar/_nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Full/Full.js" afterPath="$PROJECT_DIR$/src/containers/Full/Full.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes.js" afterPath="$PROJECT_DIR$/src/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configs/companyConfig.js" afterPath="$PROJECT_DIR$/src/configs/companyConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configs/ipConfig.js" afterPath="$PROJECT_DIR$/src/configs/ipConfig.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/FinanceStore.js" afterPath="$PROJECT_DIR$/src/stores/FinanceStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/Tasks/TaskModal.js" afterPath="$PROJECT_DIR$/src/views/Work/Tasks/TaskModal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/Tasks/TaskTable.js" afterPath="$PROJECT_DIR$/src/views/Work/Tasks/TaskTable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js" afterPath="$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js" afterPath="$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/views/Finance/Sales/Sales.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/views/Finance/Sales/SalesModal.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesModal.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/views/Finance/Sales/SalesTable.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesTable.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/views/Finance/Sales/TaskModal.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesRecord/TaskModal.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/views/Finance/Sales/package.json" afterPath="$PROJECT_DIR$/src/views/Finance/SalesRecord/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,14 +29,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SalesRecord.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js">
+      <file leaf-file-name="companyConfig.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/configs/companyConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="43" column="5" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,8 +42,8 @@
       <file leaf-file-name="SalesStatistics.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="64" column="49" lean-forward="false" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+            <state relative-caret-position="647">
+              <caret line="55" column="129" lean-forward="false" selection-start-line="55" selection-start-column="129" selection-end-line="55" selection-end-column="129" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -68,8 +54,8 @@
       <file leaf-file-name="FinanceStore.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stores/FinanceStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-567">
-              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="1730">
+              <caret line="266" column="30" lean-forward="false" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="30" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -77,23 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatisticsTable.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js">
+      <file leaf-file-name="ipConfig.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/configs/ipConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-73">
-              <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskStore.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stores/TaskStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+            <state relative-caret-position="57">
+              <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -138,13 +112,10 @@
         <option value="$PROJECT_DIR$/public/configs/ipconfig.json" />
         <option value="$PROJECT_DIR$/src/stores/ClientStore.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/AuthRoute.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/js/electron.js" />
         <option value="$PROJECT_DIR$/src/configs/messageConfig.js" />
-        <option value="$PROJECT_DIR$/src/configs/companyConfig.js" />
-        <option value="$PROJECT_DIR$/src/configs/ipConfig.js" />
         <option value="$PROJECT_DIR$/src/views/Finance/Sales/package.json" />
         <option value="$PROJECT_DIR$/src/views/Finance/Sales.js" />
         <option value="$PROJECT_DIR$/src/views/Finance/Sales/TaskTable.js" />
@@ -165,8 +136,11 @@
         <option value="$PROJECT_DIR$/src/views/Work/Tasks/TaskTable.js" />
         <option value="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js" />
         <option value="$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js" />
-        <option value="$PROJECT_DIR$/src/stores/FinanceStore.js" />
         <option value="$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js" />
+        <option value="$PROJECT_DIR$/src/configs/ipConfig.js" />
+        <option value="$PROJECT_DIR$/src/configs/companyConfig.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/stores/FinanceStore.js" />
         <option value="$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js" />
       </list>
     </option>
@@ -204,7 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -420,10 +393,11 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../erpapp-back" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sail/erpapp/erpapp-back" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -464,13 +438,6 @@
       <method />
     </configuration>
     <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
@@ -555,6 +522,7 @@
       <workItem from="1519265031343" duration="18120000" />
       <workItem from="1519349199093" duration="12670000" />
       <workItem from="1519437018079" duration="13385000" />
+      <workItem from="1519562268005" duration="4187000" />
     </task>
     <task id="LOCAL-00001" summary="very newbee">
       <created>1518951708149</created>
@@ -595,7 +563,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126152000" />
+    <option name="totallyTimeSpent" value="130339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -608,7 +576,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -733,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AuthRoute.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -775,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/configs/ipConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/ClientStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -801,18 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-          <folding>
-            <element signature="e#648#688#0" expanded="false" />
-            <element signature="e#844#872#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/configs/companyConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,9 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
           <caret line="111" column="55" lean-forward="false" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,9 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="79" column="13" lean-forward="true" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,9 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,9 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -920,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
           <caret line="120" column="18" lean-forward="true" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -952,7 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/TaskStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="171">
           <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
@@ -970,16 +898,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="74" column="25" lean-forward="false" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/FinanceStore.js">
+    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="874">
+          <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
           <folding>
-            <element signature="e#0#60#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -989,25 +916,49 @@
         <state relative-caret-position="536">
           <caret line="43" column="5" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js">
+    <entry file="file://$PROJECT_DIR$/src/configs/ipConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+        <state relative-caret-position="57">
+          <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/configs/companyConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/FinanceStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1730">
+          <caret line="266" column="30" lean-forward="false" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="30" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="64" column="49" lean-forward="false" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+        <state relative-caret-position="647">
+          <caret line="55" column="129" lean-forward="false" selection-start-line="55" selection-start-column="129" selection-end-line="55" selection-end-column="129" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
