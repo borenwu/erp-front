@@ -4,24 +4,60 @@ import moment from 'moment';
 import * as messageConfig from '../../../configs/messageConfig'
 import * as companyConfig from '../../../configs/companyConfig'
 import {observer} from 'mobx-react';
+import {DatePicker,Button} from 'antd';
 
 import DevTools from 'mobx-react-devtools';
+import jQuery from '../../../jquery-plugin/jquery.table2excel'
 
+const {RangePicker} = DatePicker;
 
 @observer
 export default class StatisticsTable extends React.Component {
+
+    state = {
+        dateRange : []
+    }
+
     constructor(props) {
         super(props)
     }
 
-    onDelete(record) {
-        this.props.store.deleteTaskById(record.id)
+    onChange(date, dateString) {
+        this.setState({
+            dateRange:dateString
+        })
     }
 
-    showSalesModal(record) {
-        this.props.store.showSalesModal(record)
+    searchTasksByClient(){
+        let company_id = companyConfig.companyInfo.company_id
+        let client_name = this.refs.client_name.value
+        let startDate = this.state.dateRange[0] || moment().format('YYYY-MM-DD')
+        let endDate = this.state.dateRange[1] || moment().format('YYYY-MM-DD')
+        const info = {
+            company_id: company_id,
+            client_name:client_name,
+            start_date: startDate,
+            end_date: endDate
+        }
+        this.props.store.listTasksByClient(info)
     }
 
+    componentDidMount(){
+        this.props.store.cleanTasks()
+        this.props.store.fetchClients(companyConfig.companyInfo.company_id)
+    }
+
+    exportExcel(){
+        jQuery("#example").table2excel({
+            // 不被导出的表格行的CSS class类
+            exclude: ".noExl",
+            // 导出的Excel文档的名称，（没看到作用）
+            name: "Excel Document Name",
+            // Excel文件的名称
+            filename: "myExcelTable.xls",
+            fileext: ".xls"
+        });
+    }
 
     render() {
         const data = this.props.store.tasks.map((t, i) => {
@@ -83,25 +119,22 @@ export default class StatisticsTable extends React.Component {
                 dataIndex: 'checker',
                 key: 'checker',
             },
-            // {
-            //     title: '操作',
-            //     key: 'action',
-            //     render: (text, record) => (
-            //         <span>
-            //             操作 一
-            //
-            //             {/*<Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>*/}
-            //                 {/*<a>删除</a>*/}
-            //             {/*</Popconfirm>*/}
-            //             <Divider type="vertical"/>
-            //             <button type="button" className="btn btn-primary" onClick={this.showSalesModal.bind(this,record)} disabled={record.saleOpDisable}>录入单价</button>
-            //         </span>
-            //     ),
-            // }
         ];
         return (
             <div>
-                <Table columns={columns} dataSource={data}/>
+                <div className="table-operations">
+                    <form className="form-inline">
+                        <label style={{marginRight: 8}}>选择客户</label>
+                        <select ref="client_name" style={{marginRight: 8,width:200}} className="form-control">
+                            {this.props.store.clients.map((c,i)=>  <option key={i}>{c.client_name}</option>)}
+                        </select>
+                        <label style={{marginRight: 8}}>检索日期</label>
+                        <RangePicker style={{marginRight: 8}} placeholder={['开始日期', '结束日期']} onChange={this.onChange.bind(this)}/>
+                        <Button style={{marginRight: 8}} onClick={this.searchTasksByClient.bind(this)}>查询</Button>
+                        <Button style={{marginRight: 8}} onClick={this.exportExcel.bind(this)} >导出Excel</Button>
+                    </form>
+                </div>
+                <Table id="example" columns={columns} dataSource={data}/>
                 {/*<DevTools/>*/}
             </div>
         )

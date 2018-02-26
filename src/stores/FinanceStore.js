@@ -38,6 +38,9 @@ export default class FinanceStore{
         this.computeSale()
     }
 
+    @action cleanTasks(){
+        this.tasks = []
+    }
 
     @action fetchClients(company_id){
         let companyInfo = {
