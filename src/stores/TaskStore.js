@@ -44,7 +44,7 @@ export default class TaskStore {
     @action listTasks(info) {
         Axios.post(tasksUrl, info)
             .then(response => {
-                if (response.data.status == 201) {
+                if (response.data.status === 201) {
                     message.warning('获取任务列表为空');
                 }
                 else {
@@ -60,7 +60,7 @@ export default class TaskStore {
     @action deleteTaskById(taskId) {
         Axios.delete(`${taskUrl}/${taskId}`)
             .then(response => {
-                if (response.data.status == 200) {
+                if (response.data.status === 200) {
                     this.tasks = this.tasks.filter(item => item.id !== taskId);
                     message.success('删除成功')
                 }

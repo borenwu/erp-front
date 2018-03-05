@@ -69,5 +69,32 @@ export default {
             ]
         },
 
+        {
+            name: '仪表板',
+            url: '/dash',
+            icon: 'icon-layers',
+            children: [
+                {
+                    name: '客户仪表板',
+                    url: '/dash/AccountReceivableDash',
+                    icon: 'icon-grid',
+                },
+            ]
+        },
+
+        {
+            name: '设置',
+            url: '/setting',
+            icon: 'icon-compass',
+            children: [
+                {
+                    name: '基础设置',
+                    url: '/setting/Configs',
+                    icon: 'icon-eyeglass',
+                },
+            ]
+        },
+
+
     ]
 };

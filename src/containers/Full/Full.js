@@ -19,16 +19,21 @@ import DemoTest from '../../views/Icons/DemoTest'
 import Tasks from '../../views/Work/Tasks/'
 import SalesRecord from '../../views/Finance/SalesRecord'
 import SalesStatistics from '../../views/Finance/SalesStatistics'
+import AccountReceivableDash from '../../views/Dash/AccountReceivableDash'
+import Config from '../../views/Settings/Configs'
 
 
 import CompanyStore from '../../stores/CompanyStore'
 import TaskStore from '../../stores/TaskStore'
 import FinanceStore from '../../stores/FinanceStore'
+import ConfigStore from '../../stores/ConfigStore'
+import Configs from "../../views/Settings/Configs/Configs";
 
 
 const taskStore = new TaskStore()
 const companyStore = new CompanyStore()
 const financeStore = new FinanceStore()
+const configStore = new ConfigStore()
 
 class Full extends Component {
     render() {
@@ -45,6 +50,8 @@ class Full extends Component {
                                 <Route path="/work/tasks" name="Tasks" component={()=><Tasks store={taskStore}/>}/>
                                 <Route path="/finance/SalesRecord" name="SalesRecord" component={()=><SalesRecord store={financeStore}/>}/>
                                 <Route path="/finance/SalesStatistics" name="SalesStatistics" component={()=><SalesStatistics store={financeStore}/>}/>
+                                <Route path="/dash/AccountReceivableDash" name="AccountReceivableDash" component={()=><AccountReceivableDash store={financeStore}/>}/>
+                                <Route path="/setting/Configs" name="Configs" component={()=><Configs store={configStore}/>}/>
                                 <Redirect from="/" to="/dashboard"/>
                             </Switch>
                         </Container>
