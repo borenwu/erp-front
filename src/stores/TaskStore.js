@@ -26,7 +26,12 @@ export default class TaskStore {
         }
         Axios.post(clientsUrl,companyInfo)
             .then(response=>{
-                this.clients = response.data
+                if (response.data.status === 201) {
+                    message.warning('获取客户列表为空');
+                }
+                else {
+                    this.clients = response.data
+                }
             })
     }
 

@@ -28,6 +28,11 @@ export default {
                     url: '/work/tasks',
                     icon: 'icon-screen-desktop'
                 },
+                {
+                    name: '领料退库',
+                    url: '/work/itemops',
+                    icon: 'icon-drawer'
+                },
             ]
         },
         {
@@ -71,12 +76,12 @@ export default {
 
         {
             name: '仪表板',
-            url: '/dash',
+            url: '/views',
             icon: 'icon-layers',
             children: [
                 {
                     name: '客户仪表板',
-                    url: '/dash/AccountReceivableDash',
+                    url: '/views/AccountReceivableDash',
                     icon: 'icon-grid',
                 },
             ]
