@@ -11,6 +11,8 @@ const supplierUrl = `${ipConfig.rootUrl}/supplier`
 const suppliersUrl = `${ipConfig.rootUrl}/suppliers`
 const warehouseItemUrl = `${ipConfig.rootUrl}/warehouse/item`
 const warehouseItemsUrl = `${ipConfig.rootUrl}/warehouse/items`
+const userUrl = `${ipConfig.rootUrl}/user`
+const usersUrl = `${ipConfig.rootUrl}/users`
 
 export default class ConfigStore{
 
@@ -20,6 +22,8 @@ export default class ConfigStore{
     @observable supplierById = {}
     @observable warehouseItems = []
     @observable warehouseItemById = {}
+    @observable users = []
+    @observable userById = {}
 
     @observable clientModalVisible = false
     @observable clientUpdateModalVisible = false
@@ -27,6 +31,8 @@ export default class ConfigStore{
     @observable supplierUpdateModalVisible = false
     @observable warehouseModalVisible = false
     @observable warehouseUpdateModalVisible = false
+    @observable userModalVisible = false
+    @observable userUpdateModalVisible = false
 
     ///////////////////////////////////////// client///////////////////////////////////////////////
     @action fetchClients(company_id){
@@ -137,6 +143,64 @@ export default class ConfigStore{
             });
     }
 
+
+    //////////////////////////////users//////////////////////////////////
+    @action fetchUsers(company_id){
+        let companyInfo = {
+            company_id:company_id
+        }
+        Axios.post(usersUrl,companyInfo)
+            .then(response=>{
+                if (response.data.status === 201) {
+                    message.warning('获取用户列表为空');
+                }
+                else {
+                    this.users = response.data
+                }
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    @action createUser(userInfo){
+        Axios.post(userUrl,userInfo)
+            .then(response => {
+                this.users.push(response.data)
+                message.success('创建成功')
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    @action updateUser(userInfo){
+        Axios.put(userUrl, userInfo)
+            .then(response => {
+                let updateUser = response.data
+                let index = this.users.findIndex((user) => user.id === updateUser.id)
+                this.users[index] = updateUser
+                message.success('修改成功')
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    @action deleteUserById(userId) {
+        Axios.delete(`${userUrl}/${userId}`)
+            .then(response => {
+                console.log(response)
+                if (response.data.status === 200) {
+                    this.users = this.users.filter(user => user.id !== userId);
+                    message.success('删除成功')
+                }
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
     //////////////////////////////warehouse items//////////////////////////////////
     @action fetchWarehouseItems(company_id){
         let companyInfo = {
@@ -192,7 +256,6 @@ export default class ConfigStore{
                 throw(error);
             });
     }
-
 
     /////////////////////////client modal/////////////////////////////////
     @action showClientModal() {
@@ -254,6 +317,26 @@ export default class ConfigStore{
     @action closeWarehouseUpdateModal() {
         this.warehouseItemById = {}
         this.warehouseUpdateModalVisible = false
+    }
+
+    /////////////////////// user modal////////////////////////////////////////////
+    @action showUserModal(){
+        this.userModalVisible = true
+    }
+
+    @action closeUserModal(){
+        this.userModalVisible = false
+    }
+
+    @action showUserUpdateModal(record) {
+        this.userById = this.users[record.key]
+        this.userUpdateModalVisible = true
+    }
+
+
+    @action closeUserUpdateModal() {
+        this.userById = {}
+        this.userUpdateModalVisible = false
     }
 
 }
