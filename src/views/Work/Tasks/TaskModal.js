@@ -1,5 +1,5 @@
 import React from 'react'
-import {Modal,Button,DatePicker} from 'antd'
+import {Modal,Button,DatePicker,Input} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 import * as companyConfig from '../../../configs/companyConfig'
@@ -131,7 +131,7 @@ export default class TaskModal extends React.Component {
 
                     <div className="form-group">
                         <label htmlFor="taskMaker">制作人</label>
-                        <input type="text" ref="maker" className="form-control" id="taskMaker"  placeholder="制作人"/>
+                        <input type="text" ref="maker" className="form-control" id="taskMaker"  readOnly={true} defaultValue={this.props.userName}/>
                     </div>
                 </form>
             </Modal>

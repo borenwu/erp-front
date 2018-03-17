@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import {Badge, Nav, NavItem, NavLink as RsNavLink} from 'reactstrap';
 import classNames from 'classnames';
-import nav from './_nav';
 import SidebarFooter from './../SidebarFooter';
 import SidebarForm from './../SidebarForm';
 import SidebarHeader from './../SidebarHeader';
@@ -32,6 +31,106 @@ class Sidebar extends Component {
     const props = this.props;
     const activeRoute = this.activeRoute;
     const handleClick = this.handleClick;
+
+    const items = [
+          {
+              name: '主 页',
+              url: '/dashboard',
+              icon: 'icon-speedometer',
+              // badge: {
+              //   variant: 'info',
+              //   text: 'NEW'
+              // }
+          },
+          {
+              title: true,
+              name: '工 作',
+              wrapper: {            // optional wrapper object
+                  element: '',        // required valid HTML5 element tag
+                  attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
+              },
+              class: ''             // optional class names space delimited list for title item ex: "text-center"
+          },
+          {
+              name: '生产',
+              url: '/work',
+              icon: 'icon-star',
+              disabled:this.props.auth.work,
+              children: [
+                  {
+                      name: '任务',
+                      url: '/work/tasks',
+                      icon: 'icon-screen-desktop'
+                  },
+                  {
+                      name: '领料退库',
+                      url: '/work/itemops',
+                      icon: 'icon-drawer'
+                  },
+              ]
+          },
+          {
+              name: '财务',
+              url: '/finance',
+              icon: 'icon-chart',
+              disabled:this.props.auth.finance,
+              children: [
+                  {
+                      name:'销售日报表',
+                      url:'/finance/SalesRecord',
+                      icon: 'icon-notebook'
+                  },
+                  {
+                      name:'销售统计',
+                      url:'/finance/SalesStatistics',
+                      icon: 'icon-screen-tablet'
+                  }
+              ]
+          },
+          {
+              name: '仓储',
+              url: '/warehouse',
+              icon: 'icon-star',
+              disabled:this.props.auth.warehouse,
+              children: [
+                  {
+                      name: '领料退库审核',
+                      url: '/warehouse/ItemCheck',
+                      icon: 'icon-map',
+                  },
+              ]
+          },
+
+          {
+              name: '仪表板',
+              url: '/views',
+              icon: 'icon-layers',
+              disabled:this.props.auth.views,
+              children: [
+                  {
+                      name: '客户仪表板',
+                      url: '/views/AccountReceivableDash',
+                      icon: 'icon-grid',
+                  },
+              ],
+          },
+
+          {
+              name: '设置',
+              url: '/setting',
+              icon: 'icon-compass',
+              disabled:this.props.auth.setting,
+              children: [
+                  {
+                      name: '基础设置',
+                      url: '/setting/Configs',
+                      icon: 'icon-eyeglass',
+                  },
+              ]
+          },
+
+
+      ]
 
     // badge addon to NavItem
     const badge = (badge) => {
@@ -90,7 +189,7 @@ class Sidebar extends Component {
     const navDropdown = (item, key) => {
       return (
         <li key={key} className={activeRoute(item.url, props)}>
-          <a className="nav-link nav-dropdown-toggle" href="#" onClick={handleClick.bind(this)}><i className={item.icon}></i>{item.name}</a>
+          <a className="nav-link nav-dropdown-toggle" disabled={item.disabled} href="#" onClick={handleClick.bind(this)}><i className={item.icon}></i>{item.name}</a>
           <ul className="nav-dropdown-items">
             {navList(item.children)}
           </ul>
@@ -121,7 +220,7 @@ class Sidebar extends Component {
         <SidebarForm/>
         <nav className="sidebar-nav">
           <Nav>
-            {navList(nav.items)}
+            {navList(items)}
           </Nav>
         </nav>
         <SidebarFooter/>

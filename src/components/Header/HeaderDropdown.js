@@ -1,60 +1,63 @@
 import React, {Component} from 'react';
+import {Avatar} from 'antd';
 import {
-  Badge,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Dropdown
+    Badge,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle,
+    Dropdown
 } from 'reactstrap';
+import {observer} from 'mobx-react';
+import * as companyConfig from '../../configs/companyConfig'
 
+@observer
 class HeaderDropdown extends Component {
 
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
-  }
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            dropdownOpen: false
+        };
+    }
 
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    });
-  }
+    toggle() {
+        this.setState({
+            dropdownOpen: !this.state.dropdownOpen
+        });
+    }
 
-  dropAccnt() {
-    return (
-      <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle nav>
-          <img src={'img/avatars/6.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com"/>
-        </DropdownToggle>
-        <DropdownMenu right>
-          <DropdownItem header tag="div" className="text-center"><strong>Account</strong></DropdownItem>
-          <DropdownItem><i className="fa fa-bell-o"></i> Updates<Badge color="info">42</Badge></DropdownItem>
-          <DropdownItem><i className="fa fa-envelope-o"></i> Messages<Badge color="success">42</Badge></DropdownItem>
-          <DropdownItem><i className="fa fa-tasks"></i> Tasks<Badge color="danger">42</Badge></DropdownItem>
-          <DropdownItem><i className="fa fa-comments"></i> Comments<Badge color="warning">42</Badge></DropdownItem>
-          <DropdownItem header tag="div" className="text-center"><strong>Settings</strong></DropdownItem>
-          <DropdownItem><i className="fa fa-user"></i> Profile</DropdownItem>
-          <DropdownItem><i className="fa fa-wrench"></i> Settings</DropdownItem>
-          <DropdownItem><i className="fa fa-usd"></i> Payments<Badge color="secondary">42</Badge></DropdownItem>
-          <DropdownItem><i className="fa fa-file"></i> Projects<Badge color="primary">42</Badge></DropdownItem>
-          <DropdownItem divider/>
-          <DropdownItem><i className="fa fa-shield"></i> Lock Account</DropdownItem>
-          <DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    );
-  }
+    logout() {
+        const company_id = companyConfig.companyInfo.company_id
+        const user_name = this.props.userName
+        const userInfo = {
+            company_id:company_id,
+            user_name:user_name
+        }
+        this.props.store.userLogout(userInfo)
+    }
 
-  render() {
-    const {...attributes} = this.props;
-    return (
-      this.dropAccnt()
-    );
-  }
+    dropAccnt() {
+        return (
+            <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                <DropdownToggle nav>
+                    <Avatar style={{backgroundColor: '#87d068', marginRight: 20}} icon="user"/>
+                    <label htmlFor="" style={{marginRight: 48}}>{this.props.userName}</label>
+                </DropdownToggle>
+                <DropdownMenu right>
+                    <DropdownItem onClick={this.logout.bind(this)}><i className="fa fa-lock"></i> 登出</DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
+        );
+    }
+
+    render() {
+        const {...attributes} = this.props;
+        return (
+            this.dropAccnt()
+        );
+    }
 }
 
 export default HeaderDropdown;

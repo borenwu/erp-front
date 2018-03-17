@@ -9,7 +9,7 @@ import DevTools from 'mobx-react-devtools';
 
 
 @observer
-export default class WarehouseopTable extends React.Component{
+export default class WarehouseItemCheckTable extends React.Component{
     constructor(props){
         super(props)
     }
@@ -18,8 +18,12 @@ export default class WarehouseopTable extends React.Component{
         this.props.store.deleteItemopById(record.id)
     }
 
-    showItemopUpdateModal(record) {
-        this.props.store.showItemopUpdateModal(record)
+    onCheck(record){
+        this.props.store.checkItem(record)
+    }
+
+    showItemCheckUpdateModal(record) {
+        this.props.store.showItemCheckUpdateModal(record)
     }
 
 
@@ -113,12 +117,17 @@ export default class WarehouseopTable extends React.Component{
                     <span>
                         操作 一
                         <Divider type="vertical"/>
-
                         <Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>
                             <a>删除</a>
                         </Popconfirm>
+
                         <Divider type="vertical"/>
-                        <a onClick={this.showItemopUpdateModal.bind(this,record)}>修改</a>
+                        <a onClick={this.showItemCheckUpdateModal.bind(this,record)}>修改</a>
+
+                        <Divider type="vertical"/>
+                        <Popconfirm title="审核通过，录入库存?" onConfirm={this.onCheck.bind(this,record)}>
+                            <a>审核通过</a>
+                        </Popconfirm>
                     </span>
                 ),
             }];

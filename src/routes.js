@@ -10,11 +10,14 @@ const routes = {
     '/finance/SalesRecord':'销售记录',
     '/finance/SalesStatistics':'销售统计',
 
+    '/warehouse':'仓储',
+    '/warehouse/ItemCheck':'领料退库审核',
+
     '/views':'仪表板',
     '/views/AccountReceivableDash':'客户仪表板',
 
     '/setting':'设置',
-    '/setting/Configs':'基础设置'
+    '/setting/Configs':'基础设置',
 
 };
 export default routes;

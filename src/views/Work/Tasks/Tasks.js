@@ -73,10 +73,12 @@ export default class Tasks extends Component {
                     <Button onClick={this.showTodayTasks.bind(this)}>查询今日任务</Button>
                     <Button onClick={this.showModal.bind(this)}>创建</Button>
                     <TaskModal
+                        {...this.props}
                         store={this.props.store}
                         title="Basic Modal"
                         visible={this.props.store.modalVisible}/>
                     <UpdateModal
+                        {...this.props}
                         store={this.props.store}
                         title="Update Modal"
                         visible={this.props.store.updateModalVisible}

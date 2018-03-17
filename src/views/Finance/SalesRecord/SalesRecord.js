@@ -64,6 +64,7 @@ export default class SalesRecord extends Component{
                     <Button onClick={this.showTodayTasks.bind(this)}>查询今日任务</Button>
 
                     <SalesModal
+                        {...this.props}
                         store={this.props.store}
                         title="Sales Modal"
                         visible={this.props.store.salesModalVisible}

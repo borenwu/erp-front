@@ -25,7 +25,6 @@ export default class UserTable extends Component{
                 key: i,
                 id:u.id,
                 user_name: u.user_name,
-                password: u.password,
                 level: u.level,
             }
         })
@@ -35,11 +34,6 @@ export default class UserTable extends Component{
                 title: '用户名',
                 dataIndex: 'user_name',
                 key: 'user_name',
-            },
-            {
-                title: '密码',
-                dataIndex: 'password',
-                key: 'password',
             },
             {
                 title: '权限',

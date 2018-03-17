@@ -1,24 +1,16 @@
 import React, {Component} from 'react';
-import {Container, Row, Col, CardGroup, Card, CardBody, Button, Input, InputGroup, InputGroupAddon} from 'reactstrap';
+import { Switch,Divider } from 'antd';
 import {observer} from 'mobx-react';
 import * as companyConfig from '../../../configs/companyConfig'
 
 @observer
-class Login extends Component {
+class Init extends Component {
     constructor() {
         super();
     }
 
-    handleIn(){
-        const company_id = companyConfig.companyInfo.company_id
-        const user_name = this.refs.user_name.value;
-        const password = this.refs.password.value;
-        let userInfo = {
-            company_id:company_id,
-            user_name:user_name,
-            password:password
-        }
-        this.props.store.userLogin(userInfo)
+    handleInit(){
+        console.log('init')
     }
 
     render() {
@@ -30,22 +22,19 @@ class Login extends Component {
                             <div className="card-group mb-0">
                                 <div className="card p-4">
                                     <div className="card-block">
-                                        <h1>登录窗口</h1>
-                                        <p className="text-muted">使用账户登录</p>
+                                        <h1>激活公司加密狗</h1>
+                                        <p className="text-muted">请输入公司加密狗信息</p>
                                         <div className="input-group mb-3">
                                             <span className="input-group-addon"><i className="icon-user"></i></span>
-                                            <input ref="user_name" type="text" className="form-control" placeholder="用户名"/>
+                                            <input ref="company_name" type="text" className="form-control" placeholder="公司名"/>
                                         </div>
                                         <div className="input-group mb-4">
                                             <span className="input-group-addon"><i className="icon-lock"></i></span>
-                                            <input ref="password" type="password" className="form-control" placeholder="密码"/>
+                                            <input ref="secret" type="password" className="form-control" placeholder="密钥"/>
                                         </div>
                                         <div className="row">
                                             <div className="col-6">
-                                                <button type="button" className="btn btn-primary px-4" onClick={this.handleIn.bind(this)}>登陆</button>
-                                            </div>
-                                            <div className="col-6 text-right">
-                                                <button type="button" className="btn btn-link px-0">忘记密码?</button>
+                                                <button type="button" className="btn btn-primary px-4" onClick={this.handleInit.bind(this)}>激活</button>
                                             </div>
                                         </div>
                                     </div>
@@ -53,9 +42,13 @@ class Login extends Component {
                                 <div className="card card-inverse card-primary py-5 d-md-down-none"
                                      style={{width: 44 + '%'}}>
                                     <div className="card-block text-center">
+                                        <h3>选择网络模式</h3>
                                         <div>
-                                            <p>印务通云计算版, 采用云计算等先进技术, 无论是网页浏览器,桌面客户端,
-                                                甚至是手机平板电脑都能使用.</p>
+                                            <div className="input-group">
+                                                <label htmlFor="">网络切换</label>
+                                                <Divider type="vertical"/>
+                                                <Switch defaultChecked checkedChildren="云模式" unCheckedChildren="内网模式"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -68,4 +61,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Init;

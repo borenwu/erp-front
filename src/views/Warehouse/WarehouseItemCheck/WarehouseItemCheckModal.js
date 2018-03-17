@@ -7,7 +7,7 @@ import * as companyConfig from '../../../configs/companyConfig'
 const { Option, OptGroup } = Select;
 
 @observer
-export default class WarehouseOpModal extends React.Component {
+export default class WarehouseItemCheckModal extends React.Component {
     state = {
         selectItemId:'',
         itemSelected:{},
@@ -56,12 +56,12 @@ export default class WarehouseOpModal extends React.Component {
         }
         console.log(itemop)
         this.props.store.createItemop(itemop)
-        this.props.store.closeItemopModal()
+        this.props.store.closeItemCheckModal()
     }
     handleCancel(e){
         console.log(e);
         this.setState({itemSelected:{}})
-        this.props.store.closeItemopModal()
+        this.props.store.closeItemCheckModal()
     }
 
     componentDidMount(){
@@ -121,7 +121,7 @@ export default class WarehouseOpModal extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="itemMaker">领料记录人</label>
-                        <input ref="maker" type="text" className="form-control" id="itemMaker" readOnly={true} defaultValue={this.props.userName}/>
+                        <input ref="maker" type="text" className="form-control" id="itemMaker" defaultValue={this.props.userName} readOnly={true}/>
                     </div>
                 </form>
             </Modal>

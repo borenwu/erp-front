@@ -121,7 +121,7 @@ export default class UpdateModal extends React.Component{
 
                         <div className="form-group">
                             <label htmlFor="taskMaker">制作人</label>
-                            <input type="text" ref="maker" className="form-control" id="taskMaker"  defaultValue={this.props.store.taskById.maker}/>
+                            <input type="text" ref="maker" className="form-control" readOnly={true} id="taskMaker"  defaultValue={this.props.userName}/>
                         </div>
                     </form>
                 </Modal>

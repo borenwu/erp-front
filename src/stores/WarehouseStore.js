@@ -22,6 +22,8 @@ export default class WarehouseStore{
 
     @observable itemopModalVisible = false
     @observable itemopUpdateModalVisible = false
+    @observable itemCheckModalVisible = false
+    @observable itemCheckUpdateModalVisible = false
 
 
     @action fetchItems(company_id){
@@ -108,6 +110,11 @@ export default class WarehouseStore{
             });
     }
 
+    @action checkItem(itemInfo){
+        console.log('check')
+    }
+
+    /////////////////////////////////////////////////////////////////
     @action showItemopModal() {
         this.itemopModalVisible = true
     }
@@ -125,6 +132,26 @@ export default class WarehouseStore{
     @action closeItemopUpdateModal() {
         this.warehouseItemopById = {}
         this.itemopUpdateModalVisible = false
+    }
+    ///////////////////////////////////////////////////////////////////
+
+    @action showItemCheckModal() {
+        this.itemCheckModalVisible = true
+    }
+
+    @action closeItemCheckModal() {
+        this.itemCheckModalVisible = false
+    }
+
+    @action showItemCheckUpdateModal(record) {
+        this.warehouseItemopById = this.warehouseItemops[record.key]
+        this.itemCheckUpdateModalVisible = true
+    }
+
+
+    @action closeItemCheckUpdateModal() {
+        this.warehouseItemopById = {}
+        this.itemCheckUpdateModalVisible = false
     }
 
 

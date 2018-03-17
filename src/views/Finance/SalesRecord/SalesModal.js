@@ -112,7 +112,7 @@ export default class SaleModal extends React.Component{
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskChecker">审核人</label>
-                            <input type="text" ref="checker" className="form-control" id="taskChecker"  defaultValue={this.props.store.taskById.checker}/>
+                            <input type="text" ref="checker" className="form-control" id="taskChecker" readOnly={true} defaultValue={this.props.userName}/>
                         </div>
                     </form>
                 </Modal>

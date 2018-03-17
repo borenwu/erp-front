@@ -1,0 +1,6 @@
+{
+  "name": "WarehouseItemCheck",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./WarehouseItemCheck.js"
+}

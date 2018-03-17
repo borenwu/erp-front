@@ -8,7 +8,7 @@ import * as companyConfig from '../../../configs/companyConfig'
 const { Option, OptGroup } = Select;
 
 @observer
-export default class WarehouseOpUpdateModal extends React.Component{
+export default class WarehouseItemCheckUpdateModal extends React.Component{
     state = {
         dueDate:''
     }
@@ -43,11 +43,11 @@ export default class WarehouseOpUpdateModal extends React.Component{
         }
         this.props.store.updateItemop(opInfo)
 
-        this.props.store.closeItemopUpdateModal()
+        this.props.store.closeItemCheckUpdateModal()
     }
 
     handleCancel(){
-        this.props.store.closeItemopUpdateModal()
+        this.props.store.closeItemCheckUpdateModal()
     }
 
     render(){
