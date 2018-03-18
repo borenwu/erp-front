@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Redirect, Route} from 'react-router-dom';
 
+// init ip config
+const local = window.localStorage
+local.setItem('ipConfig', 'http://192.168.0.100:1337');
 
 //Mock of an Auth method, can be replaced with an async call to the backend. Must return true or false
 const isAuthenticated = () => {
@@ -33,6 +36,7 @@ const INIT_ROOT = '/init'
 const AuthRoute = ({component, ...props}) => {
     const {isPrivate} = component;
     if(isAuthenticated() == 'init'){
+        console.log('need init')
         return <Redirect to={INIT_ROOT}/>;
     }
     else{

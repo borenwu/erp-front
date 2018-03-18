@@ -5,7 +5,7 @@ import './SupplierSetting.css'
 import SupplierTable from './SupplierTable'
 import SupplierModal from './SupplierModal'
 import SupplierUpdateModal from './SupplierUpdateModal'
-import * as companyConfig from '../../../../configs/companyConfig'
+// import * as companyConfig from '../../../../configs/companyConfig'
 
 const Search = Input.Search;
 
@@ -25,7 +25,7 @@ export default class SupplierSetting extends Component{
     }
 
     componentDidMount(){
-        this.props.store.fetchSuppliers(companyConfig.companyInfo.company_id)
+        this.props.store.fetchSuppliers(this.props.store.company_id)
     }
 
     render() {

@@ -2,11 +2,8 @@ import {observable, action, autorun, useStrict} from 'mobx';
 import {message} from 'antd'
 import Axios from 'axios'
 import * as ipConfig from '../configs/ipConfig'
-import * as companyConfig from '../configs/companyConfig'
 import * as messageConfig from '../configs/messageConfig'
 import history from '../history';
-
-
 
 message.config(messageConfig.messageConf);
 
@@ -14,6 +11,7 @@ const userUrl = `${ipConfig.rootUrl}/user`
 
 export default class UserStore{
     @observable currentUser = {}
+    @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
     @action userLogin(userInfo){
         Axios.post(`${userUrl}/login`,userInfo)

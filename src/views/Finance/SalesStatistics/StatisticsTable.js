@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Table, Popconfirm, Divider} from 'antd';
 import moment from 'moment';
 import * as messageConfig from '../../../configs/messageConfig'
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 import {observer} from 'mobx-react';
 import {DatePicker,Button} from 'antd';
 
@@ -29,7 +29,7 @@ export default class StatisticsTable extends React.Component {
     }
 
     searchTasksByClient(){
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let client_name = this.refs.client_name.value
         let startDate = this.state.dateRange[0] || moment().format('YYYY-MM-DD')
         let endDate = this.state.dateRange[1] || moment().format('YYYY-MM-DD')
@@ -44,7 +44,7 @@ export default class StatisticsTable extends React.Component {
 
     componentDidMount(){
         this.props.store.cleanTasks()
-        this.props.store.fetchClients(companyConfig.companyInfo.company_id)
+        this.props.store.fetchClients(this.props.store.company_id)
     }
 
     exportExcel(){

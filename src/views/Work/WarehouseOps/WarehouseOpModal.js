@@ -2,7 +2,7 @@ import React from 'react'
 import {Modal,Select,Button,DatePicker,Input,InputNumber} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 
 const { Option, OptGroup } = Select;
 
@@ -26,7 +26,7 @@ export default class WarehouseOpModal extends React.Component {
     }
 
     handleOk(){
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let item_id = this.state.itemSelected.id
         let op_date = moment().format('YYYY-MM-DD')
         // let item_name = this.refs.item_name.value
@@ -65,7 +65,7 @@ export default class WarehouseOpModal extends React.Component {
     }
 
     componentDidMount(){
-        this.props.store.fetchItems(companyConfig.companyInfo.company_id)
+        this.props.store.fetchItems(this.props.store.company_id)
     }
 
     render() {

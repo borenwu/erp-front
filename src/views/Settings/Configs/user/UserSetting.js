@@ -5,7 +5,7 @@ import './UserSetting.css'
 import UserTable from './UserTable'
 import UserModal from './UserModal'
 import UserUpdateModal from './UserUpdateModal'
-import * as companyConfig from '../../../../configs/companyConfig'
+// import * as companyConfig from '../../../../configs/companyConfig'
 
 const Search = Input.Search;
 
@@ -25,7 +25,7 @@ export default class UserSetting extends Component{
     }
 
     componentDidMount(){
-        this.props.store.fetchUsers(companyConfig.companyInfo.company_id)
+        this.props.store.fetchUsers(this.props.store.company_id)
     }
 
     render() {

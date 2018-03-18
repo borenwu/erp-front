@@ -10,6 +10,7 @@ export default class ClientStore {
 
     @observable clients = []
     @observable clientById = {}
+    @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
     @action createClient(client) {
         Axios.post(clientUrl, client)

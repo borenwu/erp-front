@@ -5,7 +5,7 @@ import './WarehouseSetting.css'
 import WarehouseTable from './WarehouseTable'
 import WarehouseModal from './WarehouseModal'
 import WarehouseUpdateModal from './WarehouseUpdateModal'
-import * as companyConfig from '../../../../configs/companyConfig'
+// import * as companyConfig from '../../../../configs/companyConfig'
 
 const Search = Input.Search;
 
@@ -25,8 +25,8 @@ export default class WarehouseSetting extends Component{
     }
 
     componentDidMount(){
-        this.props.store.fetchWarehouseItems(companyConfig.companyInfo.company_id)
-        this.props.store.fetchSuppliers(companyConfig.companyInfo.company_id)
+        this.props.store.fetchWarehouseItems(this.props.store.company_id)
+        this.props.store.fetchSuppliers(this.props.store.company_id)
     }
 
     render() {

@@ -6,289 +6,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ae6bfa5-ece0-414e-ac52-3142e381ea2e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/history.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stores/UserStore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Pages/Init/Cloud.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Pages/Init/Init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Pages/Init/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckTable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckUpdateModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/package.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/avatars/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/avatars/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/avatars/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/avatars/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/avatars/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/avatars/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/avatars/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/avatars/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/ASEAN.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Afghanistan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/African Union.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Albania.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Algeria.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/American Samoa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Andorra.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Angola.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Anguilla.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Antarctica.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Antigua &amp; Barbuda.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Arab League.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Argentina.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Armenia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Aruba.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Australia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Austria.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Azerbaijan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Bahamas.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Bahrain.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Bangladesh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Barbados.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Belarus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Belgium.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Belize.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Benin.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Bermuda.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Bhutan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Bolivia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Bosnia &amp; Herzegovina.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Botswana.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Brazil.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Brunei.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Bulgaria.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Burkina Faso.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Burundi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/CARICOM.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/CIS.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Cambodja.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Cameroon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Canada.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Cape Verde.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Cayman Islands.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Central African Republic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Chad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Chile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/China.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Colombia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Commonwealth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Comoros.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Congo-Brazzaville.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Congo-Kinshasa(Zaire).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Cook Islands.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Costa Rica.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Cote d'Ivoire.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Croatia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Cuba.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Cyprus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Czech Republic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Denmark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Djibouti.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Dominica.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Dominican Republic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Ecuador.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Egypt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/El Salvador.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/England.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Equatorial Guinea.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Eritrea.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Estonia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Ethiopia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/European Union.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Faroes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Fiji.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Finland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/France.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Gabon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Gambia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Georgia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Germany.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Ghana.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Gibraltar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Greece.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Greenland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Grenada.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Guadeloupe.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Guam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Guatemala.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Guernsey.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Guinea-Bissau.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Guinea.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Guyana.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Haiti.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Honduras.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Hong Kong.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Hungary.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Iceland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/India.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Indonezia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Iran.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Iraq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Ireland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Islamic Conference.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Isle of Man.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Israel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Italy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Jamaica.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Japan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Jersey.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Jordan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Kazakhstan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Kenya.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Kiribati.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Kosovo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Kuwait.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Kyrgyzstan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Laos.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Latvia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Lebanon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Lesotho.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Liberia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Libya.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Liechtenshein.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Lithuania.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Luxembourg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Macao.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Macedonia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Madagascar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Malawi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Malaysia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Maldives.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Mali.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Malta.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Marshall Islands.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Martinique.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Mauritania.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Mauritius.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Mexico.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Micronesia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Moldova.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Monaco.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Mongolia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Montenegro.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Montserrat.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Morocco.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Mozambique.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Myanmar(Burma).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/NATO.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Namibia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Nauru.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Nepal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Netherlands Antilles.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Netherlands.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/New Caledonia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/New Zealand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Nicaragua.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Niger.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Nigeria.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/North Korea.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Northern Cyprus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Northern Ireland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Norway.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/OPEC.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Olimpic Movement.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Oman.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Pakistan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Palau.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Palestine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Panama.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Papua New Guinea.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Paraguay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Peru.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Philippines.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Poland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Portugal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Puerto Rico.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Qatar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Red Cross.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Reunion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Romania.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Russia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Rwanda.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Saint Lucia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Samoa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/San Marino.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Sao Tome &amp; Principe.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Saudi Arabia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Scotland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Senegal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Serbia(Yugoslavia).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Seychelles.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Sierra Leone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Singapore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Slovakia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Slovenia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Solomon Islands.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Somalia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Somaliland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/South Africa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/South Korea.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Spain.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Sri Lanka.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/St Kitts &amp; Nevis.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/St Vincent &amp; the Grenadines.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Sudan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Suriname.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Swaziland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Sweden.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Switzerland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Syria.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Tahiti(French Polinesia).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Taiwan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Tajikistan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Tanzania.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Thailand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Timor-Leste.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Togo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Tonga.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Trinidad &amp; Tobago.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Tunisia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Turkey.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Turkmenistan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Turks and Caicos Islands.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Tuvalu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/USA.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Uganda.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Ukraine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/United Arab Emirates.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/United Nations.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/United-Kingdom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Uruguay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Uzbekistan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Vanutau.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Vatican City.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Venezuela.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Viet Nam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Virgin Islands British.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Virgin Islands US.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Wales.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Western Sahara.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Yemen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Zambia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/flags/Zimbabwe.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Sidebar/_nav.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/Finance/SalesRecord/TaskModal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/Pages/Init/Cloud.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AuthRoute.js" afterPath="$PROJECT_DIR$/src/AuthRoute.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Header/Header.js" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Header/HeaderDropdown.js" afterPath="$PROJECT_DIR$/src/components/Header/HeaderDropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configs/companyConfig.js" afterPath="$PROJECT_DIR$/src/configs/companyConfig.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configs/ipConfig.js" afterPath="$PROJECT_DIR$/src/configs/ipConfig.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Full/Full.js" afterPath="$PROJECT_DIR$/src/containers/Full/Full.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes.js" afterPath="$PROJECT_DIR$/src/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/ClientStore.js" afterPath="$PROJECT_DIR$/src/stores/ClientStore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/CompanyStore.js" afterPath="$PROJECT_DIR$/src/stores/CompanyStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/ConfigStore.js" afterPath="$PROJECT_DIR$/src/stores/ConfigStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/FinanceStore.js" afterPath="$PROJECT_DIR$/src/stores/FinanceStore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/TaskStore.js" afterPath="$PROJECT_DIR$/src/stores/TaskStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/UserStore.js" afterPath="$PROJECT_DIR$/src/stores/UserStore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/WarehouseStore.js" afterPath="$PROJECT_DIR$/src/stores/WarehouseStore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesModal.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesModal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesTable.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js" afterPath="$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Pages/Init/Init.js" afterPath="$PROJECT_DIR$/src/views/Pages/Init/Init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Pages/Login/Login.js" afterPath="$PROJECT_DIR$/src/views/Pages/Login/Login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientModal.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientSetting.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientSetting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientTable.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientUpdateModal.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientUpdateModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierModal.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierSetting.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierSetting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierTable.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierUpdateModal.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierUpdateModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/user/UserModal.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/user/UserModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/user/UserSetting.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/user/UserSetting.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/user/UserTable.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/user/UserTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/user/UserUpdateModal.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/user/UserUpdateModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseModal.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseSetting.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseSetting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseTable.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseUpdateModal.js" afterPath="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseUpdateModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.js" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckModal.js" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckTable.js" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckUpdateModal.js" afterPath="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckUpdateModal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/Tasks/TaskModal.js" afterPath="$PROJECT_DIR$/src/views/Work/Tasks/TaskModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/Tasks/TaskTable.js" afterPath="$PROJECT_DIR$/src/views/Work/Tasks/TaskTable.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js" afterPath="$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js" afterPath="$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOp.js" afterPath="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOp.js" />
@@ -311,120 +72,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WarehouseItemCheckTable.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="127" column="78" lean-forward="false" selection-start-line="127" selection-start-column="78" selection-end-line="127" selection-end-column="78" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthRoute.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AuthRoute.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyStore.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stores/CompanyStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Init.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Pages/Init/Init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cloud.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Pages/Init/Cloud.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalesTable.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2247">
-              <caret line="114" column="50" lean-forward="false" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="companyConfig.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/configs/companyConfig.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserStore.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stores/UserStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ipConfig.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/configs/ipConfig.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="51" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -451,57 +99,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseSetting.css" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientSetting.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierSetting.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseSetting.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseTable.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseUpdateModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserSetting.css" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserSetting.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/Configs.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserUpdateModal.js" />
-        <option value="$PROJECT_DIR$/src/stores/ConfigStore.js" />
-        <option value="$PROJECT_DIR$/src/configs/companyConfig.js" />
-        <option value="$PROJECT_DIR$/src/configs/ipConfig.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserTable.js" />
-        <option value="$PROJECT_DIR$/src/stores/TaskStore.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/history.js" />
-        <option value="$PROJECT_DIR$/src/components/Sidebar/_nav.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/HeaderDropdown.js" />
-        <option value="$PROJECT_DIR$/src/views/Pages/Login/Login.js" />
-        <option value="$PROJECT_DIR$/src/views/Pages/Init/package.json" />
-        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/package.json" />
-        <option value="$PROJECT_DIR$/src/routes.js" />
         <option value="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" />
         <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.css" />
-        <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseopTable.js" />
-        <option value="$PROJECT_DIR$/src/stores/UserStore.js" />
-        <option value="$PROJECT_DIR$/src/containers/Full/Full.js" />
-        <option value="$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js" />
-        <option value="$PROJECT_DIR$/src/views/Work/Tasks/TaskModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOp.js" />
-        <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpUpdateModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.js" />
-        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckUpdateModal.js" />
-        <option value="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js" />
-        <option value="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesModal.js" />
-        <option value="$PROJECT_DIR$/src/stores/WarehouseStore.js" />
-        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckTable.js" />
-        <option value="$PROJECT_DIR$/src/stores/CompanyStore.js" />
         <option value="$PROJECT_DIR$/src/views/Pages/Init/Cloud.js" />
         <option value="$PROJECT_DIR$/src/views/Pages/Init/Init.js" />
         <option value="$PROJECT_DIR$/src/AuthRoute.js" />
+        <option value="$PROJECT_DIR$/src/stores/CompanyStore.js" />
+        <option value="$PROJECT_DIR$/src/configs/ipConfig.js" />
+        <option value="$PROJECT_DIR$/src/configs/companyConfig.js" />
+        <option value="$PROJECT_DIR$/src/containers/Full/Full.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/stores/ClientStore.js" />
+        <option value="$PROJECT_DIR$/src/stores/UserStore.js" />
+        <option value="$PROJECT_DIR$/src/stores/ConfigStore.js" />
+        <option value="$PROJECT_DIR$/src/stores/FinanceStore.js" />
+        <option value="$PROJECT_DIR$/src/stores/TaskStore.js" />
+        <option value="$PROJECT_DIR$/src/stores/WarehouseStore.js" />
+        <option value="$PROJECT_DIR$/src/views/Pages/Login/Login.js" />
+        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.js" />
+        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckUpdateModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Work/Tasks/TaskModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js" />
+        <option value="$PROJECT_DIR$/src/views/Work/Tasks/TaskTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOp.js" />
+        <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseopTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpUpdateModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js" />
+        <option value="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js" />
+        <option value="$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientSetting.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/client/ClientUpdateModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierSetting.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierUpdateModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserSetting.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserUpdateModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseSetting.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseUpdateModal.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/HeaderDropdown.js" />
       </list>
     </option>
   </component>
@@ -538,7 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -679,7 +327,179 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="warehouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supplier" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -730,6 +550,10 @@
               <option name="myItemId" value="Finance" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalesStatistics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -754,6 +578,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SalesRecord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="erp-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AccountReceivableDash" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -911,7 +761,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -956,13 +806,6 @@
       <method />
     </configuration>
     <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
@@ -1055,6 +898,7 @@
       <workItem from="1520996686343" duration="19977000" />
       <workItem from="1521080359366" duration="28599000" />
       <workItem from="1521275128922" duration="38000" />
+      <workItem from="1521339697952" duration="13653000" />
     </task>
     <task id="LOCAL-00001" summary="very newbee">
       <created>1518951708149</created>
@@ -1116,10 +960,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214574000" />
+    <option name="totallyTimeSpent" value="228227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23340358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1128,7 +973,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1161,327 +1006,285 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/client/ClientUpdateModal.js">
+    <entry file="file://$PROJECT_DIR$/src/views/Pages/Init/Cloud.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserSetting.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserSetting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/Configs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="54" column="114" lean-forward="false" selection-start-line="54" selection-start-column="114" selection-end-line="54" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserUpdateModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/TaskTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="97" column="14" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="97" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/TaskStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/history.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Aside/Aside.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="73" column="32" lean-forward="false" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Sidebar/_nav.js" />
-    <entry file="file://$PROJECT_DIR$/src/views/Pages/Login/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Pages/Login/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="61" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Pages/Init/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="38">
+          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
+        <state relative-caret-position="456">
           <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderDropdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="37" column="44" lean-forward="false" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Sidebar/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="96" column="37" lean-forward="true" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/ConfigStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseopTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/ClientStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="80" column="39" lean-forward="false" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/TaskModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="127" column="34" lean-forward="true" selection-start-line="127" selection-start-column="34" selection-end-line="127" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="122" column="56" lean-forward="false" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="82" column="39" lean-forward="false" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpUpdateModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="97" column="38" lean-forward="false" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="129" column="1" lean-forward="true" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckUpdateModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="102" column="144" lean-forward="false" selection-start-line="102" selection-start-column="144" selection-end-line="102" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesRecord/TaskModal.js" />
-    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="115" column="30" lean-forward="true" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="127" column="9" lean-forward="true" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Full/Full.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="61" column="120" lean-forward="false" selection-start-line="61" selection-start-column="120" selection-end-line="61" selection-end-column="120" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/configs/ipConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="51" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/WarehouseStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Pages/Init/Cloud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="19">
+          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Pages/Init/Init.js">
+    <entry file="file://$PROJECT_DIR$/src/configs/companyConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AuthRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Full/Full.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="46" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+            <element signature="e#724#766#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/ClientStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="86" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#61#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/CompanyStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="33" />
+        <state relative-caret-position="209">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#61#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/ConfigStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="26" column="86" lean-forward="false" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/FinanceStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="86" lean-forward="false" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/TaskStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="19" column="86" lean-forward="false" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#60#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/UserStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/WarehouseStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="86" lean-forward="false" selection-start-line="21" selection-start-column="86" selection-end-line="21" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Pages/Init/Init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Pages/Login/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="41" column="52" lean-forward="false" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="127" column="78" lean-forward="false" selection-start-line="127" selection-start-column="78" selection-end-line="127" selection-end-column="78" />
+        <state relative-caret-position="55">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+            <element signature="e#252#288#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckUpdateModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/TaskModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/Tasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/TaskTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1764">
+          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseopTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="4" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+            <element signature="e#252#288#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpUpdateModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1490,44 +1293,221 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2247">
-          <caret line="114" column="50" lean-forward="false" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/configs/companyConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/UserStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        <state relative-caret-position="55">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="4" selection-end-column="66" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
+            <element signature="e#252#288#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AuthRoute.js">
+    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesStatistics/SalesStatistics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Finance/SalesStatistics/StatisticsTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/client/ClientModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/client/ClientSetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/client/ClientTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/client/ClientUpdateModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierSetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierUpdateModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="4" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseSetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-151">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="4" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/warehouse/WarehouseUpdateModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/Configs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserUpdateModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderDropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/user/UserSetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -3,7 +3,7 @@ import {Modal,Select,Button,DatePicker,message,Input} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 
 const { Option, OptGroup } = Select;
 
@@ -21,7 +21,7 @@ export default class WarehouseOpUpdateModal extends React.Component{
 
     handleUpdate(){
         let op_id = this.props.store.warehouseItemopById.id
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let item_id = this.props.store.warehouseItemopById.warehouseItem
         let order = this.refs.order.value
         let re = this.refs.re.value

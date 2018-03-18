@@ -2,7 +2,6 @@ import {observable, action, autorun, useStrict} from 'mobx';
 import {message} from 'antd'
 import Axios from 'axios'
 import * as ipConfig from '../configs/ipConfig'
-import * as companyConfig from '../configs/companyConfig'
 import * as messageConfig from '../configs/messageConfig'
 
 const suppliersUrl = `${ipConfig.rootUrl}/suppliers`
@@ -19,6 +18,8 @@ export default class WarehouseStore{
     @observable warehouseItemopById = {}
     @observable warehouseItems = []
     @observable warehouseItemById = {}
+
+    @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
     @observable itemopModalVisible = false
     @observable itemopUpdateModalVisible = false

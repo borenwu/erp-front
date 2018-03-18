@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import moment from 'moment';
 import StatisticsTable from './StatisticsTable'
-import * as companyConfig from '../../../configs/companyConfig'
-
-
+// import * as companyConfig from '../../../configs/companyConfig'
 
 
 @observer
@@ -20,7 +18,7 @@ export default class SalesStatistics extends Component{
     }
 
     searchTasksByClient(){
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let client_name = this.refs.client_name.value
         let startDate = this.state.dateRange[0] || moment().format('YYYY-MM-DD')
         let endDate = this.state.dateRange[1] || moment().format('YYYY-MM-DD')
@@ -35,7 +33,7 @@ export default class SalesStatistics extends Component{
 
 
     componentDidMount(){
-        this.props.store.fetchClients(companyConfig.companyInfo.company_id)
+        this.props.store.fetchClients(this.props.store.company_id)
     }
 
 

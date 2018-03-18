@@ -2,7 +2,7 @@ import React from 'react'
 import {Modal,Button,DatePicker,Input} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 
 @observer
 export default class TaskModal extends React.Component {
@@ -40,7 +40,7 @@ export default class TaskModal extends React.Component {
     }
 
     handleOk(){
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let client_name = this.refs.client_name.value
         let task_date = moment().format('YYYY-MM-DD')
         let due_date = this.state.dueDate
@@ -72,7 +72,7 @@ export default class TaskModal extends React.Component {
     }
 
     componentDidMount(){
-        this.props.store.fetchClients(companyConfig.companyInfo.company_id)
+        this.props.store.fetchClients(this.props.store.company_id)
     }
 
     render() {

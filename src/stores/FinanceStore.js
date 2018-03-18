@@ -2,7 +2,6 @@ import {observable, action, autorun, useStrict} from 'mobx';
 import {message} from 'antd'
 import Axios from 'axios'
 import * as ipConfig from '../configs/ipConfig'
-import * as companyConfig from '../configs/companyConfig'
 import * as messageConfig from '../configs/messageConfig'
 import $ from 'jquery'
 
@@ -20,6 +19,8 @@ export default class FinanceStore{
     @observable price = 0.0
     @observable volume =  0.0
     @observable sale = 0.0
+
+    @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
     @observable modalVisible = false
     @observable salesModalVisible = false

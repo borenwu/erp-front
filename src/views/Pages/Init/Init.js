@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Switch,Divider } from 'antd';
 import {observer} from 'mobx-react';
-import * as companyConfig from '../../../configs/companyConfig'
+
 
 @observer
 class Init extends Component {
@@ -10,7 +10,13 @@ class Init extends Component {
     }
 
     handleInit(){
-        console.log('init')
+        let company_name = this.refs.company_name.value
+        let secret = this.refs.secret.value
+        let companyInfo = {
+            company_name:company_name,
+            secret:secret
+        }
+        this.props.store.createCompany(companyInfo)
     }
 
     render() {
@@ -42,14 +48,14 @@ class Init extends Component {
                                 <div className="card card-inverse card-primary py-5 d-md-down-none"
                                      style={{width: 44 + '%'}}>
                                     <div className="card-block text-center">
-                                        <h3>选择网络模式</h3>
-                                        <div>
-                                            <div className="input-group">
-                                                <label htmlFor="">网络切换</label>
-                                                <Divider type="vertical"/>
-                                                <Switch defaultChecked checkedChildren="云模式" unCheckedChildren="内网模式"/>
-                                            </div>
-                                        </div>
+                                        {/*<h3>选择网络模式</h3>*/}
+                                        {/*<div>*/}
+                                            {/*<div className="input-group">*/}
+                                                {/*<label htmlFor="">网络切换</label>*/}
+                                                {/*<Divider type="vertical"/>*/}
+                                                {/*<Switch defaultChecked checkedChildren="云模式" unCheckedChildren="内网模式"/>*/}
+                                            {/*</div>*/}
+                                        {/*</div>*/}
                                     </div>
                                 </div>
                             </div>

@@ -3,7 +3,7 @@ import {Modal,Button,DatePicker,message} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
-import * as companyConfig from '../../../../configs/companyConfig'
+// import * as companyConfig from '../../../../configs/companyConfig'
 
 @observer
 export default class ClientUpdateModal extends React.Component{
@@ -19,7 +19,7 @@ export default class ClientUpdateModal extends React.Component{
 
     handleUpdate(){
         let client_id = this.props.store.clientById.id
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let client_name = this.refs.client_name.value
         let desc = this.refs.desc.value
         let receivable = Number(this.refs.receivable.value)

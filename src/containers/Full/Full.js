@@ -43,8 +43,10 @@ const userStore = new UserStore()
 
 class Full extends Component {
     render() {
-        const storage=window.sessionStorage
-        const userInfo=JSON.parse(storage.getItem("userInfo"));
+        const local=window.localStorage
+        const company =JSON.parse(local.getItem("companyInfo"));
+        const session=window.sessionStorage
+        const userInfo=JSON.parse(session.getItem("userInfo"));
 
         if(userInfo){
             const auth = userInfo.auth

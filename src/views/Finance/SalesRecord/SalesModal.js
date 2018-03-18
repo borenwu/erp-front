@@ -3,7 +3,7 @@ import {Modal,Button,DatePicker,message} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 
 const confirm = Modal.confirm;
 
@@ -32,7 +32,7 @@ export default class SaleModal extends React.Component{
 
     handleUpdate(){
         let task_id = this.props.store.taskById.id
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let client_name = this.props.store.taskById.client_name
         let price = this.refs.price.value
         let sale = this.refs.sale.value

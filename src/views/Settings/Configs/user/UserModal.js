@@ -2,7 +2,7 @@ import React from 'react'
 import {Modal,Button,DatePicker} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
-import * as companyConfig from '../../../../configs/companyConfig'
+// import * as companyConfig from '../../../../configs/companyConfig'
 
 @observer
 export default class UserModal extends React.Component {
@@ -16,7 +16,7 @@ export default class UserModal extends React.Component {
     /////////////////////////////////////////////////////////////////////////
 
     handleOk(){
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let user_name = this.refs.user_name.value
         let password = this.refs.password.value
         let level = Number(this.refs.level.value)

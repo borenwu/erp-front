@@ -3,7 +3,7 @@ import {Modal,Button,DatePicker,message} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
-import * as companyConfig from '../../../../configs/companyConfig'
+// import * as companyConfig from '../../../../configs/companyConfig'
 
 @observer
 export default class UserUpdateModal extends React.Component{
@@ -19,7 +19,7 @@ export default class UserUpdateModal extends React.Component{
 
     handleUpdate(){
         let user_id = this.props.store.userById.id
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let user_name = this.refs.user_name.value
         let level = this.refs.level.value
 

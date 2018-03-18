@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import {DatePicker,Button} from 'antd';
 import moment from 'moment';
-import * as companyConfig from '../../../configs/companyConfig'
 import WarehouseItemCheckTable from './WarehouseItemCheckTable'
 import WarehouseItemCheckModal from './WarehouseItemCheckModal'
 import WarehouseItemCheckUpdateModal from './WarehouseItemCheckUpdateModal'
@@ -27,7 +26,7 @@ export default class WarehouseItemCheck extends Component{
 
     showTodayItemops() {
         console.log('showTodayItemops')
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let startDate = moment().format('YYYY-MM-DD')
         let endDate = moment().format('YYYY-MM-DD')
         const info = {
@@ -40,7 +39,7 @@ export default class WarehouseItemCheck extends Component{
 
     searchItemops(){
         console.log('searchItemops')
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let startDate = this.state.dateRange[0] || moment().format('YYYY-MM-DD')
         let endDate = this.state.dateRange[1] || moment().format('YYYY-MM-DD')
         const info = {

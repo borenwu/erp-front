@@ -3,7 +3,7 @@ import {observer} from 'mobx-react';
 import {DatePicker,Button} from 'antd';
 import moment from 'moment';
 import SalesTable from './SalesTable'
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 import SalesModal from './SalesModal'
 
 const {RangePicker} = DatePicker;
@@ -20,7 +20,7 @@ export default class SalesRecord extends Component{
 
 
     showTodayTasks() {
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let startDate = moment().format('YYYY-MM-DD')
         let endDate = moment().format('YYYY-MM-DD')
         const info = {
@@ -32,7 +32,7 @@ export default class SalesRecord extends Component{
     }
 
     searchTasks(){
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let startDate = this.state.dateRange[0] || moment().format('YYYY-MM-DD')
         let endDate = this.state.dateRange[1] || moment().format('YYYY-MM-DD')
         const info = {

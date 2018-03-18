@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Table, Popconfirm, Divider} from 'antd';
 import moment from 'moment';
 import * as messageConfig from '../../../configs/messageConfig'
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 import {observer} from 'mobx-react';
 
 import DevTools from 'mobx-react-devtools';
@@ -23,7 +23,7 @@ export default class TaskTable extends React.Component{
     }
 
     handleFinishTask(record){
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let client_name = record.client_name
         let task_id = record.id
 

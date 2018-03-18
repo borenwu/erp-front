@@ -8,7 +8,7 @@ import {
     Dropdown
 } from 'reactstrap';
 import {observer} from 'mobx-react';
-import * as companyConfig from '../../configs/companyConfig'
+
 
 @observer
 class HeaderDropdown extends Component {
@@ -29,7 +29,7 @@ class HeaderDropdown extends Component {
     }
 
     logout() {
-        const company_id = companyConfig.companyInfo.company_id
+        const company_id = this.props.store.company_id
         const user_name = this.props.userName
         const userInfo = {
             company_id:company_id,

@@ -5,7 +5,7 @@ import './ClientSetting.css'
 import ClientTable from './ClientTable'
 import ClientModal from './ClientModal'
 import ClientUpdateModal from './ClientUpdateModal'
-import * as companyConfig from '../../../../configs/companyConfig'
+// import * as companyConfig from '../../../../configs/companyConfig'
 
 const Search = Input.Search;
 
@@ -25,7 +25,7 @@ export default class ClientSetting extends Component{
     }
 
     componentDidMount(){
-        this.props.store.fetchClients(companyConfig.companyInfo.company_id)
+        this.props.store.fetchClients(this.props.store.company_id)
     }
 
     render() {

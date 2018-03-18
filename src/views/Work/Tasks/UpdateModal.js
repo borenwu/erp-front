@@ -3,7 +3,7 @@ import {Modal,Button,DatePicker,message} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 
 @observer
 export default class UpdateModal extends React.Component{
@@ -39,7 +39,7 @@ export default class UpdateModal extends React.Component{
 
     handleUpdate(){
         let task_id = this.props.store.taskById.id
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let client_name = this.props.store.taskById.client_name
         let task_name = this.refs.task_name.value
         let due_date = this.state.dueDate

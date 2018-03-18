@@ -6,7 +6,7 @@ import WarehouseOpModal from './WarehouseOpModal'
 import WarehouseOpUpdateModal from './WarehouseOpUpdateModal'
 import WarehouseopTable from './WarehouseopTable'
 import './WarehouseOp.css'
-import * as companyConfig from '../../../configs/companyConfig'
+// import * as companyConfig from '../../../configs/companyConfig'
 
 const {RangePicker} = DatePicker;
 
@@ -28,7 +28,7 @@ export default class WarehouseOp extends Component{
 
     showTodayItemops() {
         console.log('showTodayItemops')
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let startDate = moment().format('YYYY-MM-DD')
         let endDate = moment().format('YYYY-MM-DD')
         const info = {
@@ -41,7 +41,7 @@ export default class WarehouseOp extends Component{
 
     searchItemops(){
         console.log('searchItemops')
-        let company_id = companyConfig.companyInfo.company_id
+        let company_id = this.props.store.company_id
         let startDate = this.state.dateRange[0] || moment().format('YYYY-MM-DD')
         let endDate = this.state.dateRange[1] || moment().format('YYYY-MM-DD')
         const info = {

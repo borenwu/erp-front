@@ -2,7 +2,6 @@ import {observable, action, autorun, useStrict} from 'mobx';
 import {message} from 'antd'
 import Axios from 'axios'
 import * as ipConfig from '../configs/ipConfig'
-import * as companyConfig from '../configs/companyConfig'
 import * as messageConfig from '../configs/messageConfig'
 
 const clientUrl = `${ipConfig.rootUrl}/client`
@@ -24,6 +23,8 @@ export default class ConfigStore{
     @observable warehouseItemById = {}
     @observable users = []
     @observable userById = {}
+
+    @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
     @observable clientModalVisible = false
     @observable clientUpdateModalVisible = false

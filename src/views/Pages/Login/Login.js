@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Row, Col, CardGroup, Card, CardBody, Button, Input, InputGroup, InputGroupAddon} from 'reactstrap';
 import {observer} from 'mobx-react';
-import * as companyConfig from '../../../configs/companyConfig'
+
 
 @observer
 class Login extends Component {
@@ -10,7 +10,7 @@ class Login extends Component {
     }
 
     handleIn(){
-        const company_id = companyConfig.companyInfo.company_id
+        const company_id = this.props.store.company_id
         const user_name = this.refs.user_name.value;
         const password = this.refs.password.value;
         let userInfo = {
