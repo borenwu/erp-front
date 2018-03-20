@@ -1,6 +1,5 @@
 import {observable, action, computed, useStrict} from 'mobx';
 import Axios from 'axios'
-import * as ipConfig from '../configs/ipConfig'
 import {message} from 'antd'
 import * as messageConfig from '../configs/messageConfig'
 import history from '../history';
@@ -8,15 +7,16 @@ import history from '../history';
 message.config(messageConfig.messageConf);
 
 
-const companyUrl = `${ipConfig.rootUrl}/company`;
-const adminUrl = `${ipConfig.rootUrl}/user/admin`
-
 export default class CompanyStore {
 
     @observable companies = []
 
+    @observable rootUrl = window.localStorage.getItem("ipConfig")
+    @observable companyUrl = `${this.rootUrl}/company`;
+    @observable adminUrl = `${this.rootUrl}/user/admin`
+
     @action createCompany(companyInfo) {
-        Axios.post(companyUrl, companyInfo)
+        Axios.post(this.companyUrl, companyInfo)
             .then(response => {
                 if(response.status == 200) {
                     let company = JSON.stringify(response.data.company);
@@ -27,7 +27,7 @@ export default class CompanyStore {
                         company_id:response.data.company.id,
                     }
 
-                    Axios.post(adminUrl, companyInfo)
+                    Axios.post(this.adminUrl, companyInfo)
                         .then(response => {
                             if(response.status == 200){
                                 message.info('激活完成')
@@ -44,7 +44,7 @@ export default class CompanyStore {
     }
 
     @action listAllCompanies() {
-        Axios.get(companyUrl)
+        Axios.get(this.companyUrl)
             .then(response => {
                 this.companies = response.data
             })

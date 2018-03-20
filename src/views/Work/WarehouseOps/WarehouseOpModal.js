@@ -35,7 +35,7 @@ export default class WarehouseOpModal extends React.Component {
         let supplier_name = this.refs.supplier_name.value
         let order = this.refs.order.value
         let re = this.refs.re.value
-        let use = this.refs.re.value
+        let use = this.refs.use.value
         let waste = this.refs.waste.value
         let reason = this.refs.reason.value
         let maker = this.refs.maker.value

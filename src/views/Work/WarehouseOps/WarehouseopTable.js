@@ -39,7 +39,8 @@ export default class WarehouseopTable extends React.Component{
                 reason:w.reason,
                 make_time:moment(w.make_time).format('YYYY-MM-DD'),
                 maker: w.maker,
-                status:w.status ? '已审核' : '未审核'
+                status:w.status ? '已审核' : '未审核',
+                disabled:w.status
             }
 
         })
@@ -115,10 +116,10 @@ export default class WarehouseopTable extends React.Component{
                         <Divider type="vertical"/>
 
                         <Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>
-                            <a>删除</a>
+                            <a disabled={record.disabled}>删除</a>
                         </Popconfirm>
                         <Divider type="vertical"/>
-                        <a onClick={this.showItemopUpdateModal.bind(this,record)}>修改</a>
+                        <a onClick={this.showItemopUpdateModal.bind(this,record)} disabled={record.disabled}>修改</a>
                     </span>
                 ),
             }];

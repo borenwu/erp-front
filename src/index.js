@@ -34,9 +34,6 @@ import moment from 'moment';
 import 'moment/locale/zh-cn';
 moment.locale('zh-cn');
 
-const local=window.localStorage
-const company =JSON.parse(local.getItem("companyInfo"));
-console.log(company)
 
 // init store
 const userStore = new UserStore()
@@ -45,7 +42,7 @@ const companyStore = new CompanyStore()
 ReactDOM.render((
     <Router history={history}>
         <Switch>
-            <Route exact path="/login" name="Login Page" component={()=><Login store={userStore} company={company}/>}/>
+            <Route exact path="/login" name="Login Page" component={()=><Login store={userStore}/>}/>
             <Route exact path="/init" name="Init Page" component={()=><Init store={companyStore}/>}/>
             <Route exact path="/register" name="Register Page" component={Register}/>
             <Route exact path="/404" name="Page 404" component={Page404}/>

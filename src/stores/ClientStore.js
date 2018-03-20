@@ -1,10 +1,5 @@
 import {observable, action, computed, useStrict} from 'mobx';
 import Axios from 'axios'
-import * as ipConfig from '../configs/ipConfig'
-
-const clientUrl = `${ipConfig.rootUrl}/client`;
-const clientsUrl = `${ipConfig.rootUrl}/clients`;
-
 
 export default class ClientStore {
 
@@ -12,8 +7,13 @@ export default class ClientStore {
     @observable clientById = {}
     @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
+    @observable rootUrl = window.localStorage.getItem("ipConfig")
+    @observable clientUrl = `${this.rootUrl}/client`;
+    @observable clientsUrl = `${this.rootUrl}/clients`;
+
+
     @action createClient(client) {
-        Axios.post(clientUrl, client)
+        Axios.post(this.clientUrl, client)
             .then(response => {
                 this.clients.push(response.data)
             })
@@ -23,7 +23,7 @@ export default class ClientStore {
     }
 
     @action fetchClients(company) {
-        Axios.post(clientsUrl, company)
+        Axios.post(this.clientsUrl, company)
             .then(response => {
                 this.clients = response.data
             })
@@ -33,23 +33,7 @@ export default class ClientStore {
     }
 
     @action fetchClientById(clientId) {
-        // fetch(`${clientUrl}/${clientId}`, {
-        //     method: 'GET',
-        //     headers: {
-        //         "Content-type": "application/json"
-        //     },
-        // })
-        //     .then((response) => {
-        //         // console.log(response);
-        //         response.json().then(function (data) {
-        //             console.log(data)
-        //             this.clientById = data
-        //         }.bind(this));
-        //     })
-        //     .catch((err) => {
-        //         console.log(err);
-        //     })
-        Axios.get(`${clientUrl}/${clientId}`)
+        Axios.get(`${this.clientUrl}/${clientId}`)
             .then(response => {
                 console.log(response.data)
                 this.clientById = response.data
@@ -61,7 +45,7 @@ export default class ClientStore {
     }
 
     @action updateClientById(clientId, newClient) {
-        Axios.put(`${clientUrl}/${clientId}`, newClient)
+        Axios.put(`${this.clientUrl}/${clientId}`, newClient)
             .then(response => {
                 this.clientById = response.data
             })
@@ -71,7 +55,7 @@ export default class ClientStore {
     }
 
     @action deleteClientById(clientId) {
-        Axios.delete(`${clientUrl}/${clientId}`)
+        Axios.delete(`${this.clientUrl}/${clientId}`)
             .then(response => {
                 if(response.data.status == 200){
                     this.clients = this.clients.filter(item => item.id !== clientId);

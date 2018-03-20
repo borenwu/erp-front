@@ -1,14 +1,9 @@
 import {observable, action, autorun, useStrict} from 'mobx';
 import {message} from 'antd'
 import Axios from 'axios'
-import * as ipConfig from '../configs/ipConfig'
 import * as messageConfig from '../configs/messageConfig'
 import $ from 'jquery'
 
-const clientsUrl = `${ipConfig.rootUrl}/clients`
-const taskUrl = `${ipConfig.rootUrl}/task`;
-const tasksUrl = `${ipConfig.rootUrl}/tasks`
-const tasksByClientUrl = `${ipConfig.rootUrl}/tasksByClient`
 
 message.config(messageConfig.messageConf);
 
@@ -24,6 +19,13 @@ export default class FinanceStore{
 
     @observable modalVisible = false
     @observable salesModalVisible = false
+
+    @observable rootUrl = window.localStorage.getItem("ipConfig")
+    @observable clientsUrl = `${this.rootUrl}/clients`
+    @observable taskUrl = `${this.rootUrl}/task`;
+    @observable tasksUrl = `${this.rootUrl}/tasks`
+    @observable tasksByClientUrl = `${this.rootUrl}/tasksByClient`
+
 
     computeSale(){
         this.sale = (Number(this.price) * Number(this.volume)).toFixed(2)
@@ -51,7 +53,7 @@ export default class FinanceStore{
         let companyInfo = {
             company_id:company_id
         }
-        Axios.post(clientsUrl,companyInfo)
+        Axios.post(this.clientsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
                     message.warning('获取客户列表为空');
@@ -64,7 +66,7 @@ export default class FinanceStore{
 
 
     @action listTasks(info) {
-        Axios.post(tasksUrl, info)
+        Axios.post(this.tasksUrl, info)
             .then(response => {
                 if (response.data.status == 201) {
                     message.warning('获取任务列表为空');
@@ -80,7 +82,7 @@ export default class FinanceStore{
     }
 
     @action listTasksByClient(info){
-        Axios.post(tasksByClientUrl, info)
+        Axios.post(this.tasksByClientUrl, info)
             .then(response => {
                 if (response.data.status == 201) {
                     message.warning('获取任务列表为空');
@@ -98,7 +100,7 @@ export default class FinanceStore{
 
 
     @action updateSale(taskInfo){
-        Axios.put(`${taskUrl}/sale`,taskInfo)
+        Axios.put(`${this.taskUrl}/sale`,taskInfo)
             .then(response => {
                 let updateTask = response.data
                 let index = this.tasks.findIndex((task) => task.id === updateTask.id)

@@ -1,20 +1,22 @@
 import {observable, action, autorun, useStrict} from 'mobx';
 import {message} from 'antd'
 import Axios from 'axios'
-import * as ipConfig from '../configs/ipConfig'
 import * as messageConfig from '../configs/messageConfig'
 import history from '../history';
 
 message.config(messageConfig.messageConf);
 
-const userUrl = `${ipConfig.rootUrl}/user`
+
 
 export default class UserStore{
     @observable currentUser = {}
     @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
+    @observable rootUrl = window.localStorage.getItem("ipConfig")
+    @observable userUrl = `${this.rootUrl}/user`
+
     @action userLogin(userInfo){
-        Axios.post(`${userUrl}/login`,userInfo)
+        Axios.post(`${this.userUrl}/login`,userInfo)
             .then(response =>{
                 if(response.data.status == 404){
                     message.error('用户名错误，没有此用户');
@@ -46,7 +48,7 @@ export default class UserStore{
     }
 
     @action userLogout(userInfo){
-        Axios.post(`${userUrl}/logout`,userInfo)
+        Axios.post(`${this.userUrl}/logout`,userInfo)
             .then(response=>{
                 if(response.data.status == 404){
                     message.error('用户名错误，没有此用户');

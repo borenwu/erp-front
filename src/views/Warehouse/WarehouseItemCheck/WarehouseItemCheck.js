@@ -25,7 +25,6 @@ export default class WarehouseItemCheck extends Component{
 
 
     showTodayItemops() {
-        console.log('showTodayItemops')
         let company_id = this.props.store.company_id
         let startDate = moment().format('YYYY-MM-DD')
         let endDate = moment().format('YYYY-MM-DD')
@@ -38,7 +37,6 @@ export default class WarehouseItemCheck extends Component{
     }
 
     searchItemops(){
-        console.log('searchItemops')
         let company_id = this.props.store.company_id
         let startDate = this.state.dateRange[0] || moment().format('YYYY-MM-DD')
         let endDate = this.state.dateRange[1] || moment().format('YYYY-MM-DD')
@@ -62,7 +60,6 @@ export default class WarehouseItemCheck extends Component{
         })
     }
 
-
     render(){
         return(
             <div>
@@ -84,7 +81,7 @@ export default class WarehouseItemCheck extends Component{
                         visible={this.props.store.itemCheckUpdateModalVisible}
                     />
                 </div>
-                <WarehouseItemCheckTable store={this.props.store}/>
+                <WarehouseItemCheckTable {...this.props}/>
             </div>
         )
     }

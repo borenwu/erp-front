@@ -1,17 +1,7 @@
 import {observable, action, autorun, useStrict} from 'mobx';
 import {message} from 'antd'
 import Axios from 'axios'
-import * as ipConfig from '../configs/ipConfig'
-import * as messageConfig from '../configs/messageConfig'
 
-const clientUrl = `${ipConfig.rootUrl}/client`
-const clientsUrl = `${ipConfig.rootUrl}/clients`
-const supplierUrl = `${ipConfig.rootUrl}/supplier`
-const suppliersUrl = `${ipConfig.rootUrl}/suppliers`
-const warehouseItemUrl = `${ipConfig.rootUrl}/warehouse/item`
-const warehouseItemsUrl = `${ipConfig.rootUrl}/warehouse/items`
-const userUrl = `${ipConfig.rootUrl}/user`
-const usersUrl = `${ipConfig.rootUrl}/users`
 
 export default class ConfigStore{
 
@@ -35,12 +25,22 @@ export default class ConfigStore{
     @observable userModalVisible = false
     @observable userUpdateModalVisible = false
 
+    @observable rootUrl = window.localStorage.getItem("ipConfig")
+    @observable clientUrl = `${this.rootUrl}/client`
+    @observable clientsUrl = `${this.rootUrl}/clients`
+    @observable supplierUrl = `${this.rootUrl}/supplier`
+    @observable suppliersUrl = `${this.rootUrl}/suppliers`
+    @observable warehouseItemUrl = `${this.rootUrl}/warehouse/item`
+    @observable warehouseItemsUrl = `${this.rootUrl}/warehouse/items`
+    @observable userUrl = `${this.rootUrl}/user`
+    @observable usersUrl = `${this.rootUrl}/users`
+
     ///////////////////////////////////////// client///////////////////////////////////////////////
     @action fetchClients(company_id){
         let companyInfo = {
             company_id:company_id
         }
-        Axios.post(clientsUrl,companyInfo)
+        Axios.post(this.clientsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
                     message.warning('获取客户列表为空');
@@ -52,7 +52,7 @@ export default class ConfigStore{
     }
 
     @action createClient(clientInfo){
-        Axios.post(clientUrl,clientInfo)
+        Axios.post(this.clientUrl,clientInfo)
             .then(response => {
                 this.clients.push(response.data)
                 message.success('创建成功')
@@ -63,7 +63,7 @@ export default class ConfigStore{
     }
 
     @action updateClient(clientInfo){
-        Axios.put(clientUrl, clientInfo)
+        Axios.put(this.clientUrl, clientInfo)
             .then(response => {
                 let updateClient = response.data
                 let index = this.clients.findIndex((client) => client.id === updateClient.id)
@@ -76,7 +76,7 @@ export default class ConfigStore{
     }
 
     @action deleteClientById(clientId) {
-        Axios.delete(`${clientUrl}/${clientId}`)
+        Axios.delete(`${this.clientUrl}/${clientId}`)
             .then(response => {
                 if (response.data.status === 200) {
                     this.clients = this.clients.filter(item => item.id !== clientId);
@@ -93,7 +93,7 @@ export default class ConfigStore{
         let companyInfo = {
             company_id:company_id
         }
-        Axios.post(suppliersUrl,companyInfo)
+        Axios.post(this.suppliersUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
                     message.warning('获取供应商列表为空');
@@ -108,7 +108,7 @@ export default class ConfigStore{
     }
 
     @action createSupplier(supplierInfo){
-        Axios.post(supplierUrl,supplierInfo)
+        Axios.post(this.supplierUrl,supplierInfo)
             .then(response => {
                 this.suppliers.push(response.data)
                 message.success('创建成功')
@@ -119,7 +119,7 @@ export default class ConfigStore{
     }
 
     @action updateSupplier(supplierInfo){
-        Axios.put(supplierUrl, supplierInfo)
+        Axios.put(this.supplierUrl, supplierInfo)
             .then(response => {
                 let updateSupplier = response.data
                 let index = this.suppliers.findIndex((supplier) => supplier.id === updateSupplier.id)
@@ -132,7 +132,7 @@ export default class ConfigStore{
     }
 
     @action deleteSupplierById(supplierId) {
-        Axios.delete(`${supplierUrl}/${supplierId}`)
+        Axios.delete(`${this.supplierUrl}/${supplierId}`)
             .then(response => {
                 if (response.data.status === 200) {
                     this.suppliers = this.suppliers.filter(item => item.id !== supplierId);
@@ -150,7 +150,7 @@ export default class ConfigStore{
         let companyInfo = {
             company_id:company_id
         }
-        Axios.post(usersUrl,companyInfo)
+        Axios.post(this.usersUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
                     message.warning('获取用户列表为空');
@@ -165,7 +165,7 @@ export default class ConfigStore{
     }
 
     @action createUser(userInfo){
-        Axios.post(userUrl,userInfo)
+        Axios.post(this.userUrl,userInfo)
             .then(response => {
                 this.users.push(response.data)
                 message.success('创建成功')
@@ -176,7 +176,7 @@ export default class ConfigStore{
     }
 
     @action updateUser(userInfo){
-        Axios.put(userUrl, userInfo)
+        Axios.put(this.userUrl, userInfo)
             .then(response => {
                 let updateUser = response.data
                 let index = this.users.findIndex((user) => user.id === updateUser.id)
@@ -189,7 +189,7 @@ export default class ConfigStore{
     }
 
     @action deleteUserById(userId) {
-        Axios.delete(`${userUrl}/${userId}`)
+        Axios.delete(`${this.userUrl}/${userId}`)
             .then(response => {
                 console.log(response)
                 if (response.data.status === 200) {
@@ -207,7 +207,7 @@ export default class ConfigStore{
         let companyInfo = {
             company_id:company_id
         }
-        Axios.post(warehouseItemsUrl,companyInfo)
+        Axios.post(this.warehouseItemsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
                     message.warning('获取物料列表为空');
@@ -222,7 +222,7 @@ export default class ConfigStore{
     }
 
     @action createWarehouseItem(warehouseItemInfo){
-        Axios.post(warehouseItemUrl,warehouseItemInfo)
+        Axios.post(this.warehouseItemUrl,warehouseItemInfo)
             .then(response => {
                 this.warehouseItems.push(response.data)
                 message.success('创建成功')
@@ -233,7 +233,7 @@ export default class ConfigStore{
     }
 
     @action updateWarehouseItem(warehouseItemInfo){
-        Axios.put(warehouseItemUrl, warehouseItemInfo)
+        Axios.put(this.warehouseItemUrl, warehouseItemInfo)
             .then(response => {
                 let updateItem = response.data
                 let index = this.warehouseItems.findIndex((item) => item.id === updateItem.id)
@@ -246,7 +246,7 @@ export default class ConfigStore{
     }
 
     @action deleteWarehouseItemById(itemId) {
-        Axios.delete(`${warehouseItemUrl}/${itemId}`)
+        Axios.delete(`${this.warehouseItemUrl}/${itemId}`)
             .then(response => {
                 if (response.data.status === 200) {
                     this.warehouseItems = this.warehouseItems.filter(item => item.id !== itemId);

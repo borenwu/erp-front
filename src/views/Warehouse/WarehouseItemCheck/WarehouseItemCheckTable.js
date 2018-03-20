@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import {Table, Popconfirm, Divider} from 'antd';
 import moment from 'moment';
-// import * as messageConfig from '../../../configs/messageConfig'
-// import * as companyConfig from '../../../configs/companyConfig'
 import {observer} from 'mobx-react';
-
 import DevTools from 'mobx-react-devtools';
-
 
 @observer
 export default class WarehouseItemCheckTable extends React.Component{
@@ -19,7 +15,23 @@ export default class WarehouseItemCheckTable extends React.Component{
     }
 
     onCheck(record){
-        this.props.store.checkItem(record)
+        let company_id = this.props.store.company_id
+        let item_id = record.warehouseItem
+        let op_id = record.id
+        let checker = this.props.userName
+        let order = record.order
+        let re = record.re
+
+        let itemInfo = {
+            company_id:company_id,
+            item_id:item_id,
+            op_id:op_id,
+            checker:checker,
+            order:order,
+            re:re
+        }
+        console.log(itemInfo)
+        this.props.store.checkItem(itemInfo)
     }
 
     showItemCheckUpdateModal(record) {
@@ -43,7 +55,11 @@ export default class WarehouseItemCheckTable extends React.Component{
                 reason:w.reason,
                 make_time:moment(w.make_time).format('YYYY-MM-DD'),
                 maker: w.maker,
-                status:w.status ? '已审核' : '未审核'
+                status:w.status ? '已审核' : '未审核',
+                disabled:w.status,
+                warehouseItem:w.warehouseItem,
+                checker:w.checker,
+                check_time:moment(w.check_time).format('YYYY-MM-DD')
             }
 
         })
@@ -111,6 +127,16 @@ export default class WarehouseItemCheckTable extends React.Component{
                 key: 'status',
             },
             {
+                title: '审核人',
+                dataIndex: 'checker',
+                key: 'checker',
+            },
+            {
+                title: '审核时间',
+                dataIndex: 'check_time',
+                key: 'check_time',
+            },
+            {
                 title: '操作',
                 key: 'action',
                 render: (text, record) => (
@@ -118,15 +144,16 @@ export default class WarehouseItemCheckTable extends React.Component{
                         操作 一
                         <Divider type="vertical"/>
                         <Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>
-                            <a>删除</a>
+                            <a disabled={record.disabled}>删除</a>
                         </Popconfirm>
 
                         <Divider type="vertical"/>
-                        <a onClick={this.showItemCheckUpdateModal.bind(this,record)}>修改</a>
+                        <a onClick={this.showItemCheckUpdateModal.bind(this,record)} disabled={record.disabled}>修改</a>
+
 
                         <Divider type="vertical"/>
                         <Popconfirm title="审核通过，录入库存?" onConfirm={this.onCheck.bind(this,record)}>
-                            <a>审核通过</a>
+                            <a disabled={record.disabled}>审核通过</a>
                         </Popconfirm>
                     </span>
                 ),

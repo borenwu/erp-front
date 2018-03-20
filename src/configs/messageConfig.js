@@ -1,4 +1,4 @@
 export const messageConf = {
-    top: 100,
-    duration: 5,
+    top: 80,
+    duration: 2,
 }

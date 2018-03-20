@@ -1,14 +1,8 @@
 import {observable, action, autorun, useStrict} from 'mobx';
 import {message} from 'antd'
 import Axios from 'axios'
-import * as ipConfig from '../configs/ipConfig'
 import * as messageConfig from '../configs/messageConfig'
 
-const suppliersUrl = `${ipConfig.rootUrl}/suppliers`
-const itemUrl = `${ipConfig.rootUrl}/warehouse/item`;
-const itemsUrl = `${ipConfig.rootUrl}/warehouse/items`
-const itemopUrl = `${ipConfig.rootUrl}/warehouse/itemop`;
-const itemopsUrl = `${ipConfig.rootUrl}/warehouse/itemops`
 
 message.config(messageConfig.messageConf);
 
@@ -26,12 +20,19 @@ export default class WarehouseStore{
     @observable itemCheckModalVisible = false
     @observable itemCheckUpdateModalVisible = false
 
+    @observable rootUrl = window.localStorage.getItem("ipConfig")
+    @observable suppliersUrl = `${this.rootUrl}/suppliers`
+    @observable itemUrl = `${this.rootUrl}/warehouse/item`;
+    @observable itemsUrl = `${this.rootUrl}/warehouse/items`
+    @observable itemopUrl = `${this.rootUrl}/warehouse/itemop`;
+    @observable itemopsUrl = `${this.rootUrl}/warehouse/itemops`
+
 
     @action fetchItems(company_id){
         let companyInfo = {
             company_id:company_id
         }
-        Axios.post(itemsUrl,companyInfo)
+        Axios.post(this.itemsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
                     message.warning('获取物料列表为空');
@@ -46,7 +47,7 @@ export default class WarehouseStore{
         let companyInfo = {
             company_id:company_id
         }
-        Axios.post(suppliersUrl,companyInfo)
+        Axios.post(this.suppliersUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
                     message.warning('获取供应商列表为空');
@@ -59,7 +60,7 @@ export default class WarehouseStore{
 
 
     @action createItemop(itemop) {
-        Axios.post(itemopUrl, itemop)
+        Axios.post(this.itemopUrl, itemop)
             .then(response => {
                 this.warehouseItemops.push(response.data)
                 message.success('创建成功')
@@ -70,7 +71,7 @@ export default class WarehouseStore{
     }
 
     @action listItemops(info) {
-        Axios.post(itemopsUrl, info)
+        Axios.post(this.itemopsUrl, info)
             .then(response => {
                 if (response.data.status === 201) {
                     message.warning('获取物料操作列表为空');
@@ -86,7 +87,7 @@ export default class WarehouseStore{
     }
 
     @action deleteItemopById(itemopId) {
-        Axios.delete(`${itemopUrl}/${itemopId}`)
+        Axios.delete(`${this.itemopUrl}/${itemopId}`)
             .then(response => {
                 if (response.data.status === 200) {
                     this.warehouseItemops = this.warehouseItemops.filter(itemop => itemop.id !== itemopId);
@@ -99,7 +100,7 @@ export default class WarehouseStore{
     }
 
     @action updateItemop(itemopInfo) {
-        Axios.put(itemopUrl, itemopInfo)
+        Axios.put(this.itemopUrl, itemopInfo)
             .then(response => {
                 let updateItemop = response.data
                 let index = this.warehouseItemops.findIndex((itemop) => itemop.id === updateItemop.id)
@@ -112,7 +113,13 @@ export default class WarehouseStore{
     }
 
     @action checkItem(itemInfo){
-        console.log('check')
+        Axios.post(`${this.itemopUrl}/check`,itemInfo)
+            .then(response =>{
+                let updateItemop = response.data
+                let index = this.warehouseItemops.findIndex((itemop) => itemop.id === updateItemop.id)
+                this.warehouseItemops[index] = updateItemop
+                message.success('审核完成')
+            })
     }
 
     /////////////////////////////////////////////////////////////////
