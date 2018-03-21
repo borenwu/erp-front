@@ -15,6 +15,7 @@ const routes = {
 
     '/views':'仪表板',
     '/views/AccountReceivableDash':'客户仪表板',
+    '/views/SalesDash':'销售仪表板',
 
     '/setting':'设置',
     '/setting/Configs':'基础设置',

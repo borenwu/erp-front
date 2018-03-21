@@ -112,6 +112,11 @@ class Sidebar extends Component {
                       url: '/views/AccountReceivableDash',
                       icon: 'icon-grid',
                   },
+                  {
+                      name: '销售仪表板',
+                      url: '/views/SalesDash',
+                      icon: 'icon-graph',
+                  },
               ],
           },
 

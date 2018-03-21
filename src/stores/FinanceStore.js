@@ -124,6 +124,8 @@ export default class FinanceStore{
     @action showSalesModal(record) {
         this.taskById = this.tasks[record.key]
         this.volume = this.taskById.volume
+        this.price = 0
+        this.sale = 0
         this.salesModalVisible = true
     }
 
