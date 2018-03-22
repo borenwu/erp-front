@@ -5,6 +5,7 @@ import moment from 'moment';
 import SalesTable from './SalesTable'
 // import * as companyConfig from '../../../configs/companyConfig'
 import SalesModal from './SalesModal'
+import SalesUndoModal from './SalesUndoModal'
 
 const {RangePicker} = DatePicker;
 
@@ -69,6 +70,15 @@ export default class SalesRecord extends Component{
                         title="Sales Modal"
                         visible={this.props.store.salesModalVisible}
                     />
+
+                    <SalesUndoModal
+                        {...this.props}
+                        store={this.props.store}
+                        title="Sales Undo Modal"
+                        visible={this.props.store.salesUndoModalVisible}
+                    />
+
+
                 </div>
                 <SalesTable store={this.props.store}/>
             </div>

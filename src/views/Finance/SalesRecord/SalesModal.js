@@ -3,8 +3,6 @@ import {Modal,Button,DatePicker,message} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
-// import * as companyConfig from '../../../configs/companyConfig'
-
 const confirm = Modal.confirm;
 
 @observer
@@ -15,8 +13,6 @@ export default class SaleModal extends React.Component{
     }
 
     //////////////////////////////////////////////////
-
-
 
 
     onVolumeChange(){
@@ -70,7 +66,6 @@ export default class SaleModal extends React.Component{
 
     render(){
         return(
-
                 <Modal
                     title={this.props.title}
                     visible={this.props.visible}

@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {Table, Popconfirm, Divider} from 'antd';
 import moment from 'moment';
-// import * as messageConfig from '../../../configs/messageConfig'
-// import * as companyConfig from '../../../configs/companyConfig'
 import {observer} from 'mobx-react';
 
 import DevTools from 'mobx-react-devtools';
@@ -20,6 +18,10 @@ export default class SalesTable extends React.Component{
 
     showSalesModal(record) {
         this.props.store.showSalesModal(record)
+    }
+
+    showSalesUndoModal(record){
+        this.props.store.showSalesUndoModal(record)
     }
 
 
@@ -114,6 +116,9 @@ export default class SalesTable extends React.Component{
                         {/*</Popconfirm>*/}
                         <Divider type="vertical"/>
                         <button type="button" className="btn btn-primary" onClick={this.showSalesModal.bind(this,record)} disabled={record.saleOpDisable}>录入单价</button>
+
+                        <Divider type="vertical"/>
+                        <button type="button" className="btn btn-danger" onClick={this.showSalesUndoModal.bind(this,record)}>撤销重录</button>
                     </span>
                 ),
             }];

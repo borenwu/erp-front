@@ -20,5 +20,7 @@ const routes = {
     '/setting':'设置',
     '/setting/Configs':'基础设置',
 
+    '/DemoTest':'测试页面'
+
 };
 export default routes;

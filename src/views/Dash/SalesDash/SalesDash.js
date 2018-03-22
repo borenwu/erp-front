@@ -1,27 +1,24 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-import moment from 'moment';
-import {
-    Badge,
-    Row,
-    Col,
-    Progress,
-    Dropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    CardTitle,
-    Button,
-    ButtonToolbar,
-    ButtonGroup,
-    ButtonDropdown,
-    Label,
-    Input,
-} from 'reactstrap';
+import {Line} from 'react-chartjs-2';
+import moment from 'moment'
+
+const brandPrimary = '#20a8d8';
+const brandSuccess = '#4dbd74';
+const brandInfo = '#63c2de';
+const brandWarning = '#f8cb00';
+const brandDanger = '#f86c6b';
+
+// convert Hex to RGBA
+function convertHex(hex, opacity) {
+    hex = hex.replace('#', '');
+    var r = parseInt(hex.substring(0, 2), 16);
+    var g = parseInt(hex.substring(2, 4), 16);
+    var b = parseInt(hex.substring(4, 6), 16);
+
+    var result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
+    return result;
+}
 
 @observer
 export default class SalesDash extends Component {
@@ -33,105 +30,130 @@ export default class SalesDash extends Component {
         let companyInfo = {
             company_id: this.props.store.company_id
         }
-        this.props.store.fetchTodaySales(companyInfo)
+        this.props.store.fetchSaleToday(companyInfo)
+        this.props.store.fetchSaleSoFar(companyInfo)
+        this.props.store.fetchSaleEachDay(companyInfo)
+    }
+
+    processData(){
+        let saleEachDay = this.props.store.saleEachDay
+        let data = []
+        let labels = []
+        saleEachDay.forEach(record=>{
+            data.push(record.total)
+            labels.push(moment(record._id).format('YYYY-MM-DD'))
+        })
+        return {
+            data:data.reverse(),
+            labels:labels.reverse()
+        }
+    }
+
+    getLabels(){
+
     }
 
     render() {
+        const mainChartOpts = {
+            maintainAspectRatio: false,
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        drawOnChartArea: false,
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        maxTicksLimit: 5,
+                        stepSize: Math.ceil(Math.max(...this.processData().data) / 10),
+                        max: Math.max(...this.processData().data)
+                    }
+                }]
+            },
+            elements: {
+                point: {
+                    radius: 0,
+                    hitRadius: 10,
+                    hoverRadius: 4,
+                    hoverBorderWidth: 3,
+                }
+            }
+        }
+
+
+
+        const mainChart = {
+            labels: this.processData().labels,
+            datasets: [
+                {
+                    label: '当月每日销售额',
+                    backgroundColor: convertHex(brandInfo, 10),
+                    borderColor: brandInfo,
+                    pointHoverBackgroundColor: '#fff',
+                    borderWidth: 2,
+                    data: this.processData().data
+                }
+            ]
+        }
+
+
         return (
             <div className="animated fadeIn">
-                <Row>
-                    <Col xs="12" sm="12" lg="6">
-                        <Card>
-                            <CardBody className="pb-0">
-                                <h4 className="mb-0">{this.props.store.todaySales}</h4>
+                <div className="row">
+                    <div className="col-xs-12 col-sm-12 col-lg-6">
+                        <div className="card">
+                            <div className="card-body pb-0">
+                                <h4 className="mb-0">{this.props.store.saleToday}</h4>
                                 <p>今日已录入销售额</p>
-                            </CardBody>
-                        </Card>
-                    </Col>
+                            </div>
+                        </div>
+                    </div>
 
-                    <Col xs="12" sm="12" lg="6">
-                        <Card>
-                            <CardBody className="pb-0">
-                                <h4 className="mb-0">9.823</h4>
+                    <div className="col-xs-12 col-sm-12 col-lg-6">
+                        <div className="card">
+                            <div className="card-body pb-0">
+                                <h4 className="mb-0">{this.props.store.saleSoFar}</h4>
                                 <p>当月累计销售额</p>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                </Row>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <Row>
-                    <Col xs="12" sm="12" lg="12">
-                        <Card>
-                            <CardBody className="pb-0">
+                <div className="row">
+                    <div className="col-xs-12 col-sm-12 col-lg-12">
+                        <div className="card">
+                            <div className="card-body pb-0">
                                 <h4 className="mb-0">9.823</h4>
                                 <p>今日已录入销售的任务统计</p>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                </Row>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <Row>
-                    <Col>
-                        <Card>
-                            <CardBody>
-                                <Row>
-                                    <Col sm="5">
-                                        <CardTitle className="mb-0">当月销售</CardTitle>
-                                        <div className="small text-muted">November 2015</div>
-                                    </Col>
-                                    {/*<Col sm="7" className="d-none d-sm-inline-block">*/}
-                                    {/*<Button color="primary" className="float-right"><i className="icon-cloud-download"></i></Button>*/}
-                                    {/*<ButtonToolbar className="float-right" aria-label="Toolbar with button groups">*/}
-                                    {/*<ButtonGroup className="mr-3" data-toggle="buttons" aria-label="First group">*/}
-                                    {/*<Label htmlFor="option1" className="btn btn-outline-secondary">*/}
-                                    {/*<Input type="radio" name="options" id="option1"/> Day*/}
-                                    {/*</Label>*/}
-                                    {/*<Label htmlFor="option2" className="btn btn-outline-secondary active">*/}
-                                    {/*<Input type="radio" name="options" id="option2" defaultChecked/> Month*/}
-                                    {/*</Label>*/}
-                                    {/*<Label htmlFor="option3" className="btn btn-outline-secondary">*/}
-                                    {/*<Input type="radio" name="options" id="option3"/> Year*/}
-                                    {/*</Label>*/}
-                                    {/*</ButtonGroup>*/}
-                                    {/*</ButtonToolbar>*/}
-                                    {/*</Col>*/}
-                                </Row>
-                                {/*<div className="chart-wrapper" style={{height: 300 + 'px', marginTop: 40 + 'px'}}>*/}
-                                {/*<Line data={mainChart} options={mainChartOpts} height={300}/>*/}
-                                {/*</div>*/}
-                            </CardBody>
-                            <CardFooter>
-                                <ul>
-                                    <li>
-                                        <div className="text-muted">Visits</div>
-                                        <strong>29.703 Users (40%)</strong>
-                                        <Progress className="progress-xs mt-2" color="success" value="40"/>
-                                    </li>
-                                    <li className="d-none d-md-table-cell">
-                                        <div className="text-muted">Unique</div>
-                                        <strong>24.093 Users (20%)</strong>
-                                        <Progress className="progress-xs mt-2" color="info" value="20"/>
-                                    </li>
-                                    <li>
-                                        <div className="text-muted">Pageviews</div>
-                                        <strong>78.706 Views (60%)</strong>
-                                        <Progress className="progress-xs mt-2" color="warning" value="60"/>
-                                    </li>
-                                    <li className="d-none d-md-table-cell">
-                                        <div className="text-muted">New Users</div>
-                                        <strong>22.123 Users (80%)</strong>
-                                        <Progress className="progress-xs mt-2" color="danger" value="80"/>
-                                    </li>
-                                    <li className="d-none d-md-table-cell">
-                                        <div className="text-muted">Bounce Rate</div>
-                                        <strong>Average 40.15%</strong>
-                                        <Progress className="progress-xs mt-2" color="primary" value="40"/>
-                                    </li>
-                                </ul>
-                            </CardFooter>
-                        </Card>
-                    </Col>
-                </Row>
+                <div className="row">
+                    <div className="col">
+                        <div className="card">
+                            <div className="card-body">
+                                <div className="row">
+                                    <div className="col-sm-5">
+                                        <div className="card-title mb-0">当月销售</div>
+                                        <div className="text-muted">{this.props.store.saleLineTime}</div>
+                                    </div>
+                                </div>
+                                <div className="chart-wrapper" style={{height: 300 + 'px', marginTop: 40 + 'px'}}>
+                                    <Line data={mainChart} options={mainChartOpts} height={300}/>
+                                </div>
+                            </div>
+                            <div className="card-footer">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

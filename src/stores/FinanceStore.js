@@ -19,6 +19,7 @@ export default class FinanceStore{
 
     @observable modalVisible = false
     @observable salesModalVisible = false
+    @observable salesUndoModalVisible = false
 
     @observable rootUrl = window.localStorage.getItem("ipConfig")
     @observable clientsUrl = `${this.rootUrl}/clients`
@@ -112,6 +113,20 @@ export default class FinanceStore{
             });
     }
 
+    @action undoSale(taskInfo){
+        Axios.put(`${this.taskUrl}/sale/undo`,taskInfo)
+            .then(response=>{
+                let updateTask = response.data
+                let index = this.tasks.findIndex((task) => task.id === updateTask.id)
+                this.tasks[index] = updateTask
+                this.taskById = updateTask
+                message.success('销售记录撤销成功')
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
 
     @action showModal() {
         this.modalVisible = true
@@ -133,6 +148,16 @@ export default class FinanceStore{
     @action closeSalesModal() {
         this.taskById = {}
         this.salesModalVisible = false
+    }
+
+    @action showSalesUndoModal(record){
+        this.taskById = this.tasks[record.key]
+        this.salesUndoModalVisible = true
+    }
+
+    @action closeSalesUndoModal() {
+        this.taskById = {}
+        this.salesUndoModalVisible = false
     }
 
 

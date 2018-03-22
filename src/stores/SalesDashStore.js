@@ -2,24 +2,28 @@ import {observable, action, computed, useStrict} from 'mobx';
 import Axios from 'axios'
 import {message} from 'antd'
 import * as messageConfig from '../configs/messageConfig'
+import moment from 'moment'
 
 message.config(messageConfig.messageConf);
 
 export default class SalesDashStore{
     @observable todayTasks = []
-    @observable todaySales = 0.0
-    // @observable clientById = {}
+    @observable saleToday = 0.0
+    @observable saleSoFar = 0.0
+    @observable saleEachDay = []
+    @observable saleLineTime = ''
     @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
     @observable rootUrl = window.localStorage.getItem("ipConfig")
     @observable saleTodayUrl = `${this.rootUrl}/sales/today`;
-    // @observable clientsUrl = `${this.rootUrl}/clients`;
+    @observable saleSoFarUrl = `${this.rootUrl}/sales/sofar`;
+    @observable saleEachDayUrl = `${this.rootUrl}/sales/eachday`;
 
-    @action fetchTodaySales(companyInfo){
+    @action fetchSaleToday(companyInfo){
         Axios.post(this.saleTodayUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
-                    message.warning('获取客户列表为空');
+                    message.warning('获取今日销售记录列表为空');
                 }
                 else {
                     this.todayTasks = response.data
@@ -29,7 +33,27 @@ export default class SalesDashStore{
                         return acc + Number(currentValue.sale)
                     };
                     let sum = this.todayTasks.reduce(reducer,0);
-                    this.todaySales = sum
+                    this.saleToday = sum
+                }
+            })
+    }
+
+    @action fetchSaleSoFar(companyInfo){
+        Axios.post(this.saleSoFarUrl,companyInfo)
+            .then(response=>{
+                if(response.status == 200){
+                    this.saleSoFar = response.data.result[0].total
+                }
+            })
+    }
+
+    @action fetchSaleEachDay(companyInfo){
+        Axios.post(this.saleEachDayUrl,companyInfo)
+            .then(response=>{
+                if(response.status == 200){
+                    this.saleEachDay = response.data.result
+                    let time = this.saleEachDay[0]._id
+                    this.saleLineTime = moment(time).format('YYYY[年]MMM')
                 }
             })
     }
