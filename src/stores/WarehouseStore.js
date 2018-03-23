@@ -6,7 +6,7 @@ import * as messageConfig from '../configs/messageConfig'
 
 message.config(messageConfig.messageConf);
 
-export default class WarehouseStore{
+export default class WarehouseStore {
     @observable suppliers = []
     @observable warehouseItemops = []
     @observable warehouseItemopById = {}
@@ -19,6 +19,8 @@ export default class WarehouseStore{
     @observable itemopUpdateModalVisible = false
     @observable itemCheckModalVisible = false
     @observable itemCheckUpdateModalVisible = false
+    @observable itemCreateModalVisible = false
+    @observable itemStockModalVisible = false
 
     @observable rootUrl = window.localStorage.getItem("ipConfig")
     @observable suppliersUrl = `${this.rootUrl}/suppliers`
@@ -28,12 +30,12 @@ export default class WarehouseStore{
     @observable itemopsUrl = `${this.rootUrl}/warehouse/itemops`
 
 
-    @action fetchItems(company_id){
+    @action fetchItems(company_id) {
         let companyInfo = {
-            company_id:company_id
+            company_id: company_id
         }
-        Axios.post(this.itemsUrl,companyInfo)
-            .then(response=>{
+        Axios.post(this.itemsUrl, companyInfo)
+            .then(response => {
                 if (response.data.status === 201) {
                     message.warning('获取物料列表为空');
                 }
@@ -43,12 +45,12 @@ export default class WarehouseStore{
             })
     }
 
-    @action fetchSuppliers(company_id){
+    @action fetchSuppliers(company_id) {
         let companyInfo = {
-            company_id:company_id
+            company_id: company_id
         }
-        Axios.post(this.suppliersUrl,companyInfo)
-            .then(response=>{
+        Axios.post(this.suppliersUrl, companyInfo)
+            .then(response => {
                 if (response.data.status === 201) {
                     message.warning('获取供应商列表为空');
                 }
@@ -56,6 +58,19 @@ export default class WarehouseStore{
                     this.suppliers = response.data
                 }
             })
+    }
+
+    @action stockItem(itemInfo){
+        Axios.put(`${this.itemUrl}/stock`, itemInfo)
+            .then(response => {
+                let updateItem = response.data
+                let index = this.warehouseItems.findIndex((item) => item.id === updateItem.id)
+                this.warehouseItems[index] = updateItem
+                message.success('修改成功')
+            })
+            .catch(error => {
+                throw(error);
+            });
     }
 
 
@@ -99,6 +114,19 @@ export default class WarehouseStore{
             });
     }
 
+    @action undoItemop(itemInfo) {
+        Axios.post(`${this.itemopUrl}/undo`, itemInfo)
+            .then(response => {
+                if (response.data.status === 200) {
+                    this.warehouseItemops = this.warehouseItemops.filter(itemop => itemop.id !== itemInfo.op_id);
+                    message.success('删除成功')
+                }
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
     @action updateItemop(itemopInfo) {
         Axios.put(this.itemopUrl, itemopInfo)
             .then(response => {
@@ -112,9 +140,9 @@ export default class WarehouseStore{
             });
     }
 
-    @action checkItem(itemInfo){
-        Axios.post(`${this.itemopUrl}/check`,itemInfo)
-            .then(response =>{
+    @action checkItem(itemInfo) {
+        Axios.post(`${this.itemopUrl}/check`, itemInfo)
+            .then(response => {
                 let updateItemop = response.data
                 let index = this.warehouseItemops.findIndex((itemop) => itemop.id === updateItemop.id)
                 this.warehouseItemops[index] = updateItemop
@@ -141,6 +169,7 @@ export default class WarehouseStore{
         this.warehouseItemopById = {}
         this.itemopUpdateModalVisible = false
     }
+
     ///////////////////////////////////////////////////////////////////
 
     @action showItemCheckModal() {
@@ -162,5 +191,23 @@ export default class WarehouseStore{
         this.itemCheckUpdateModalVisible = false
     }
 
+    /////////////////////////////////////////////////////////////////////////
+    @action showItemCreateModal(){
+        this.itemCreateModalVisible = true
+    }
+
+    @action closeItemCreateModal(){
+        this.itemCreateModalVisible = false
+    }
+
+    @action showItemStockModal(record){
+        this.warehouseItemById = this.warehouseItems[record.key]
+        this.itemStockModalVisible = true
+    }
+
+    @action closeItemStockModal(){
+        this.warehouseItemById = {}
+        this.itemStockModalVisible = false
+    }
 
 }

@@ -18,14 +18,24 @@ export default class SalesUndoModal extends React.Component {
         };
     }
 
+    onClose(){
+        this.setState({current:0})
+    }
 
     next(current) {
         this.setState({current:current+1});
     }
 
+
     prev() {
         const current = this.state.current - 1;
         this.setState({current});
+    }
+
+    handleCancel(){
+        if(this.state.current == 0){
+            this.props.store.closeSalesUndoModal()
+        }
     }
 
     render() {
@@ -37,8 +47,8 @@ export default class SalesUndoModal extends React.Component {
                 content: <ContentF handleNext={current => this.next(current)} current={this.state.current} {...this.props}/>,
             },
             {
-                title: 'Second',
-                content: <ContentS/>,
+                title: '第二步:录入新记录',
+                content: <ContentS {...this.props}/>,
             },
         ];
 
@@ -48,31 +58,16 @@ export default class SalesUndoModal extends React.Component {
                 visible={this.props.visible}
                 destroyOnClose={true}
                 okText='确定'
-                cancelText='取消'>
+                cancelText='取消'
+                footer={null}
+                onCancel={this.handleCancel.bind(this)}
+                afterClose={this.onClose.bind(this)}
+            >
 
                 <Steps current={current}>
                     {steps.map(item => <Step key={item.title} title={item.title}/>)}
                 </Steps>
-                <div className="steps-content">{steps[this.state.current].content}</div>
-                <div className="steps-action">
-                    {
-                        this.state.current < steps.length - 1
-                        &&
-                        <Button type="primary" onClick={() => this.next(this.state.current)}>Next</Button>
-                    }
-                    {
-                        this.state.current === steps.length - 1
-                        &&
-                        <Button type="primary" onClick={() => message.success('Processing complete!')}>Done</Button>
-                    }
-                    {
-                        this.state.current > 0
-                        &&
-                        <Button style={{marginLeft: 8}} onClick={() => this.prev()}>
-                            Previous
-                        </Button>
-                    }
-                </div>
+                <div>{steps[this.state.current].content}</div>
             </Modal>
         )
     }

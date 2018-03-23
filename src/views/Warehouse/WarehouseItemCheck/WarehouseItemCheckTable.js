@@ -11,7 +11,30 @@ export default class WarehouseItemCheckTable extends React.Component{
     }
 
     onDelete(record){
-        this.props.store.deleteItemopById(record.id)
+        let status = record.disabled
+        if(status == false){
+            this.props.store.deleteItemopById(record.id)
+        }
+        else{
+            let company_id = this.props.store.company_id
+            let item_id = record.warehouseItem
+            let op_id = record.id
+            let checker = this.props.userName
+            let order = record.order
+            let re = record.re
+
+            let itemInfo = {
+                company_id:company_id,
+                item_id:item_id,
+                op_id:op_id,
+                checker:checker,
+                order:order,
+                re:re
+            }
+
+            this.props.store.undoItemop(itemInfo)
+        }
+
     }
 
     onCheck(record){
@@ -30,7 +53,6 @@ export default class WarehouseItemCheckTable extends React.Component{
             order:order,
             re:re
         }
-        console.log(itemInfo)
         this.props.store.checkItem(itemInfo)
     }
 
@@ -143,9 +165,17 @@ export default class WarehouseItemCheckTable extends React.Component{
                     <span>
                         操作 一
                         <Divider type="vertical"/>
-                        <Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>
-                            <a disabled={record.disabled}>删除</a>
-                        </Popconfirm>
+                        {
+                            record.disabled ?
+                                <Popconfirm title="已审核, 确定删除?" onConfirm={this.onDelete.bind(this,record)}>
+                                    <a>删除</a>
+                                </Popconfirm>
+                                :
+                                <Popconfirm title="未审核,确定删除?" onConfirm={this.onDelete.bind(this,record)}>
+                                    <a>删除</a>
+                                </Popconfirm>
+                        }
+
 
                         <Divider type="vertical"/>
                         <a onClick={this.showItemCheckUpdateModal.bind(this,record)} disabled={record.disabled}>修改</a>
@@ -155,6 +185,7 @@ export default class WarehouseItemCheckTable extends React.Component{
                         <Popconfirm title="审核通过，录入库存?" onConfirm={this.onCheck.bind(this,record)}>
                             <a disabled={record.disabled}>审核通过</a>
                         </Popconfirm>
+
                     </span>
                 ),
             }];

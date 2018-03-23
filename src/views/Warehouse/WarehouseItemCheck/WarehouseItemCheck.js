@@ -72,12 +72,12 @@ export default class WarehouseItemCheck extends Component{
                     <WarehouseItemCheckModal
                         {...this.props}
                         store={this.props.store}
-                        title="Basic Modal"
+                        title="创建新的领料记录"
                         visible={this.props.store.itemCheckModalVisible}/>
                     <WarehouseItemCheckUpdateModal
                         {...this.props}
                         store={this.props.store}
-                        title="Update Modal"
+                        title="修改领料记录"
                         visible={this.props.store.itemCheckUpdateModalVisible}
                     />
                 </div>

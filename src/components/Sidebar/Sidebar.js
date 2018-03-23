@@ -98,6 +98,11 @@ class Sidebar extends Component {
                         url: '/warehouse/ItemCheck',
                         icon: 'icon-map',
                     },
+                    {
+                        name: '仓库物料进货',
+                        url: '/warehouse/ItemStock',
+                        icon: 'icon-direction',
+                    }
                 ]
             },
 
@@ -116,6 +121,11 @@ class Sidebar extends Component {
                         name: '销售仪表板',
                         url: '/views/SalesDash',
                         icon: 'icon-graph',
+                    },
+                    {
+                        name: '仓储仪表板',
+                        url: '/views/WarehouseDash',
+                        icon: 'icon-docs',
                     },
                 ],
             },

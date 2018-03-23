@@ -2,7 +2,6 @@ import React from 'react'
 import {Modal,Button,DatePicker,Input} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
-// import * as companyConfig from '../../../configs/companyConfig'
 
 @observer
 export default class TaskModal extends React.Component {

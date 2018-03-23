@@ -18,11 +18,16 @@ export default class ContentF extends Component{
         this.props.handleNext(this.props.current)
     }
 
+    handleCancel(){
+        this.props.store.closeSalesUndoModal()
+    }
+
     render(){
         return(
             <div>
                 <p>撤销此条记录,应收款记录也会随之更改</p>
                 <Button type="primary" onClick={this.handleUndo.bind(this)}>撤销记录</Button>
+                <Button style={{marginLeft:20}} onClick={this.handleCancel.bind(this)}>取消</Button>
             </div>
         )
     }

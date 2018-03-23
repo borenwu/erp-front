@@ -4,7 +4,6 @@ import Axios from 'axios'
 import * as messageConfig from '../configs/messageConfig'
 import $ from 'jquery'
 
-
 message.config(messageConfig.messageConf);
 
 export default class FinanceStore{
@@ -120,6 +119,9 @@ export default class FinanceStore{
                 let index = this.tasks.findIndex((task) => task.id === updateTask.id)
                 this.tasks[index] = updateTask
                 this.taskById = updateTask
+                this.volume = this.taskById.volume
+                this.price = 0
+                this.sale = 0
                 message.success('销售记录撤销成功')
             })
             .catch(error => {
@@ -152,6 +154,8 @@ export default class FinanceStore{
 
     @action showSalesUndoModal(record){
         this.taskById = this.tasks[record.key]
+        this.price = 0
+        this.sale = 0
         this.salesUndoModalVisible = true
     }
 

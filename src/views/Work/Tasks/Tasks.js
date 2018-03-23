@@ -75,12 +75,12 @@ export default class Tasks extends Component {
                     <TaskModal
                         {...this.props}
                         store={this.props.store}
-                        title="Basic Modal"
+                        title="新建任务"
                         visible={this.props.store.modalVisible}/>
                     <UpdateModal
                         {...this.props}
                         store={this.props.store}
-                        title="Update Modal"
+                        title="修改任务"
                         visible={this.props.store.updateModalVisible}
                     />
                 </div>

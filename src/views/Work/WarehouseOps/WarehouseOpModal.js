@@ -54,7 +54,6 @@ export default class WarehouseOpModal extends React.Component {
             maker:maker,
             make_time:make_time
         }
-        console.log(itemop)
         this.props.store.createItemop(itemop)
         this.props.store.closeItemopModal()
     }

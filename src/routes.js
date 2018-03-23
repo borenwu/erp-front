@@ -12,10 +12,12 @@ const routes = {
 
     '/warehouse':'仓储',
     '/warehouse/ItemCheck':'领料退库审核',
+    '/warehouse/ItemStock':'仓库物料进货',
 
     '/views':'仪表板',
     '/views/AccountReceivableDash':'客户仪表板',
     '/views/SalesDash':'销售仪表板',
+    '/views/WarehouseDash':'仓储仪表板',
 
     '/setting':'设置',
     '/setting/Configs':'基础设置',
