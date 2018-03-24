@@ -41,7 +41,10 @@ export default class SalesDashStore{
     @action fetchSaleSoFar(companyInfo){
         Axios.post(this.saleSoFarUrl,companyInfo)
             .then(response=>{
-                if(response.status == 200){
+                if(response.data.status === 201){
+                    message.warning('没有得到数据');
+                }
+                if(response.data.status === 200){
                     this.saleSoFar = response.data.result[0].total
                 }
             })
@@ -50,7 +53,10 @@ export default class SalesDashStore{
     @action fetchSaleEachDay(companyInfo){
         Axios.post(this.saleEachDayUrl,companyInfo)
             .then(response=>{
-                if(response.status == 200){
+                if(response.data.status === 201){
+                    message.warning('没有得到数据');
+                }
+                if(response.data.status === 200){
                     this.saleEachDay = response.data.result
                     let time = this.saleEachDay[0]._id
                     this.saleLineTime = moment(time).format('YYYY[年]MMM')

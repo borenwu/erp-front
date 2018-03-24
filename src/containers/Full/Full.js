@@ -8,7 +8,6 @@ import Aside from '../../components/Aside/';
 import Footer from '../../components/Footer/';
 import Dashboard from '../../views/Dashboard/';
 
-
 //Tasks
 import Tasks from '../../views/Work/Tasks/'
 import SalesRecord from '../../views/Finance/SalesRecord'
@@ -94,8 +93,6 @@ class Full extends Component {
                 <Redirect from="/" to="/login"/>
             )
         }
-
-
     }
 }
 

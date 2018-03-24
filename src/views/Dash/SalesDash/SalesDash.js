@@ -37,21 +37,29 @@ export default class SalesDash extends Component {
 
     processData(){
         let saleEachDay = this.props.store.saleEachDay
-        let data = []
-        let labels = []
-        saleEachDay.forEach(record=>{
-            data.push(record.total)
-            labels.push(moment(record._id).format('YYYY-MM-DD'))
-        })
-        return {
-            data:data.reverse(),
-            labels:labels.reverse()
+        if(! saleEachDay){
+            let data = [0]
+            let labels = ['empty']
+            return {
+                data:data,
+                labels:labels
+            }
         }
+        else{
+            let data = []
+            let labels = []
+            saleEachDay.forEach(record=>{
+                data.push(record.total)
+                labels.push(moment(record._id).format('YYYY-MM-DD'))
+            })
+            return {
+                data:data.reverse(),
+                labels:labels.reverse()
+            }
+        }
+
     }
 
-    getLabels(){
-
-    }
 
     render() {
         const mainChartOpts = {
