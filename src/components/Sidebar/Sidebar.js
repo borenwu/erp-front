@@ -84,6 +84,11 @@ class Sidebar extends Component {
                         name: '销售统计',
                         url: '/finance/SalesStatistics',
                         icon: 'icon-screen-tablet'
+                    },
+                    {
+                        name: '应收款操作',
+                        url: '/finance/AccountReceivable',
+                        icon: 'icon-arrow-right-circle'
                     }
                 ]
             },

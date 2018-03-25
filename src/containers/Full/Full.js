@@ -12,6 +12,7 @@ import Dashboard from '../../views/Dashboard/';
 import Tasks from '../../views/Work/Tasks/'
 import SalesRecord from '../../views/Finance/SalesRecord'
 import SalesStatistics from '../../views/Finance/SalesStatistics'
+import AccountReceivable from '../../views/Finance/AccountReceivable'
 import AccountReceivableDash from '../../views/Dash/AccountReceivableDash'
 import Configs from '../../views/Settings/Configs/Configs'
 import WarehouseOp from '../../views/Work/WarehouseOps'
@@ -29,6 +30,7 @@ import WarehouseStore from '../../stores/WarehouseStore'
 import UserStore from '../../stores/UserStore'
 import SalesDashStore from '../../stores/SalesDashStore'
 import WarehouseDashStore from '../../stores/WarehouseDashStore'
+import ReceivableDashStore from '../../stores/ReceivableDashStore'
 
 
 const taskStore = new TaskStore()
@@ -39,6 +41,7 @@ const warehouseStore = new WarehouseStore()
 const userStore = new UserStore()
 const salesDashStore = new SalesDashStore()
 const warehouseDashStore = new WarehouseDashStore()
+const receivableDashStore = new ReceivableDashStore()
 
 
 class Full extends Component {
@@ -68,11 +71,12 @@ class Full extends Component {
 
                                     <Route path="/finance/SalesRecord" name="SalesRecord" component={()=><SalesRecord store={financeStore} userName={user_name}/>}/>
                                     <Route path="/finance/SalesStatistics" name="SalesStatistics" component={()=><SalesStatistics store={financeStore} userName={user_name}/>}/>
+                                    <Route path="/finance/AccountReceivable" name="AccountReceivable" component={()=><AccountReceivable store={financeStore} userName={user_name}/>}/>
 
                                     <Route path="/warehouse/ItemCheck" name="ItemCheck" component={()=><WarehouseItemCheck store={warehouseStore} userName={user_name}/>}/>
                                     <Route path="/warehouse/ItemStock" name="ItemStock" component={()=><WarehouseItemStock store={warehouseStore} userName={user_name}/>}/>
 
-                                    <Route path="/views/AccountReceivableDash" name="AccountReceivableDash" component={()=><AccountReceivableDash store={financeStore} userName={user_name}/>}/>
+                                    <Route path="/views/AccountReceivableDash" name="AccountReceivableDash" component={()=><AccountReceivableDash store={receivableDashStore} userName={user_name}/>}/>
                                     <Route path="/views/SalesDash" name="SalesDash" component={()=><SalesDash store={salesDashStore} userName={user_name}/>}/>
                                     <Route path="/views/WarehouseDash" name="WarehouseDash" component={()=><WarehouseDash store={warehouseDashStore} userName={user_name}/>}/>
 

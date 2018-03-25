@@ -15,9 +15,9 @@ export default class SalesDashStore{
     @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
     @observable rootUrl = window.localStorage.getItem("ipConfig")
-    @observable saleTodayUrl = `${this.rootUrl}/sales/today`;
-    @observable saleSoFarUrl = `${this.rootUrl}/sales/sofar`;
-    @observable saleEachDayUrl = `${this.rootUrl}/sales/eachday`;
+    @observable saleTodayUrl = `${this.rootUrl}/salesdash/today`;
+    @observable saleSoFarUrl = `${this.rootUrl}/salesdash/sofar`;
+    @observable saleEachDayUrl = `${this.rootUrl}/salesdash/eachday`;
 
     @action fetchSaleToday(companyInfo){
         Axios.post(this.saleTodayUrl,companyInfo)

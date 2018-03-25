@@ -10,6 +10,8 @@ export default class FinanceStore{
     @observable clients = []
     @observable tasks = []
     @observable taskById = {}
+    @observable accountsByClient = []
+    @observable accountsBySupplier = []
     @observable price = 0.0
     @observable volume =  0.0
     @observable sale = 0.0
@@ -19,13 +21,17 @@ export default class FinanceStore{
     @observable modalVisible = false
     @observable salesModalVisible = false
     @observable salesUndoModalVisible = false
+    @observable accountReceivableModalVisible = false
+    @observable accountPayableModalVisible = false
 
     @observable rootUrl = window.localStorage.getItem("ipConfig")
     @observable clientsUrl = `${this.rootUrl}/clients`
     @observable taskUrl = `${this.rootUrl}/task`;
     @observable tasksUrl = `${this.rootUrl}/tasks`
     @observable tasksByClientUrl = `${this.rootUrl}/tasksByClient`
-
+    @observable clientAccountsUrl = `${this.rootUrl}/accounts/client`
+    @observable supplierAccountsUrl = `${this.rootUrl}/account/supplier`
+    @observable receivableCrUrl = `${this.rootUrl}/accounts/receivablecr`
 
     computeSale(){
         this.sale = (Number(this.price) * Number(this.volume)).toFixed(2)
@@ -129,6 +135,33 @@ export default class FinanceStore{
             });
     }
 
+    @action fetchAccountsByClient(info){
+        Axios.post(this.clientAccountsUrl,info)
+            .then(response=>{
+                if (response.data.status == 201) {
+                    message.warning('获取账户信息列表为空');
+                }
+                else {
+                    this.accountsByClient = response.data
+                }
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    @action createReceivableCr(accountInfo){
+        Axios.post(this.receivableCrUrl,accountInfo)
+            .then(response=>{
+                this.accountsByClient.push(response.data.account)
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    //////////////////////////////////////////////////////////////
+
 
     @action showModal() {
         this.modalVisible = true
@@ -162,6 +195,22 @@ export default class FinanceStore{
     @action closeSalesUndoModal() {
         this.taskById = {}
         this.salesUndoModalVisible = false
+    }
+
+    @action showReceivableModal(){
+        this.accountReceivableModalVisible = true
+    }
+
+    @action closeReceivableModal(){
+        this.accountReceivableModalVisible = false
+    }
+
+    @action showPayableModal(){
+        this.accountPayableModalVisible = true
+    }
+
+    @action closePayableModal(){
+        this.accountPayableModalVisible = false
     }
 
 

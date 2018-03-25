@@ -1,0 +1,6 @@
+{
+  "name": "AccountReceivable",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./AccountReceivable.js"
+}

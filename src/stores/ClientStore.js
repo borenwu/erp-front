@@ -1,5 +1,9 @@
 import {observable, action, computed, useStrict} from 'mobx';
 import Axios from 'axios'
+import {message} from 'antd'
+import * as messageConfig from '../configs/messageConfig'
+
+message.config(messageConfig.messageConf);
 
 export default class ClientStore {
 
@@ -22,14 +26,19 @@ export default class ClientStore {
             });
     }
 
-    @action fetchClients(company) {
-        Axios.post(this.clientsUrl, company)
-            .then(response => {
-                this.clients = response.data
+    @action fetchClients(company_id){
+        let companyInfo = {
+            company_id:company_id
+        }
+        Axios.post(this.clientsUrl,companyInfo)
+            .then(response=>{
+                if (response.data.status === 201) {
+                    message.warning('获取客户列表为空');
+                }
+                else {
+                    this.clients = response.data
+                }
             })
-            .catch(error => {
-                throw(error);
-            });
     }
 
     @action fetchClientById(clientId) {

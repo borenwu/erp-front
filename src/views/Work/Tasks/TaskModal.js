@@ -34,7 +34,6 @@ export default class TaskModal extends React.Component {
     /////////////////////////////////////////////////////////////////////////
 
     onChange(date, dateString) {
-        console.log(date, dateString);
         this.setState({dueDate:dateString})
     }
 
@@ -61,7 +60,6 @@ export default class TaskModal extends React.Component {
             make_time:make_time
         }
 
-        console.log(task)
         this.props.store.createTask(task)
         this.props.store.closeModal()
     }

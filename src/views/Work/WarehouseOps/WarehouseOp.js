@@ -74,12 +74,12 @@ export default class WarehouseOp extends Component{
                     <WarehouseOpModal
                         {...this.props}
                         store={this.props.store}
-                        title="Basic Modal"
+                        title="创建领料记录"
                         visible={this.props.store.itemopModalVisible}/>
                     <WarehouseOpUpdateModal
                         {...this.props}
                         store={this.props.store}
-                        title="Update Modal"
+                        title="修改领料记录"
                         visible={this.props.store.itemopUpdateModalVisible}
                     />
                 </div>
