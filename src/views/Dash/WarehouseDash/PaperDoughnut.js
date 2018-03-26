@@ -11,7 +11,6 @@ export default class PaperDoughnut extends Component{
     }
 
     componentDidMount(){
-        console.log(this.props.item_name)
         let itemInfo = {
             company_id:this.props.store.company_id,
             item_name:this.props.item_name

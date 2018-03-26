@@ -13,6 +13,7 @@ import Tasks from '../../views/Work/Tasks/'
 import SalesRecord from '../../views/Finance/SalesRecord'
 import SalesStatistics from '../../views/Finance/SalesStatistics'
 import AccountReceivable from '../../views/Finance/AccountReceivable'
+import AccountPayable from  '../../views/Finance/AccountPayable'
 import AccountReceivableDash from '../../views/Dash/AccountReceivableDash'
 import Configs from '../../views/Settings/Configs/Configs'
 import WarehouseOp from '../../views/Work/WarehouseOps'
@@ -72,6 +73,7 @@ class Full extends Component {
                                     <Route path="/finance/SalesRecord" name="SalesRecord" component={()=><SalesRecord store={financeStore} userName={user_name}/>}/>
                                     <Route path="/finance/SalesStatistics" name="SalesStatistics" component={()=><SalesStatistics store={financeStore} userName={user_name}/>}/>
                                     <Route path="/finance/AccountReceivable" name="AccountReceivable" component={()=><AccountReceivable store={financeStore} userName={user_name}/>}/>
+                                    <Route path="/finance/AccountPayable" name="AccountPayable" component={()=><AccountPayable store={financeStore} userName={user_name}/>}/>
 
                                     <Route path="/warehouse/ItemCheck" name="ItemCheck" component={()=><WarehouseItemCheck store={warehouseStore} userName={user_name}/>}/>
                                     <Route path="/warehouse/ItemStock" name="ItemStock" component={()=><WarehouseItemStock store={warehouseStore} userName={user_name}/>}/>

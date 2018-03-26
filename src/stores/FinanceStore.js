@@ -8,6 +8,7 @@ message.config(messageConfig.messageConf);
 
 export default class FinanceStore{
     @observable clients = []
+    @observable suppliers = []
     @observable tasks = []
     @observable taskById = {}
     @observable accountsByClient = []
@@ -26,12 +27,16 @@ export default class FinanceStore{
 
     @observable rootUrl = window.localStorage.getItem("ipConfig")
     @observable clientsUrl = `${this.rootUrl}/clients`
+    @observable suppliersUrl = `${this.rootUrl}/suppliers`
     @observable taskUrl = `${this.rootUrl}/task`;
     @observable tasksUrl = `${this.rootUrl}/tasks`
     @observable tasksByClientUrl = `${this.rootUrl}/tasksByClient`
     @observable clientAccountsUrl = `${this.rootUrl}/accounts/client`
-    @observable supplierAccountsUrl = `${this.rootUrl}/account/supplier`
+    @observable supplierAccountsUrl = `${this.rootUrl}/accounts/supplier`
     @observable receivableCrUrl = `${this.rootUrl}/accounts/receivablecr`
+    @observable payableDrUrl = `${this.rootUrl}/accounts/payabledr`
+    @observable payableCrUrl = `${this.rootUrl}/accounts/payablecr`
+
 
     computeSale(){
         this.sale = (Number(this.price) * Number(this.volume)).toFixed(2)
@@ -68,6 +73,24 @@ export default class FinanceStore{
                     this.clients = response.data
                 }
             })
+    }
+
+    @action fetchSuppliers(company_id){
+        let companyInfo = {
+            company_id:company_id
+        }
+        Axios.post(this.suppliersUrl,companyInfo)
+            .then(response=>{
+                if (response.data.status === 201) {
+                    message.warning('获取供应商列表为空');
+                }
+                else {
+                    this.suppliers = response.data
+                }
+            })
+            .catch(error => {
+                throw(error);
+            });
     }
 
 
@@ -138,7 +161,7 @@ export default class FinanceStore{
     @action fetchAccountsByClient(info){
         Axios.post(this.clientAccountsUrl,info)
             .then(response=>{
-                if (response.data.status == 201) {
+                if (response.data.status === 201) {
                     message.warning('获取账户信息列表为空');
                 }
                 else {
@@ -150,10 +173,46 @@ export default class FinanceStore{
             });
     }
 
+    @action fetchAccountsBySupplier(info){
+        Axios.post(this.supplierAccountsUrl,info)
+            .then(response=>{
+                if (response.data.status === 201) {
+                    message.warning('获取账户信息列表为空');
+                }
+                else {
+                    this.accountsBySupplier = response.data
+                }
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
     @action createReceivableCr(accountInfo){
         Axios.post(this.receivableCrUrl,accountInfo)
             .then(response=>{
                 this.accountsByClient.push(response.data.account)
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    @action createPayableDr(accountInfo){
+        Axios.post(this.payableDrUrl,accountInfo)
+            .then(response=>{
+                this.accountsBySupplier.push(response.data.account)
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
+
+    @action createPayableCr(accountInfo){
+        Axios.post(this.payableCrUrl,accountInfo)
+            .then(response=>{
+                console.log(response)
+                this.accountsBySupplier.push(response.data.account)
             })
             .catch(error => {
                 throw(error);

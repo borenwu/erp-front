@@ -89,6 +89,11 @@ class Sidebar extends Component {
                         name: '应收款操作',
                         url: '/finance/AccountReceivable',
                         icon: 'icon-arrow-right-circle'
+                    },
+                    {
+                        name: '应付款操作',
+                        url: '/finance/AccountPayable',
+                        icon: 'icon-arrow-left-circle'
                     }
                 ]
             },

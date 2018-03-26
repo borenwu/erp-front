@@ -10,6 +10,7 @@ const routes = {
     '/finance/SalesRecord':'销售记录',
     '/finance/SalesStatistics':'销售统计',
     '/finance/AccountReceivable':'应收款操作',
+    '/finance/AccountPayable':'应付款操作',
 
     '/warehouse':'仓储',
     '/warehouse/ItemCheck':'领料退库审核',
