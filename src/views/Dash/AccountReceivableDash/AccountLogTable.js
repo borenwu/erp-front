@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Table,Badge} from 'antd';
 import {observer} from 'mobx-react';
 
-const genSubData = function (record,store){
-    store.fetchThisMonthSalesByClient(record)
-    let data = store.accountLogData
+const genSubData = function (store){
+    const data = [];
+    store.
     return data;
 }
 
@@ -67,9 +67,9 @@ export default class AccountLogTable extends Component {
 
 
     fetchData() {
-
+        this.props.store.fetchThisMonthSalesByClient(this.props.record)
         setTimeout(() => {
-            const data = genSubData(this.props.record,this.props.store)
+            const data = genSubData(this.props.store)
             this.setState({ data })
         }, 1000);
     }
