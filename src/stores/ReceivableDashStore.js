@@ -49,21 +49,12 @@ export default class ReceivableDashStore{
             .then(response=>{
                 if (response.data.status === 201) {
                     message.warning('获取账户信息列表为空');
+                    this.accountsByClient = []
+                    this.accountLogData = []
                 }
                 else {
                     this.accountsByClient = response.data
-                    this.accountLogData = this.accountsByClient.map((a, i) => {
-                        return {
-                            key: i,
-                            id:a.id,
-                            op_date:moment(a.op_date).format('YYYY-MM-DD'),
-                            op_name: a.op_name,
-                            direction: a.direction,
-                            amount:a.amount,
-                            invoice:a.invoice,
-                            maker: a.maker,
-                        }
-                    })
+
                 }
             })
     }

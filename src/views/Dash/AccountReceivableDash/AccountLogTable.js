@@ -1,10 +1,25 @@
 import React, {Component} from 'react';
 import {Table,Badge} from 'antd';
 import {observer} from 'mobx-react';
+import moment from 'moment'
 
 const genSubData = function (store){
-    const data = [];
-    store.
+    let data = [];
+    let accountLogData = store.accountsByClient.map((a, i) => {
+        return {
+            key: i,
+            id:a.id,
+            op_date:moment(a.op_date).format('YYYY-MM-DD'),
+            op_name: a.op_name,
+            direction: a.direction,
+            amount:a.amount,
+            invoice:a.invoice,
+            maker: a.maker,
+        }
+    })
+    accountLogData.forEach(item=>{
+        data.push(item)
+    })
     return data;
 }
 
