@@ -5,7 +5,7 @@ import './UserSetting.css'
 import UserTable from './UserTable'
 import UserModal from './UserModal'
 import UserUpdateModal from './UserUpdateModal'
-// import * as companyConfig from '../../../../configs/companyConfig'
+
 
 const Search = Input.Search;
 

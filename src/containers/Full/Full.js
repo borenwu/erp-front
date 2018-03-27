@@ -10,13 +10,15 @@ import Dashboard from '../../views/Dashboard/';
 
 //Tasks
 import Tasks from '../../views/Work/Tasks/'
+import WarehouseOp from '../../views/Work/WarehouseOps'
+import TaskWastes from '../../views/Work/TaskWastes'
 import SalesRecord from '../../views/Finance/SalesRecord'
 import SalesStatistics from '../../views/Finance/SalesStatistics'
 import AccountReceivable from '../../views/Finance/AccountReceivable'
 import AccountPayable from  '../../views/Finance/AccountPayable'
 import AccountReceivableDash from '../../views/Dash/AccountReceivableDash'
 import Configs from '../../views/Settings/Configs/Configs'
-import WarehouseOp from '../../views/Work/WarehouseOps'
+
 import WarehouseItemCheck from '../../views/Warehouse/WarehouseItemCheck'
 import WarehouseItemStock from '../../views/Warehouse/WarehouseItemStock'
 import DemoTest from '../../views/DemoTest'
@@ -32,6 +34,7 @@ import UserStore from '../../stores/UserStore'
 import SalesDashStore from '../../stores/SalesDashStore'
 import WarehouseDashStore from '../../stores/WarehouseDashStore'
 import ReceivableDashStore from '../../stores/ReceivableDashStore'
+import TaskWastesStore from '../../stores/TaskWasteStore'
 
 
 const taskStore = new TaskStore()
@@ -43,6 +46,7 @@ const userStore = new UserStore()
 const salesDashStore = new SalesDashStore()
 const warehouseDashStore = new WarehouseDashStore()
 const receivableDashStore = new ReceivableDashStore()
+const taskWasteStore = new TaskWastesStore()
 
 
 class Full extends Component {
@@ -69,6 +73,7 @@ class Full extends Component {
 
                                     <Route path="/work/tasks" name="Tasks" component={()=><Tasks store={taskStore} userName={user_name}/>}/>
                                     <Route path="/work/itemops" name="WarehouseOps" component={()=><WarehouseOp store={warehouseStore} userName={user_name}/>}/>
+                                    <Route path="/work/TaskWastes" name="TaskWastes" component={()=><TaskWastes store={taskWasteStore} userName={user_name}/>}/>
 
                                     <Route path="/finance/SalesRecord" name="SalesRecord" component={()=><SalesRecord store={financeStore} userName={user_name}/>}/>
                                     <Route path="/finance/SalesStatistics" name="SalesStatistics" component={()=><SalesStatistics store={financeStore} userName={user_name}/>}/>

@@ -6,7 +6,7 @@ import WarehouseOpModal from './WarehouseOpModal'
 import WarehouseOpUpdateModal from './WarehouseOpUpdateModal'
 import WarehouseopTable from './WarehouseopTable'
 import './WarehouseOp.css'
-// import * as companyConfig from '../../../configs/companyConfig'
+
 
 const {RangePicker} = DatePicker;
 

@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import { Table} from 'antd';
 import {observer} from 'mobx-react';
-import moment from 'moment';
 import AccountReceivableDashTable from './AccountReceivableDashTable'
 import './AccountReceivableDash.css'
 

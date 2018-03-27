@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {observer} from 'mobx-react';
 import {Steps, Button, message,Modal} from 'antd';
 import ContentF from './ContentF'
 import ContentS from './ContentS'

@@ -67,6 +67,11 @@ class Sidebar extends Component {
                         url: '/work/itemops',
                         icon: 'icon-drawer'
                     },
+                    {
+                        name: '废料记录',
+                        url: '/work/TaskWastes',
+                        icon: 'icon-basket'
+                    },
                 ]
             },
             {

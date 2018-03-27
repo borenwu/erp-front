@@ -60,4 +60,10 @@ export default class UserStore{
                 }
             })
     }
+
+    @action companyLogout() {
+        window.localStorage.removeItem("companyInfo");
+        window.localStorage.removeItem("ipConfig")
+        history.push('/')
+    }
 }

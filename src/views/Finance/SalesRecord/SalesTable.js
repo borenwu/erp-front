@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-import {Table, Popconfirm, Divider} from 'antd';
+import {Table, Divider} from 'antd';
 import moment from 'moment';
 import {observer} from 'mobx-react';
-
-import DevTools from 'mobx-react-devtools';
-
 
 @observer
 export default class SalesTable extends React.Component{
@@ -110,10 +107,6 @@ export default class SalesTable extends React.Component{
                 render: (text, record) => (
                     <span>
                         操作 一
-
-                        {/*<Popconfirm title="确定删除?" onConfirm={this.onDelete.bind(this,record)}>*/}
-                            {/*<a>删除</a>*/}
-                        {/*</Popconfirm>*/}
                         <Divider type="vertical"/>
                         <button type="button" className="btn btn-primary" onClick={this.showSalesModal.bind(this,record)} disabled={record.saleOpDisable}>录入单价</button>
 

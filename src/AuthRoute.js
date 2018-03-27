@@ -35,12 +35,12 @@ const INIT_ROOT = '/init'
 // 页面第一次加载时，写入localStorage关于服务器的信息
 const AuthRoute = ({component, ...props}) => {
     const {isPrivate} = component;
-    if(isAuthenticated() == 'init'){
+    if(isAuthenticated() === 'init'){
         console.log('need init')
         return <Redirect to={INIT_ROOT}/>;
     }
     else{
-        if (isAuthenticated() == 'private') {
+        if (isAuthenticated() === 'private') {
             //User is Authenticated
             return <Route {...props} component={component}/>;
         }

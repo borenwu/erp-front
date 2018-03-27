@@ -5,7 +5,7 @@ import './ClientSetting.css'
 import ClientTable from './ClientTable'
 import ClientModal from './ClientModal'
 import ClientUpdateModal from './ClientUpdateModal'
-// import * as companyConfig from '../../../../configs/companyConfig'
+
 
 const Search = Input.Search;
 

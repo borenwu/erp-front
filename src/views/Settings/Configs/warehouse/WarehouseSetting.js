@@ -5,7 +5,7 @@ import './WarehouseSetting.css'
 import WarehouseTable from './WarehouseTable'
 import WarehouseModal from './WarehouseModal'
 import WarehouseUpdateModal from './WarehouseUpdateModal'
-// import * as companyConfig from '../../../../configs/companyConfig'
+
 
 const Search = Input.Search;
 

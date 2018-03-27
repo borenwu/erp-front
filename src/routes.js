@@ -5,6 +5,7 @@ const routes = {
     '/work':'生产',
     '/work/tasks': '任务',
     '/work/itemops':'领料退库',
+    '/work/TaskWastes':'废料记录',
 
     '/finance':'财务',
     '/finance/SalesRecord':'销售记录',

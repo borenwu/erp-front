@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-import moment from 'moment';
-import {Modal,Button,DatePicker} from 'antd'
+import {Modal} from 'antd'
 
 @observer
 export default class AccountReceivableModal extends Component{

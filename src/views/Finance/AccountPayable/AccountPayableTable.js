@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-import {Table, Popconfirm, Divider} from 'antd';
+import {Table} from 'antd';
 import moment from 'moment';
 
 @observer

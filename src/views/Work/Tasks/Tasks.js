@@ -6,7 +6,7 @@ import TaskModal from './TaskModal'
 import UpdateModal from './UpdateModal'
 import TaskTable from './TaskTable'
 import './Tasks.css'
-// import * as companyConfig from '../../../configs/companyConfig'
+
 
 
 const {RangePicker} = DatePicker;

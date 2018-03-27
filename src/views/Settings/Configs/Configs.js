@@ -34,4 +34,3 @@ export default class Configs extends Component{
 
 }
 
-{/*<SupplierSetting store={this.props.store}/>*/}

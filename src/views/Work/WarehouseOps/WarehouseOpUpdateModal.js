@@ -1,9 +1,7 @@
 import React from 'react'
-import {Modal,Select,Button,DatePicker,message,Input} from 'antd'
+import {Modal,Select,Input} from 'antd'
 import {observer} from 'mobx-react';
-import moment from 'moment';
 
-// import * as companyConfig from '../../../configs/companyConfig'
 
 const { Option, OptGroup } = Select;
 

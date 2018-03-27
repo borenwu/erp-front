@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import {Table, Popconfirm, Divider} from 'antd';
 import moment from 'moment';
-// import * as messageConfig from '../../../configs/messageConfig'
-// import * as companyConfig from '../../../configs/companyConfig'
 import {observer} from 'mobx-react';
-
-import DevTools from 'mobx-react-devtools';
 
 
 @observer

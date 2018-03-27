@@ -1,5 +1,5 @@
 import React from 'react'
-import {Modal,Button,DatePicker,Input} from 'antd'
+import {Modal,Button,DatePicker} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
@@ -64,7 +64,6 @@ export default class TaskModal extends React.Component {
         this.props.store.closeModal()
     }
     handleCancel(e){
-        console.log(e);
         this.props.store.closeModal()
     }
 
@@ -102,7 +101,7 @@ export default class TaskModal extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="taskVolume">印量</label>
-                        <input ref="volume" type="number" className="form-control" id="taskVolume" placeholder="印量"/>
+                        <input ref="volume" type="number" className="form-control" id="taskVolume" defaultValue={0}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="taskDesc">规格明细</label>

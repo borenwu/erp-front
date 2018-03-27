@@ -38,6 +38,10 @@ class HeaderDropdown extends Component {
         this.props.store.userLogout(userInfo)
     }
 
+    logoutCompany(){
+        this.props.store.companyLogout()
+    }
+
     dropAccnt() {
         return (
             <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
@@ -47,6 +51,7 @@ class HeaderDropdown extends Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                     <DropdownItem onClick={this.logout.bind(this)}><i className="fa fa-lock"></i> 登出</DropdownItem>
+                    <DropdownItem onClick={this.logoutCompany.bind(this)}><i className="fa fa-sign-out"></i> 完全注销</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
         );

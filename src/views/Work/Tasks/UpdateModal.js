@@ -1,9 +1,7 @@
 import React from 'react'
-import {Modal,Button,DatePicker,message} from 'antd'
+import {Modal,Button,DatePicker} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
-
-// import * as companyConfig from '../../../configs/companyConfig'
 
 @observer
 export default class UpdateModal extends React.Component{

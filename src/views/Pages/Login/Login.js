@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Container, Row, Col, CardGroup, Card, CardBody, Button, Input, InputGroup, InputGroupAddon} from 'reactstrap';
 import {observer} from 'mobx-react';
 
 
@@ -21,6 +20,13 @@ class Login extends Component {
         this.props.store.userLogin(userInfo)
     }
 
+    onKeyup(e){
+        e.keyCode === 13 && this.handler()
+    }
+    handler(){
+        this.handleIn()
+    }
+
     render() {
         return (
             <div className="app flex-row align-items-center">
@@ -38,15 +44,15 @@ class Login extends Component {
                                         </div>
                                         <div className="input-group mb-4">
                                             <span className="input-group-addon"><i className="icon-lock"></i></span>
-                                            <input ref="password" type="password" className="form-control" placeholder="密码"/>
+                                            <input ref="password" type="password" className="form-control" placeholder="密码" onKeyUp={this.onKeyup.bind(this)}/>
                                         </div>
                                         <div className="row">
                                             <div className="col-6">
                                                 <button type="button" className="btn btn-primary px-4" onClick={this.handleIn.bind(this)}>登陆</button>
                                             </div>
-                                            <div className="col-6 text-right">
-                                                <button type="button" className="btn btn-link px-0">忘记密码?</button>
-                                            </div>
+                                            {/*<div className="col-6 text-right">*/}
+                                                {/*<button type="button" className="btn btn-link px-0">忘记密码?</button>*/}
+                                            {/*</div>*/}
                                         </div>
                                     </div>
                                 </div>

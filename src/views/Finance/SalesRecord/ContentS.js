@@ -1,9 +1,7 @@
 import React,{Component} from 'react'
-import {Modal,Button,DatePicker,message} from 'antd'
+import {Button,DatePicker} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
-
-const confirm = Modal.confirm;
 
 @observer
 export default class ContentS extends Component{

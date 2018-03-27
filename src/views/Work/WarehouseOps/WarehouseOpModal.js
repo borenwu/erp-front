@@ -1,10 +1,10 @@
 import React from 'react'
-import {Modal,Select,Button,DatePicker,Input,InputNumber} from 'antd'
+import {Modal,Select,Input} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
-// import * as companyConfig from '../../../configs/companyConfig'
 
-const { Option, OptGroup } = Select;
+
+const { Option} = Select;
 
 @observer
 export default class WarehouseOpModal extends React.Component {
@@ -29,9 +29,6 @@ export default class WarehouseOpModal extends React.Component {
         let company_id = this.props.store.company_id
         let item_id = this.state.itemSelected.id
         let op_date = moment().format('YYYY-MM-DD')
-        // let item_name = this.refs.item_name.value
-        // let item_type = this.refs.item_type.value
-        // let unit = this.refs.unit.value
         let supplier_name = this.refs.supplier_name.value
         let order = this.refs.order.value
         let re = this.refs.re.value
