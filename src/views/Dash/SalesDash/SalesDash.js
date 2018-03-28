@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import {Line} from 'react-chartjs-2';
 import moment from 'moment'
+import SaleDashTable from './SaleDashTable'
 
 const brandPrimary = '#20a8d8';
 const brandSuccess = '#4dbd74';
@@ -135,8 +136,10 @@ export default class SalesDash extends Component {
                     <div className="col-xs-12 col-sm-12 col-lg-12">
                         <div className="card">
                             <div className="card-body pb-0">
-                                <h4 className="mb-0">9.823</h4>
+                                <h4 className="mb-0">销售任务报告</h4>
+                                <br/>
                                 <p>今日已录入销售的任务统计</p>
+                                <SaleDashTable {...this.props}/>
                             </div>
                         </div>
                     </div>

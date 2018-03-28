@@ -13,14 +13,27 @@ export default class TaskStore {
 
     @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
+    @observable clientModalVisible = false
     @observable modalVisible = false
     @observable updateModalVisible = false
 
     @observable rootUrl = window.localStorage.getItem("ipConfig")
     @observable clientsUrl = `${this.rootUrl}/clients`
+    @observable clientUrl = `${this.rootUrl}/client`
     @observable taskUrl = `${this.rootUrl}/task`;
     @observable tasksUrl = `${this.rootUrl}/tasks`
 
+
+    @action createClient(clientInfo){
+        Axios.post(this.clientUrl,clientInfo)
+            .then(response => {
+                this.clients.push(response.data)
+                message.success('创建成功')
+            })
+            .catch(error => {
+                throw(error);
+            });
+    }
 
     @action fetchClients(company_id){
         let companyInfo = {
@@ -123,14 +136,12 @@ export default class TaskStore {
         this.updateModalVisible = false
     }
 
-    // @action listAllCompanies(){
-    //     Axios.get(apiUrl)
-    //         .then(response => {
-    //             this.companies = response.data
-    //         })
-    //         .catch(error =>{
-    //             throw(error);
-    //         })
-    // }
+    @action showClientModal() {
+        this.clientModalVisible = true
+    }
+
+    @action closeClientModal() {
+        this.clientModalVisible = false
+    }
 }
 

@@ -66,14 +66,14 @@ export default class SalesRecord extends Component{
                     <SalesModal
                         {...this.props}
                         store={this.props.store}
-                        title="Sales Modal"
+                        title="创建销售记录"
                         visible={this.props.store.salesModalVisible}
                     />
 
                     <SalesUndoModal
                         {...this.props}
                         store={this.props.store}
-                        title="Sales Undo Modal"
+                        title="撤销销售记录"
                         visible={this.props.store.salesUndoModalVisible}
                     />
 

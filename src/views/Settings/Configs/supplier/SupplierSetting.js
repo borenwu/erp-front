@@ -42,11 +42,11 @@ export default class SupplierSetting extends Component{
                     <Button onClick={this.showSupplierModal.bind(this)}>创建</Button>
                     <SupplierModal
                         store={this.props.store}
-                        title="Basic Modal"
+                        title="添加供应商"
                         visible={this.props.store.supplierModalVisible}/>
                     <SupplierUpdateModal
                         store={this.props.store}
-                        title="Update Modal"
+                        title="修改供应商"
                         visible={this.props.store.supplierUpdateModalVisible}
                     />
                 </div>

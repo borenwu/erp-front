@@ -42,11 +42,11 @@ export default class UserSetting extends Component{
                     <Button onClick={this.showUserModal.bind(this)}>创建</Button>
                     <UserModal
                         store={this.props.store}
-                        title="Basic Modal"
+                        title="添加新用户"
                         visible={this.props.store.userModalVisible}/>
                     <UserUpdateModal
                         store={this.props.store}
-                        title="Update Modal"
+                        title="修改用户"
                         visible={this.props.store.userUpdateModalVisible}
                     />
                 </div>

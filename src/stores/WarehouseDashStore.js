@@ -11,12 +11,14 @@ export default class WarehouseDashStore{
     @observable warehouseDashItemById = {}
     @observable empty = 0.0
     @observable now = 0.0
+    @observable taskWastes = []
 
     @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
     @observable rootUrl = window.localStorage.getItem("ipConfig")
-    // @observable itemsUrl = `${this.rootUrl}/warehouse/items`
     @observable dashItemsUrl = `${this.rootUrl}/warehousedash/items`;
     @observable ratioUrl = `${this.rootUrl}/warehousedash/ratio`;
+    @observable taskWastesUrl = `${this.rootUrl}/taskwastes`
+
 
     @action fetchDashItems(itemInfo) {
         Axios.post(this.dashItemsUrl, itemInfo)
@@ -50,6 +52,29 @@ export default class WarehouseDashStore{
             .catch(error => {
                 throw(error);
             });
+    }
+
+    @action fetchTaskWastesForMonth(){
+        let today = moment().format('YYYY-MM-DD')
+        let month = moment().month()
+        let startOfMonth = moment().month(month).startOf('month').format('YYYY-MM-DD')
+
+        let data = {
+            company_id:this.company_id,
+            start_date:startOfMonth,
+            end_date:today
+        }
+        console.log(data)
+
+        Axios.post(this.taskWastesUrl,data)
+            .then(response=>{
+                if (response.data.status === 201) {
+                    message.warning('获取废料列表为空');
+                }
+                else {
+                    this.taskWastes = response.data
+                }
+            })
     }
 
     @action reset(){

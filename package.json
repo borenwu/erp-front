@@ -27,7 +27,7 @@
     "simple-line-icons": "2.4.1"
   },
   "main": "src/electron-starter.js",
-  "homepage": "./",
+  "homepage": "/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

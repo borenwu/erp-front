@@ -42,11 +42,11 @@ export default class ClientSetting extends Component{
                     <Button onClick={this.showClientModal.bind(this)}>创建</Button>
                     <ClientModal
                         store={this.props.store}
-                        title="Basic Modal"
+                        title="添加新客户"
                         visible={this.props.store.clientModalVisible}/>
                     <ClientUpdateModal
                         store={this.props.store}
-                        title="Update Modal"
+                        title="修改客户"
                         visible={this.props.store.clientUpdateModalVisible}
                     />
                 </div>

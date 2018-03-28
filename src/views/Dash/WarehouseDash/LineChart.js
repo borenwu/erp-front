@@ -26,9 +26,13 @@ export default class LineChart extends Component{
         super(props)
     }
 
+    componentDidMount(){
+        this.props.store.fetchTaskWastesForMonth()
+    }
+
     processData(){
-        let accountsByClient = this.props.store.accountsByClient
-        if(! accountsByClient){
+        let taskWastes = this.props.store.taskWastes
+        if(! taskWastes){
             let data = [0]
             let labels = ['empty']
             return {
@@ -39,15 +43,16 @@ export default class LineChart extends Component{
         else{
             let data = []
             let labels = []
-            accountsByClient.forEach(record=>{
-                if(record.direction === '借'){
+            taskWastes.forEach(record=>{
+                if(record.waste_name === this.props.wasteName){
+                    console.log('equal')
                     data.push(record.amount)
                     labels.push(moment(record.op_date).format('YYYY-MM-DD'))
                 }
             })
             return {
-                data:data.reverse(),
-                labels:labels.reverse()
+                data:data,
+                labels:labels
             }
         }
 
@@ -90,7 +95,7 @@ export default class LineChart extends Component{
             labels: this.processData().labels,
             datasets: [
                 {
-                    label: '该客户当月每日销售额',
+                    label: `近一个月废料-${this.props.wasteName}`,
                     backgroundColor: convertHex(brandInfo, 10),
                     borderColor: brandInfo,
                     pointHoverBackgroundColor: '#fff',

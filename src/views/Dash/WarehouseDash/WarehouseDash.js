@@ -6,6 +6,7 @@ import PaperDoughnut from './PaperDoughnut'
 import InkDoughnut from './InkDoughnut'
 import PartsDoughnut from './PartsDoughnut'
 import OtherDoughnut from './OtherDoughnut'
+import LineChart from './LineChart'
 
 
 @observer
@@ -22,8 +23,9 @@ export default class WarehouseDash extends Component {
         this.setState({ [type]: key });
     }
 
+
     render() {
-        const tabList = [
+        const warehouseTabList = [
             {
                 key: 'tab1',
                 tab: '纸张',
@@ -41,11 +43,18 @@ export default class WarehouseDash extends Component {
                 tab: '其他辅料',
             }
         ];
-        const contentList = {
+
+
+
+        const warehouseContentList = {
             tab1: <PaperDoughnut {...this.props} item_name={'纸张'}/>,
             tab2: <InkDoughnut {...this.props} item_name={'油墨'}/>,
             tab3: <PartsDoughnut {...this.props} item_name={'配件耗材'}/>,
             tab4: <OtherDoughnut {...this.props} item_name={'其他辅料'}/>,
+        };
+
+        const expandedRowRender = (waste_name) => {
+            return <LineChart store={this.props.store} wasteName={waste_name}/>
         };
 
         return (
@@ -55,11 +64,30 @@ export default class WarehouseDash extends Component {
                         <Card
                             style={{ width: '100%' }}
                             title="仓储信息图"
-                            extra={<a href="#">More</a>}
-                            tabList={tabList}
+                            tabList={warehouseTabList}
                             onTabChange={(key) => { this.onTabChange(key, 'key'); }}
                         >
-                            {contentList[this.state.key]}
+                            {warehouseContentList[this.state.key]}
+                        </Card>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <Card
+                            style={{ width: '100%' }}
+                            title="白破信息图"
+                        >
+                            {expandedRowRender('白破')}
+                        </Card>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <Card
+                            style={{ width: '100%' }}
+                            title="黑破信息图"
+                        >
+                            {expandedRowRender('黑破')}
                         </Card>
                     </div>
                 </div>

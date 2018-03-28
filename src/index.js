@@ -25,6 +25,7 @@ import Init from './views/Pages/Init'
 // route history
 import history from './history';
 
+
 // stores
 import UserStore from './stores/UserStore'
 import CompanyStore from './stores/CompanyStore'
@@ -38,6 +39,8 @@ moment.locale('zh-cn');
 // init store
 const userStore = new UserStore()
 const companyStore = new CompanyStore()
+
+history.replace('/')
 
 ReactDOM.render((
     <Router history={history}>

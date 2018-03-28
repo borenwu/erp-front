@@ -43,11 +43,11 @@ export default class WarehouseSetting extends Component{
                     <Button onClick={this.showWarehouseModal.bind(this)}>创建</Button>
                     <WarehouseModal
                         store={this.props.store}
-                        title="Basic Modal"
+                        title="添加新物料"
                         visible={this.props.store.warehouseModalVisible}/>
                     <WarehouseUpdateModal
                         store={this.props.store}
-                        title="Update Modal"
+                        title="修改物料"
                         visible={this.props.store.warehouseUpdateModalVisible}
                     />
                 </div>

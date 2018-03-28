@@ -1,5 +1,5 @@
 import React from 'react'
-import {Modal,Button,DatePicker} from 'antd'
+import {Modal,Button,DatePicker,Cascader} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
@@ -19,7 +19,9 @@ export default class UpdateModal extends React.Component{
             assistantVisible: true,
         });
     }
-    handleAssistantOk(e){
+    handleAssistantOk(e) {
+        let description = this.state.desc
+        this.refs.desc.value = `${description[0]}/${description[1]}/${description[2]}`
         this.setState({
             assistantVisible: false,
         });
@@ -64,7 +66,246 @@ export default class UpdateModal extends React.Component{
         this.props.store.closeUpdateModal()
     }
 
+    onChangeAssistant(value) {
+        this.setState({desc:value})
+    }
+
     render(){
+        const options = [
+            {
+                value: '对开',
+                label: '对开',
+                children: [
+                    {
+                        value: '4版',
+                        label: '4版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    },
+                    {
+                        value: '8版',
+                        label: '8版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    },
+                    {
+                        value: '16版',
+                        label: '16版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    },
+                    {
+                        value: '32版',
+                        label: '32版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    },
+                    {
+                        value: '64版',
+                        label: '64版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    }
+                ],
+            },
+            {
+                value: '四开',
+                label: '四开',
+                children: [
+                    {
+                        value: '4版',
+                        label: '4版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    },
+                    {
+                        value: '8版',
+                        label: '8版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    },
+                    {
+                        value: '16版',
+                        label: '16版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    },
+                    {
+                        value: '32版',
+                        label: '32版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    },
+                    {
+                        value: '64版',
+                        label: '64版',
+                        children: [
+                            {
+                                value: '双面彩色',
+                                label: '双面彩色',
+                            },
+                            {
+                                value: '单面彩色',
+                                label: '单面彩色',
+                            },
+                            {
+                                value: '套红',
+                                label: '套红',
+                            },
+                            {
+                                value: '黑白',
+                                label: '黑白',
+                            }
+                        ],
+                    }
+                ],
+            },
+        ]
+
         return(
                 <Modal
                     title={this.props.title}
@@ -83,7 +324,6 @@ export default class UpdateModal extends React.Component{
                         <div className="form-group">
                             <label htmlFor="taskName">任务</label>
                             <input type="text" ref="task_name" className="form-control" id="taskName"  defaultValue={this.props.store.taskById.task_name}/>
-                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div className="form-group">
                             <label>交付时间</label>
@@ -100,18 +340,17 @@ export default class UpdateModal extends React.Component{
                                     <input ref="desc" type="text" className="form-control" id="taskDesc" defaultValue={this.props.store.taskById.desc}/>
                                 </div>
                                 <div className="col-4">
-                                    <Button type="primary" onClick={this.showAssistantModal.bind(this)}>明细小助手</Button>
+                                    <Button type="primary" onClick={this.showAssistantModal.bind(this)}>报业印刷小助手</Button>
                                     <Modal
-                                        title="Assistant Modal"
+                                        title="报业印刷小助手"
                                         visible={this.state.assistantVisible}
                                         onOk={this.handleAssistantOk.bind(this)}
                                         onCancel={this.handleAssistantCancel.bind(this)}
                                         okText='确定'
                                         cancelText='取消'
                                     >
-                                        <p>Some contents...</p>
-                                        <p>Some contents...</p>
-                                        <p>Some contents...</p>
+                                        <Cascader options={options} style={{width: 400}} onChange={this.onChangeAssistant.bind(this)}
+                                                    placeholder="请选择"/>
                                     </Modal>
                                 </div>
                             </div>

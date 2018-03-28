@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route,Router, Redirect} from 'react-router-dom';
 import {Container} from 'reactstrap';
 import Header from '../../components/Header/';
 import Sidebar from '../../components/Sidebar/';
@@ -49,6 +49,7 @@ const receivableDashStore = new ReceivableDashStore()
 const taskWasteStore = new TaskWastesStore()
 
 
+
 class Full extends Component {
     render() {
         const local=window.localStorage
@@ -68,30 +69,31 @@ class Full extends Component {
                         <main className="main">
                             <Breadcrumb />
                             <Container fluid>
-                                <Switch>
-                                    <Route path="/dashboard" name="Dashboard" component={Dashboard} userName={user_name}/>
+                                    <Switch>
+                                        <Route path="/dashboard" name="Dashboard" component={Dashboard} userName={user_name}/>
 
-                                    <Route path="/work/tasks" name="Tasks" component={()=><Tasks store={taskStore} userName={user_name}/>}/>
-                                    <Route path="/work/itemops" name="WarehouseOps" component={()=><WarehouseOp store={warehouseStore} userName={user_name}/>}/>
-                                    <Route path="/work/TaskWastes" name="TaskWastes" component={()=><TaskWastes store={taskWasteStore} userName={user_name}/>}/>
+                                        <Route path="/work/tasks" name="Tasks" component={()=><Tasks store={taskStore} userName={user_name}/>}/>
+                                        <Route path="/work/itemops" name="WarehouseOps" component={()=><WarehouseOp store={warehouseStore} userName={user_name}/>}/>
+                                        <Route path="/work/TaskWastes" name="TaskWastes" component={()=><TaskWastes store={taskWasteStore} userName={user_name}/>}/>
 
-                                    <Route path="/finance/SalesRecord" name="SalesRecord" component={()=><SalesRecord store={financeStore} userName={user_name}/>}/>
-                                    <Route path="/finance/SalesStatistics" name="SalesStatistics" component={()=><SalesStatistics store={financeStore} userName={user_name}/>}/>
-                                    <Route path="/finance/AccountReceivable" name="AccountReceivable" component={()=><AccountReceivable store={financeStore} userName={user_name}/>}/>
-                                    <Route path="/finance/AccountPayable" name="AccountPayable" component={()=><AccountPayable store={financeStore} userName={user_name}/>}/>
+                                        <Route path="/finance/SalesRecord" name="SalesRecord" component={()=><SalesRecord store={financeStore} userName={user_name}/>}/>
+                                        <Route path="/finance/SalesStatistics" name="SalesStatistics" component={()=><SalesStatistics store={financeStore} userName={user_name}/>}/>
+                                        <Route path="/finance/AccountReceivable" name="AccountReceivable" component={()=><AccountReceivable store={financeStore} userName={user_name}/>}/>
+                                        <Route path="/finance/AccountPayable" name="AccountPayable" component={()=><AccountPayable store={financeStore} userName={user_name}/>}/>
 
-                                    <Route path="/warehouse/ItemCheck" name="ItemCheck" component={()=><WarehouseItemCheck store={warehouseStore} userName={user_name}/>}/>
-                                    <Route path="/warehouse/ItemStock" name="ItemStock" component={()=><WarehouseItemStock store={warehouseStore} userName={user_name}/>}/>
+                                        <Route path="/warehouse/ItemCheck" name="ItemCheck" component={()=><WarehouseItemCheck store={warehouseStore} userName={user_name}/>}/>
+                                        <Route path="/warehouse/ItemStock" name="ItemStock" component={()=><WarehouseItemStock store={warehouseStore} userName={user_name}/>}/>
 
-                                    <Route path="/views/AccountReceivableDash" name="AccountReceivableDash" component={()=><AccountReceivableDash store={receivableDashStore} userName={user_name}/>}/>
-                                    <Route path="/views/SalesDash" name="SalesDash" component={()=><SalesDash store={salesDashStore} userName={user_name}/>}/>
-                                    <Route path="/views/WarehouseDash" name="WarehouseDash" component={()=><WarehouseDash store={warehouseDashStore} userName={user_name}/>}/>
+                                        <Route path="/views/AccountReceivableDash" name="AccountReceivableDash" component={()=><AccountReceivableDash store={receivableDashStore} userName={user_name}/>}/>
+                                        <Route path="/views/SalesDash" name="SalesDash" component={()=><SalesDash store={salesDashStore} userName={user_name}/>}/>
+                                        <Route path="/views/WarehouseDash" name="WarehouseDash" component={()=><WarehouseDash store={warehouseDashStore} userName={user_name}/>}/>
 
-                                    <Route path="/setting/Configs" name="Configs" component={()=><Configs store={configStore} userName={user_name}/>}/>
+                                        <Route path="/setting/Configs" name="Configs" component={()=><Configs store={configStore} userName={user_name}/>}/>
 
-                                    <Route path="/DemoTest" name="DemoTest" component={DemoTest}/>
-                                    <Redirect from="/" to="/dashboard"/>
-                                </Switch>
+                                        <Route path="/DemoTest" name="DemoTest" component={DemoTest}/>
+                                        <Redirect from="/" to="/dashboard"/>
+                                    </Switch>
+
                             </Container>
                         </main>
                         <Aside />
