@@ -10,6 +10,7 @@ export default class TaskStore {
     @observable clients = []
     @observable tasks = []
     @observable taskById = {}
+    @observable taskNames = []
 
     @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
@@ -115,6 +116,23 @@ export default class TaskStore {
             .catch(error => {
                 throw(error);
             });
+    }
+
+    @action getTaskNames(){
+        let companyInfo = {
+            company_id:this.company_id
+        }
+
+        Axios.post(`${this.tasksUrl}/names`,companyInfo)
+            .then(response=>{
+                if (response.data.status === 201) {
+                    message.warning('获取任务名列表为空');
+                }
+                else {
+                    let result = response.data.result
+                    this.taskNames = result
+                }
+            })
     }
 
     @action showModal() {

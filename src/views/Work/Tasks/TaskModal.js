@@ -1,5 +1,5 @@
 import React from 'react'
-import {Modal, Button, DatePicker, Cascader} from 'antd'
+import {Modal, Button, DatePicker, Cascader,AutoComplete} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 import ClientModal from '../../Settings/Configs/client/ClientModal'
@@ -9,7 +9,9 @@ export default class TaskModal extends React.Component {
     state = {
         assistantVisible: false,
         dueDate: '',
-        desc:[]
+        desc:[],
+        dataSource: [],
+        task_name:''
     }
 
     constructor(props) {
@@ -40,6 +42,19 @@ export default class TaskModal extends React.Component {
         });
     }
 
+    handleSearch(value){
+        let names = []
+        this.props.store.taskNames.forEach((element)=>{
+            names.push(element._id)
+        })
+        this.setState({
+            dataSource: !value ? [] : names,
+        });
+    }
+
+    onSelect(value) {
+        this.setState({task_name:value})
+    }
     /////////////////////////////////////////////////////////////////////////
 
     onChange(date, dateString) {
@@ -51,7 +66,7 @@ export default class TaskModal extends React.Component {
         let client_name = this.refs.client_name.value
         let task_date = moment().format('YYYY-MM-DD')
         let due_date = this.state.dueDate
-        let task_name = this.refs.task_name.value
+        let task_name = this.state.task_name
         let volume = this.refs.volume.value
         let desc = this.refs.desc.value
         let maker = this.refs.maker.value
@@ -79,6 +94,7 @@ export default class TaskModal extends React.Component {
 
     componentDidMount() {
         this.props.store.fetchClients(this.props.store.company_id)
+        this.props.store.getTaskNames()
     }
 
     onChangeAssistant(value) {
@@ -322,7 +338,6 @@ export default class TaskModal extends React.Component {
             },
         ]
 
-
         return (
             <div>
                 <Modal
@@ -351,7 +366,15 @@ export default class TaskModal extends React.Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskName">任务</label>
-                            <input type="text" ref="task_name" className="form-control" id="taskName" placeholder="任务名称"/>
+                            {/*<input type="text" ref="task_name" className="form-control" id="taskName" placeholder="任务名称"/>*/}
+                            <AutoComplete
+                                className="form-control"
+                                ref="task_name"
+                                dataSource={this.state.dataSource}
+                                onSearch={this.handleSearch.bind(this)}
+                                onSelect={this.onSelect.bind(this)}
+                                placeholder="任务名称"
+                            />
                         </div>
                         <div className="form-group">
                             <label>交付时间</label>
