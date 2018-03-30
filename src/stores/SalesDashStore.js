@@ -23,6 +23,7 @@ export default class SalesDashStore{
         Axios.post(this.saleTodayUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.todayTasks = []
                     message.warning('获取今日销售记录列表为空');
                 }
                 else {
@@ -42,6 +43,7 @@ export default class SalesDashStore{
         Axios.post(this.saleSoFarUrl,companyInfo)
             .then(response=>{
                 if(response.data.status === 201){
+                    this.saleSoFar = 0.0
                     message.warning('没有得到数据');
                 }
                 if(response.data.status === 200){
@@ -54,6 +56,8 @@ export default class SalesDashStore{
         Axios.post(this.saleEachDayUrl,companyInfo)
             .then(response=>{
                 if(response.data.status === 201){
+                    this.saleEachDay = []
+                    this.saleLineTime = ''
                     message.warning('没有得到数据');
                 }
                 if(response.data.status === 200){

@@ -43,6 +43,7 @@ export default class ConfigStore{
         Axios.post(this.clientsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.clients = []
                     message.warning('获取客户列表为空');
                 }
                 else {
@@ -96,6 +97,7 @@ export default class ConfigStore{
         Axios.post(this.suppliersUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.suppliers = []
                     message.warning('获取供应商列表为空');
                 }
                 else {
@@ -153,6 +155,7 @@ export default class ConfigStore{
         Axios.post(this.usersUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.users = []
                     message.warning('获取用户列表为空');
                 }
                 else {
@@ -210,6 +213,7 @@ export default class ConfigStore{
         Axios.post(this.warehouseItemsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.warehouseItems = []
                     message.warning('获取物料列表为空');
                 }
                 else {

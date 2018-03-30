@@ -82,6 +82,7 @@ export default class FinanceStore{
         Axios.post(this.suppliersUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.suppliers = []
                     message.warning('获取供应商列表为空');
                 }
                 else {
@@ -98,6 +99,7 @@ export default class FinanceStore{
         Axios.post(this.tasksUrl, info)
             .then(response => {
                 if (response.data.status == 201) {
+                    this.tasks = []
                     message.warning('获取任务列表为空');
                 }
                 else {
@@ -114,6 +116,7 @@ export default class FinanceStore{
         Axios.post(this.tasksByClientUrl, info)
             .then(response => {
                 if (response.data.status == 201) {
+                    this.tasks = []
                     message.warning('获取任务列表为空');
                 }
                 else {
@@ -177,6 +180,7 @@ export default class FinanceStore{
         Axios.post(this.supplierAccountsUrl,info)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.accountsBySupplier = []
                     message.warning('获取账户信息列表为空');
                 }
                 else {

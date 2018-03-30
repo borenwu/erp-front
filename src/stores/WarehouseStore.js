@@ -52,6 +52,7 @@ export default class WarehouseStore {
         Axios.post(this.suppliersUrl, companyInfo)
             .then(response => {
                 if (response.data.status === 201) {
+                    this.suppliers = []
                     message.warning('获取供应商列表为空');
                 }
                 else {
@@ -89,6 +90,7 @@ export default class WarehouseStore {
         Axios.post(this.itemopsUrl, info)
             .then(response => {
                 if (response.data.status === 201) {
+                    this.warehouseItemops = []
                     message.warning('获取物料操作列表为空');
                 }
                 else {

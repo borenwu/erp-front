@@ -66,7 +66,7 @@ export default class TaskModal extends React.Component {
         let client_name = this.refs.client_name.value
         let task_date = moment().format('YYYY-MM-DD')
         let due_date = this.state.dueDate
-        let task_name = this.state.task_name
+        let task_name = this.refs.task_name.value
         let volume = this.refs.volume.value
         let desc = this.refs.desc.value
         let maker = this.refs.maker.value
@@ -366,15 +366,15 @@ export default class TaskModal extends React.Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="taskName">任务</label>
-                            {/*<input type="text" ref="task_name" className="form-control" id="taskName" placeholder="任务名称"/>*/}
-                            <AutoComplete
-                                className="form-control"
-                                ref="task_name"
-                                dataSource={this.state.dataSource}
-                                onSearch={this.handleSearch.bind(this)}
-                                onSelect={this.onSelect.bind(this)}
-                                placeholder="任务名称"
-                            />
+                            <input type="text" ref="task_name" className="form-control" id="taskName" placeholder="任务名称"/>
+                            {/*<AutoComplete*/}
+                                {/*className="form-control"*/}
+                                {/*ref="task_name"*/}
+                                {/*dataSource={this.state.dataSource}*/}
+                                {/*onSearch={this.handleSearch.bind(this)}*/}
+                                {/*onSelect={this.onSelect.bind(this)}*/}
+                                {/*placeholder="任务名称"*/}
+                            {/*/>*/}
                         </div>
                         <div className="form-group">
                             <label>交付时间</label>

@@ -91,17 +91,20 @@ export default class WarehouseItemCheckTable extends React.Component{
                 title: '领料日期',
                 dataIndex: 'op_date',
                 key: 'op_date',
+
                 // render: text => <a href="#">{text}</a>,
             },
             {
                 title: '物料名称',
                 dataIndex: 'item_name',
                 key: 'item_name',
+                fixed: 'left'
             },
             {
                 title: '物料型号',
                 dataIndex: 'item_type',
                 key: 'item_type',
+
             },
             {
                 title: '单位',
@@ -139,11 +142,6 @@ export default class WarehouseItemCheckTable extends React.Component{
                 key: 'maker',
             },
             {
-                title: '领料录入时间',
-                dataIndex: 'make_time',
-                key: 'make_time',
-            },
-            {
                 title: '审核状态',
                 dataIndex: 'status',
                 key: 'status',
@@ -161,6 +159,8 @@ export default class WarehouseItemCheckTable extends React.Component{
             {
                 title: '操作',
                 key: 'action',
+                fixed: 'right',
+                width: 294,
                 render: (text, record) => (
                     <span>
                         操作 一
@@ -185,13 +185,12 @@ export default class WarehouseItemCheckTable extends React.Component{
                         <Popconfirm title="审核通过，录入库存?" onConfirm={this.onCheck.bind(this,record)}>
                             <a disabled={record.disabled}>审核通过</a>
                         </Popconfirm>
-
                     </span>
                 ),
             }];
         return(
             <div>
-                <Table columns={columns} dataSource={data}/>
+                <Table columns={columns} dataSource={data} scroll={{ x: 1600 }}/>
                 {/*<DevTools/>*/}
             </div>
         )

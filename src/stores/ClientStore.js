@@ -33,6 +33,7 @@ export default class ClientStore {
         Axios.post(this.clientsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.clients = []
                     message.warning('获取客户列表为空');
                 }
                 else {

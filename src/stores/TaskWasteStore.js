@@ -34,6 +34,7 @@ export default class TaskWasteStore{
         Axios.post(this.taskWastesUrl, info)
             .then(response => {
                 if (response.data.status === 201) {
+                    this.taskWastes = []
                     message.warning('获取任务列表为空');
                 }
                 else {

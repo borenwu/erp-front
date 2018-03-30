@@ -43,6 +43,7 @@ export default class TaskStore {
         Axios.post(this.clientsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.clients = []
                     message.warning('获取客户列表为空');
                 }
                 else {
@@ -66,6 +67,7 @@ export default class TaskStore {
         Axios.post(this.tasksUrl, info)
             .then(response => {
                 if (response.data.status === 201) {
+                    this.tasks = []
                     message.warning('获取任务列表为空');
                 }
                 else {
@@ -126,6 +128,7 @@ export default class TaskStore {
         Axios.post(`${this.tasksUrl}/names`,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.taskNames = []
                     message.warning('获取任务名列表为空');
                 }
                 else {

@@ -26,6 +26,7 @@ export default class ReceivableDashStore{
         Axios.post(this.clientsUrl,companyInfo)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.clients = []
                     message.warning('获取客户列表为空');
                 }
                 else {
@@ -75,6 +76,7 @@ export default class ReceivableDashStore{
         Axios.post(this.clientAccountsUrl,req)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.accountsByClient = []
                     message.warning('获取账户信息列表为空');
                 }
                 else {

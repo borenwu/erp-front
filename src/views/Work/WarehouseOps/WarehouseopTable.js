@@ -106,6 +106,8 @@ export default class WarehouseopTable extends React.Component{
             {
                 title: '操作',
                 key: 'action',
+                fixed: 'right',
+                width: 294,
                 render: (text, record) => (
                     <span>
                         操作 一
@@ -121,7 +123,7 @@ export default class WarehouseopTable extends React.Component{
             }];
         return(
             <div>
-                <Table columns={columns} dataSource={data}/>
+                <Table columns={columns} dataSource={data} scroll={{ x: 1600 }}/>
                 {/*<DevTools/>*/}
             </div>
         )

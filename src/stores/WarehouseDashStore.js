@@ -69,6 +69,7 @@ export default class WarehouseDashStore{
         Axios.post(this.taskWastesUrl,data)
             .then(response=>{
                 if (response.data.status === 201) {
+                    this.taskWastes = []
                     message.warning('获取废料列表为空');
                 }
                 else {
