@@ -12,6 +12,8 @@ export default class WarehouseStore {
     @observable warehouseItemopById = {}
     @observable warehouseItems = []
     @observable warehouseItemById = {}
+    @observable paperOrder = []
+    @observable paperReturn = []
 
     @observable company_id = JSON.parse(window.localStorage.getItem("companyInfo")).id
 
@@ -29,6 +31,30 @@ export default class WarehouseStore {
     @observable itemopUrl = `${this.rootUrl}/warehouse/itemop`;
     @observable itemopsUrl = `${this.rootUrl}/warehouse/itemops`
 
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    @action addPaperOrder(order){
+        this.paperOrder.push(order)
+    }
+
+    @action removePaperOrder(index){
+        this.paperOrder.splice(index, 1)
+    }
+
+    @action addPaperReturn(returnData){
+        this.paperReturn.push(returnData)
+    }
+
+    @action removePaperReturn(index){
+        this.paperReturn.splice(index, 1)
+    }
+
+    @action resetPaperArrays(){
+        this.paperOrder = []
+        this.paperReturn = []
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////
 
     @action fetchItems(company_id) {
         let companyInfo = {
@@ -37,6 +63,7 @@ export default class WarehouseStore {
         Axios.post(this.itemsUrl, companyInfo)
             .then(response => {
                 if (response.data.status === 201) {
+                    this.warehouseItems = []
                     message.warning('获取物料列表为空');
                 }
                 else {

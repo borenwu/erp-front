@@ -21,6 +21,7 @@ export default class WarehouseModal extends React.Component {
         let desc = this.refs.desc.value
         let unit = this.refs.unit.value
         let balance = Number(this.refs.balance.value)
+        let constant = Number(this.refs.constant.value)
 
         const warehouseItemInfo = {
             company_id:company_id,
@@ -29,7 +30,8 @@ export default class WarehouseModal extends React.Component {
             item_type:item_type,
             desc:desc,
             unit:unit,
-            balance:balance
+            balance:balance,
+            constant:constant
         }
 
         this.props.store.createWarehouseItem(warehouseItemInfo)
@@ -86,7 +88,12 @@ export default class WarehouseModal extends React.Component {
 
                     <div className="form-group">
                         <label htmlFor="itemBalance">库存量</label>
-                        <input type="balance" ref="balance" className="form-control" id="itemBalance"  placeholder="库存量"/>
+                        <input type="number" ref="balance" className="form-control" id="itemBalance"  placeholder="库存量"/>
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="itemBalance">纸类常量参数(可选)</label>
+                        <input type="number" ref="constant" className="form-control" id="itemBalance"  placeholder="纸类常量参数" defaultValue={0.0}/>
                     </div>
                 </form>
             </Modal>

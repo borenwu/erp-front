@@ -1,5 +1,5 @@
 import React from 'react'
-import {Modal,Select,Input} from 'antd'
+import {Modal,Select,Input,Button,Card} from 'antd'
 import {observer} from 'mobx-react';
 import moment from 'moment';
 
@@ -9,19 +9,69 @@ const { Option} = Select;
 @observer
 export default class WarehouseOpModal extends React.Component {
     state = {
+        assistantVisible: false,
         selectItemId:'',
         itemSelected:{},
         supplier_name:'',
     }
 
-    constructor(props) {
-        super(props)
+    showAssistantModal() {
+        this.setState({
+            assistantVisible: true,
+        });
+    }
+
+    handleAssistantOk(e) {
+        let paperOrder = this.props.store.paperOrder
+        let paperReturn = this.props.store.paperReturn
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        let orderTotal = paperOrder.reduce(reducer)
+        let returnTotal = paperReturn.reduce(reducer)
+
+        this.refs.order.value = orderTotal
+        this.refs.re.value = returnTotal
+        this.refs.use.value = (Number(orderTotal) - Number(returnTotal)).toFixed(2)
+        this.setState({
+            assistantVisible: false,
+        });
+        this.props.store.resetPaperArrays()
+    }
+
+    handleAssistantCancel(e) {
+        this.setState({
+            assistantVisible: false,
+        });
+        this.props.store.resetPaperArrays()
+    }
+
+    handleOrderAdd(){
+        let constant = this.state.itemSelected.constant || 0
+        let orderFi = (Number(this.refs.orderFi.value) / 100).toFixed(2)
+        let weight = (Number(constant) * orderFi * orderFi).toFixed(2)
+
+        this.props.store.addPaperOrder(weight)
+    }
+
+    handleOrderRemove(index){
+        this.props.store.removePaperOrder(index)
+    }
+
+    handleReturnAdd(){
+        let constant = this.state.itemSelected.constant || 0
+        let returnFi = (Number(this.refs.returnFi.value) / 100).toFixed(2)
+        let weight = (Number(constant) * returnFi * returnFi).toFixed(2)
+
+        this.props.store.addPaperReturn(weight)
+    }
+
+    handleReturnRemove(index){
+        this.props.store.removePaperReturn(index)
     }
 
     /////////////////////////////////////////////////////////////////////////
     handleSelectItem(value){
         console.log(value)
-        const itemSelected = this.props.store.warehouseItems.filter(item => item.id == value)[0]
+        const itemSelected = this.props.store.warehouseItems.filter(item => item.id === value)[0]
         this.setState({itemSelected:itemSelected})
     }
 
@@ -60,11 +110,18 @@ export default class WarehouseOpModal extends React.Component {
         this.props.store.closeItemopModal()
     }
 
+
     componentDidMount(){
         this.props.store.fetchItems(this.props.store.company_id)
     }
 
     render() {
+        const gridStyle = {
+            width: '50%',
+            textAlign: 'center',
+        };
+
+
         return (
             <Modal
                 title={this.props.title}
@@ -97,7 +154,73 @@ export default class WarehouseOpModal extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="itemOrder">领料</label>
-                        <input ref="order" type="number" className="form-control"  id="itemOrder" defaultValue={0.0}/>
+                        <div className="row">
+                            <div className="col-8">
+                                <input ref="order" type="number" className="form-control"  id="itemOrder" defaultValue={0.0}/>
+                            </div>
+                            <div className="col-4">
+                                <Button type="primary" onClick={this.showAssistantModal.bind(this)}>报业印刷小助手</Button>
+                                <Modal
+                                    title="新闻纸领料计算器"
+                                    visible={this.state.assistantVisible}
+                                    onOk={this.handleAssistantOk.bind(this)}
+                                    onCancel={this.handleAssistantCancel.bind(this)}
+                                    width={1040}
+                                >
+                                    <Card title={this.state.itemSelected.item_type}>
+                                        <Card.Grid style={gridStyle}>
+                                            <div className="row">
+                                                <form className="form-inline">
+                                                    <div className="form-group mx-sm-3 mb-2">
+                                                        <label>领</label>
+                                                    </div>
+                                                    <div className="form-group mx-sm-3 mb-2">
+                                                        <input type="number" ref="orderFi" className="form-control" placeholder="直径" defaultValue={0}/>
+                                                    </div>
+                                                    <div className="form-group mx-sm-3 mb-2">
+                                                        <Button type="primary" shape="circle" icon="plus" onClick={this.handleOrderAdd.bind(this)}/>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div className="row">
+                                                <ul className="list-group">
+                                                    {
+                                                        this.props.store.paperOrder.map((order,index)=>{
+                                                            return(<li key={index} className="list-group-item">{order} KG  <Button type="primary" onClick={this.handleOrderRemove.bind(this,index)} shape="circle" icon="minus"/></li>)
+                                                        })
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </Card.Grid>
+
+                                        <Card.Grid style={gridStyle}>
+                                            <div className="row">
+                                                <form className="form-inline">
+                                                    <div className="form-group mx-sm-3 mb-2">
+                                                        <label>退</label>
+                                                    </div>
+                                                    <div className="form-group mx-sm-3 mb-2">
+                                                        <input type="number" ref="returnFi" className="form-control" placeholder="直径" />
+                                                    </div>
+                                                    <div className="form-group mx-sm-3 mb-2">
+                                                        <Button type="primary" shape="circle" icon="plus" onClick={this.handleReturnAdd.bind(this)} />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div className="row">
+                                                <ul className="list-group">
+                                                    {
+                                                        this.props.store.paperReturn.map((returnData,index)=>{
+                                                            return(<li key={index} className="list-group-item">{returnData} KG  <Button type="primary" onClick={this.handleReturnRemove.bind(this,index)} shape="circle" icon="minus"/></li>)
+                                                        })
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </Card.Grid>
+                                    </Card>
+                                </Modal>
+                            </div>
+                        </div>
                     </div>
                     <div className="form-group">
                         <label htmlFor="itemRe">退库</label>

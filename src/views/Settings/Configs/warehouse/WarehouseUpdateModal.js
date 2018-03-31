@@ -23,6 +23,7 @@ export default class SupplierUpdateModal extends React.Component{
         let desc = this.refs.desc.value
         let unit = this.refs.unit.value
         let balance = Number(this.refs.balance.value)
+        let constant = Number(this.refs.constant.value)
 
         const warehouseItemInfo = {
             company_id:company_id,
@@ -32,8 +33,11 @@ export default class SupplierUpdateModal extends React.Component{
             item_type:item_type,
             desc:desc,
             unit:unit,
-            balance:balance
+            balance:balance,
+            constant:constant
         }
+
+        console.log(warehouseItemInfo)
 
         this.props.store.updateWarehouseItem(warehouseItemInfo)
         this.props.store.closeWarehouseUpdateModal()
@@ -88,6 +92,11 @@ export default class SupplierUpdateModal extends React.Component{
                     <div className="form-group">
                         <label htmlFor="itemBalance">库存量</label>
                         <input type="balance" ref="balance" className="form-control" id="itemBalance"  defaultValue={this.props.store.warehouseItemById.balance}/>
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="itemBalance">纸类常量参数(可选)</label>
+                        <input type="number" ref="constant" className="form-control" id="itemBalance"  placeholder="纸类常量参数" defaultValue={this.props.store.warehouseItemById.constant}/>
                     </div>
 
                 </form>
