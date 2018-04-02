@@ -46,8 +46,8 @@ export default class WarehouseDashStore{
         }
         Axios.post(this.ratioUrl,itemInfo)
             .then(response=>{
-                this.empty = Number(response.data.ratio.total) - Number(response.data.ratio.now)
-                this.now = Number(response.data.ratio.now)
+                this.empty = (Number(response.data.ratio.total) - Number(response.data.ratio.now)).toFixed(2)
+                this.now = (Number(response.data.ratio.now)).toFixed(2)
             })
             .catch(error => {
                 throw(error);
