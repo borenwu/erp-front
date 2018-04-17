@@ -24,7 +24,7 @@ export default class WarehouseOpModal extends React.Component {
     handleAssistantOk(e) {
         let paperOrder = this.props.store.paperOrder
         let paperReturn = this.props.store.paperReturn
-        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        const reducer = (accumulator, currentValue) => (Number(accumulator) + Number(currentValue)).toFixed(2);
         let orderTotal = paperOrder.reduce(reducer)
         let returnTotal = paperReturn.reduce(reducer)
 
