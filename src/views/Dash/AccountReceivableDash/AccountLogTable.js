@@ -12,7 +12,7 @@ const genSubData = function (store){
             op_date:moment(a.op_date).format('YYYY-MM-DD'),
             op_name: a.op_name,
             direction: a.direction,
-            amount:a.amount,
+            amount:Number(a.amount).toFixed(2),
             invoice:a.invoice,
             maker: a.maker,
         }

@@ -6,10 +6,11 @@
     <bookmark url="file://$PROJECT_DIR$/src/views/Finance/AccountReceivable/AccountReceivableTable.js" line="55" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ae6bfa5-ece0-414e-ac52-3142e381ea2e" name="Default" comment="2018.3.31/14:15">
-      <change beforePath="$PROJECT_DIR$/.idea/erp-front.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/erp-front.iml" afterDir="false" />
+    <list default="true" id="9ae6bfa5-ece0-414e-ac52-3142e381ea2e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountLogTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountLogTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountReceivableDashTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountReceivableDashTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Dash/SalesDash/SalesDash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dash/SalesDash/SalesDash.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,20 +27,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WarehouseOpModal.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpModal.js">
+      <file leaf-file-name="AccountLogTable.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountLogTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state relative-caret-position="168">
+              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WarehouseStore.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stores/WarehouseStore.js">
+      <file leaf-file-name="AccountReceivableDash.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountReceivableDash.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="-260">
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountReceivableDashTable.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountReceivableDashTable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="72" column="58" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,8 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierTable.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Configs/supplier/SupplierUpdateModal.js" />
         <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserModal.js" />
         <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserTable.js" />
         <option value="$PROJECT_DIR$/src/views/Settings/Configs/user/UserUpdateModal.js" />
@@ -110,7 +126,6 @@
         <option value="$PROJECT_DIR$/src/views/Finance/SalesRecord/SalesRecord.js" />
         <option value="$PROJECT_DIR$/src/views/Work/Tasks/UpdateModal.js" />
         <option value="$PROJECT_DIR$/src/views/Dash/SalesDash/SaleDashTable.js" />
-        <option value="$PROJECT_DIR$/src/views/Dash/SalesDash/SalesDash.js" />
         <option value="$PROJECT_DIR$/src/views/Dash/WarehouseDash/WhiteLineChart.js" />
         <option value="$PROJECT_DIR$/src/views/Dash/WarehouseDash/BlackLineChart.js" />
         <option value="$PROJECT_DIR$/src/views/Dash/WarehouseDash/WarehouseDash.js" />
@@ -136,6 +151,9 @@
         <option value="$PROJECT_DIR$/src/stores/WarehouseStore.js" />
         <option value="$PROJECT_DIR$/src/views/Warehouse/WarehouseItemCheck/WarehouseItemCheckModal.js" />
         <option value="$PROJECT_DIR$/src/views/Work/WarehouseOps/WarehouseOpModal.js" />
+        <option value="$PROJECT_DIR$/src/views/Dash/SalesDash/SalesDash.js" />
+        <option value="$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountReceivableDashTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountLogTable.js" />
       </list>
     </option>
   </component>
@@ -157,10 +175,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="686" />
+    <option name="y" value="118" />
+    <option name="width" value="1192" />
+    <option name="height" value="722" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -184,7 +202,28 @@
               <item name="erp-front" type="b2602c69:ProjectViewProjectNode" />
               <item name="erp-front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="stores" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp-front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp-front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Dash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp-front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Dash" type="462c0819:PsiDirectoryNode" />
+              <item name="AccountReceivableDash" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="erp-front" type="b2602c69:ProjectViewProjectNode" />
@@ -262,116 +301,6 @@
       <recent name="E:\web\react\erp-front\src\views\Finance\AccountReceivable" />
       <recent name="E:\projects\web\sails\erp-front\src\views\Dash\WarehouseDash" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/stores/WarehouseDashStore.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -503,7 +432,9 @@
       <workItem from="1522650511860" duration="1075000" />
       <workItem from="1523170057188" duration="718000" />
       <workItem from="1523170889122" duration="21000" />
-      <workItem from="1523928858724" duration="3137000" />
+      <workItem from="1523928858724" duration="3488000" />
+      <workItem from="1523937328296" duration="98000" />
+      <workItem from="1524022009804" duration="1732000" />
     </task>
     <task id="LOCAL-00001" summary="very newbee">
       <created>1518951708149</created>
@@ -652,11 +583,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522476962831</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="2018.4.17/10:41">
+      <created>1523932911852</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1523932911853</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411772000" />
+    <option name="totallyTimeSpent" value="413953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -668,26 +606,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.329718" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38419914" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1977612" />
-      <window_info anchor="right" id="R Packages" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38311687" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20202559" />
+      <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="right" id="R Graphics" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
     </layout>
@@ -726,7 +664,8 @@
     <MESSAGE value="very very new new bee" />
     <MESSAGE value="2018.3.30/16:45" />
     <MESSAGE value="2018.3.31/14:15" />
-    <option name="LAST_COMMIT_MESSAGE" value="2018.3.31/14:15" />
+    <MESSAGE value="2018.4.17/10:41" />
+    <option name="LAST_COMMIT_MESSAGE" value="2018.4.17/10:41" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -854,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Dash/SalesDash/SalesDash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="139" column="37" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Settings/Configs/client/ClientTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -869,13 +801,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Dash/WarehouseDash/WhiteLineChart.js" />
-    <entry file="file://$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountReceivableDashTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="45" column="10" selection-start-line="43" selection-start-column="7" selection-end-line="45" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Dash/SalesDash/SaleDashTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -979,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/SalesDashStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/TaskWasteStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -1051,7 +969,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/WarehouseStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="315">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
@@ -1060,6 +978,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Dash/SalesDash/SalesDash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/SalesDashStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountReceivableDash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-260">
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountReceivableDashTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="72" column="58" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Dash/AccountReceivableDash/AccountLogTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

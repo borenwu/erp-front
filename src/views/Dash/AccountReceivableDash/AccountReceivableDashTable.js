@@ -70,7 +70,7 @@ export default class AccountReceivableDashTable extends Component {
                 id:c.id,
                 client_name: c.client_name,
                 desc: c.desc,
-                receivable: c.receivable,
+                receivable: Number(c.receivable).toFixed(2),
             }
         })
 

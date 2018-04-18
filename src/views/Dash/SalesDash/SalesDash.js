@@ -54,8 +54,8 @@ export default class SalesDash extends Component {
                 labels.push(moment(record._id).format('YYYY-MM-DD'))
             })
             return {
-                data:data.reverse(),
-                labels:labels.reverse()
+                data:data,
+                labels:labels
             }
         }
 
