@@ -47,7 +47,7 @@ export default class SalesDashStore{
                     message.warning('没有得到数据');
                 }
                 if(response.data.status === 200){
-                    this.saleSoFar = response.data.result[0].total
+                    this.saleSoFar = (Number(response.data.result[0].total)).toFixed(2)
                 }
             })
     }

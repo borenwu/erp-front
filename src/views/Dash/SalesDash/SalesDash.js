@@ -53,6 +53,8 @@ export default class SalesDash extends Component {
                 data.push(record.total)
                 labels.push(moment(record._id).format('YYYY-MM-DD'))
             })
+			console.log(data)
+			console.log(labels)
             return {
                 data:data,
                 labels:labels
